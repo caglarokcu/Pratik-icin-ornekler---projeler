@@ -1,0 +1,11 @@
+5 tane div oluştur ve aşşağıdaki örenkleri gösterecek şekilde onların hover durumuna animasyon ekle.
+
+    animasyon komutunu kullanarak arka fon rengini değiştir, 4 saniye olsun 3 farklı renk kullan, sonsuza kadar döngüde olsun, animasyonun bütün özelliklerini kullan.
+
+    animasyonun fill-mode özelliğini gösterecek şekilde örnekler yap.
+
+    hover durumuna background color ata ve fill-mode nin buna verdiği tepkiyi göster.
+
+    hem arkafon gem de boyut a iki farklı animasyon yaz.
+
+    Bu animasyonu elemente yaz ve hover durumunda durdurması için bir kontrol ekle. Sonra da animasyonun her özelliğini ayrı ayrı belirterek yaz.

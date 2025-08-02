@@ -1,0 +1,143 @@
+cursor: öğenin üzerine gelindiğinde görüntülenecek fare imlecini belirtir.
+
+.alias {cursor: alias;}
+.all-scroll {cursor: all-scroll;}
+.auto {cursor: auto;}
+.cell {cursor: cell;}
+.col-resize {cursor: col-resize;}
+.context-menu {cursor: context-menu;}
+.copy {cursor: copy;}
+.crosshair {cursor: crosshair;}
+.default {cursor: default;}
+.e-resize {cursor: e-resize;}
+.ew-resize {cursor: ew-resize;}
+.grab {cursor: grab;}
+.grabbing {cursor: grabbing;}
+.help {cursor: help;}
+.move {cursor: move;}
+.n-resize {cursor: n-resize;}
+.ne-resize {cursor: ne-resize;}
+.nesw-resize {cursor: nesw-resize;}
+.ns-resize {cursor: ns-resize;}
+.nw-resize {cursor: nw-resize;}
+.nwse-resize {cursor: nwse-resize;}
+.no-drop {cursor: no-drop;}
+.none {cursor: none;}
+.not-allowed {cursor: not-allowed;}
+.pointer {cursor: pointer;}
+.progress {cursor: progress;}
+.row-resize {cursor: row-resize;}
+.s-resize {cursor: s-resize;}
+.se-resize {cursor: se-resize;}
+.sw-resize {cursor: sw-resize;}
+.text {cursor: text;}
+.url {cursor: url(myBall.cur),auto;}
+.w-resize {cursor: w-resize;}
+.wait {cursor: wait;}
+.zoom-in {cursor: zoom-in;}
+.zoom-out {cursor: zoom-out;}
+
+text-wrap; kelimelerin satrılara nasıl yerleşeceğini belirler. wrap: sığdırabildiğin kadar kelime. nowrap: bütün kelimeler yan yana. balance: her satırdaki harf sayısını yakın şekilde ayarlıyarak. pretty: wrap ile aynı işlev fakat hız yerine nazik görünümü odak alan bir algoritma ile. stable: wrap gibi tek fark kullanıcı bir satırda bir şey değiştirirken öbür satırlar önceki görinimi koruyor, sürekli güncelleme yapmıyor. Not: Bu keilmeler de global de yazdıklarımızın yerine kullanılıyormuş. inherit, initial, revert, revert-layer, unset.
+https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap#wrap
+
+white-space-collapse: satır sonları ve boşluklara nasıl davranması gerektiğini açıklar. collapse: satır sonlarını be boşlukları 1 boşluk olarak sayar. preserve: boşlukları ve segment sonlarını korur. preserve-breaks: boşluklar daraltılır, segment sonları korunur. preserve-spaces: boşluklar korunur segment sonları boşluğa dönüştürülür.(Bu uygulamada çalışmadı.). break-spaces: preserve ile aynı sadece satırbaşından sonra kalan boşluklar yer tutmaya devam ediyor yeni satırda, sanırım preserve de bu yok.
+https://developer.mozilla.org/en-US/docs/Web/CSS/white-space-collapse
+
+unicode-bidi
+
+overflow
+
+Margin - Padding
+
+Float
+
+Caption-side
+
+width-height
+
+Form da kullanılabilcek attiributeler:
+    <input>
+    <textarea>
+    <button>
+    <select>
+    <option>
+    <optgroup>
+    <fieldset>
+    <label>
+    <output>
+
+form da get attiributesi ile ilgili bir özellik var, neden işe yaradığını tam anlamadım;
+    Kullanıcının sonucu yer imlerine eklemek istediği form gönderimleri için yararlıdır(hızlı bir şekilde sayfaya ulaşmak için kısyol şeklinde ekliyoruz ya.)
+
+Fieldset de border-image-outset border-image-repeat border-image-slice border-image-source border-image-width özellikleri bulunuyor. border-image ile de hepsini kapsayan bir kısayol ile tanımlayabiliyoruz.
+
+            border-image-outset özelliği, sınır görüntü alanının sınır kutusunun ötesine ne kadar uzanacağını belirtir.
+            
+            İpucu: Ayrıca border-image özelliğine de bakın (tüm border-image-* özelliklerini ayarlamak için kullanılan bir kısaltma özelliği).
+
+            border-image-repeat özelliği, kenarlık görüntüsünün tekrarlanıp tekrarlanmayacağını, yuvarlatılıp yuvarlatılmayacağını, aralıklı mı yoksa uzatılıp uzatılmayacağını belirtir. Bunun etkisini tam anlamadım.
+
+            border-image-slice özelliği, border-image-source tarafından belirtilen görüntünün nasıl dilimleneceğini belirtir. Görüntü her zaman dokuz bölüme bölünür: dört köşe, dört kenar ve orta.
+            "Orta" kısım, fill anahtar sözcüğü ayarlanmadığı sürece tamamen şeffaf olarak ele alınır.
+
+            border-image-source özelliği, kenarlık olarak kullanılacak görüntünün yolunu belirtir (bir öğenin etrafındaki normal kenarlık yerine).
+            İpucu: Değer "none" ise veya görüntü görüntülenemiyorsa, kenarlık stilleri kullanılır.
+
+            border-image-width özelliği, kenarlık görüntüsünün genişliğini belirtir. -->
+
+Flex de div in içinde p ile bir şeyler yazdım ve onu vertical-align ile hizalamaya çalıştım. Olmadı acaba vertical-align sadece inline elementlerde mi işe yarıyor. Ama p de block element. Acaba p ye özel bir attiribute mi?
+
+İnput çeşitleri;
+
+    <input type="button">
+        <input type="checkbox">
+        <input type="color">
+        <input type="date">
+        <input type="datetime-local">
+        <input type="email">
+        <input type="file">
+        <input type="month">
+        <input type="number">
+        <input type="password">
+        <input type="radio">
+        <input type="range">
+        <input type="search">
+        <input type="tel">
+        <input type="text">
+        <input type="time">
+        <input type="url">
+        <input type="week">
+        <meter>
+        <progress>
+        <select>
+        <textarea>
+        
+        İpucu: <input type="text">, <input type="checkbox">, <input type="radio">, <input type="file"> ve <input type="password"> etiketlerini tanımlamak için her zaman <label> etiketini kullanın.
+         -->
+
+16 lık sistemde sayı hesaplama.
+
+    16 lık sistemde sayı bulma, basamak sayısı kadar 16 nın kuvvetini al ve çarp. ff = (16 üzeri 0)x 15 + (16 üzeri 1)x 15 = 255
+
+    işlemi tersten yapmak istersen sayıyı 16 ya böl sürekli kalanlar sırasıyla birler basamağından itibaren sayının rakamları
+
+(p.para$#par$)*30   .parent>(.item)*2        Bunları araştı, visual studio nun kusa yollar vs öğren.
+
+display:inline-flex;    Tahminen inline-block gibi bir şey
+
+<!-- text-decoration: Metne çizgi çekmemizi sağlar. Sırasıyla: text-decoration-line, text-decoration-style, text-decoration-color, text-decoration-thickness olarak yazılır. Bunları ayrı ayrı da yazabilirsin. Örnek;
+text-decoration: underline wavy blue 5px; -->
+
+Tarayıcıda sayfanın başlığını değiştirmemizi sağlayan öge. Aynı zamanda fonksiyon olarak da ögelere eklenebiliyor.
+
+Tarayıcının dizeltme yapmak istediğinde çıkan çizgileri kullanmamızı sağlayan css komutu ile süsleme yap.
+
+Yazının olması gereken yerden yukarı ve aşşağı götür.
+
+1. projede tag ların css özelliklerini de ilk önce genel sonra da özel olarak hatırlamamızı iste.
+
+a da belgeye açılan bağlantıda yazdığımız css ler işe yaramıyor.
+
+tr ler varsayılan olarak ortalanırken th ler sola yapışıyor. Bir de bir th normalden büyükse, resim vs, o sütundakilerde mecburen o büyüklükte oluyor.
+
+th:nth-child(odd) dediğimde sadece ilk satırdaki th leri aldı neden acaba.

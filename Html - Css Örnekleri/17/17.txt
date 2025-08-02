@@ -1,0 +1,3 @@
+Bir fotoğraf albümü yapacağız burda.
+
+Izgara şeklinde olan kapsayıcıda yeni gelen ögelerin nasıl doldurulacağı ve fotoğrafların boyutunu korumaları için bir kod vardı. Onları kullan ve fotoğrafları sınıfa ayırarak hangilerinin ne kadar alana uzayacağını vs yaz.

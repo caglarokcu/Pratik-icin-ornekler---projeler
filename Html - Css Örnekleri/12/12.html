@@ -1,0 +1,113 @@
+<!DOCTYPE html> <!-- inline-block'a bir örnek ve paddinge bir örnek. -->
+ <html lang="en">
+ <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+         div{
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+         }
+         .container{
+            width:50%;
+            background-color: red;
+            padding: 1rem;
+         }
+         .spann{
+            color: blue;
+            width: 500px;
+            height: 500px;
+            background-color: purple;
+            display: inline-block; 
+         }
+         .btn{
+            display: block;
+
+            /* Alttaki float kodu bozulmasın diye yaptık. */
+
+            width: 200px;
+            height: 200px;
+         }
+         .display{
+            display:none;
+         }
+         .image1{
+                  
+         width: 50px;
+         float:left;
+                  
+         /* Float neydi, her şeyi yok say ve sağa yapıştır gibi.*/
+         }
+         .image2{
+         
+         width: 50px;
+         float:right;
+         }
+         p{
+         clear:right;
+         
+         /* Float özelliğini kullandığımızda ve bir sonraki öğenin aşağıda olmasını istediğimizde (sağda veya solda değil), clear özelliğini kullanmamız gerekecek.
+         
+         clear özelliği, kayan bir öğenin yanındaki öğeye ne olması gerektiğini belirtir.
+         
+         clear özelliği aşağıdaki değerlerden birine sahip olabilir:
+         
+             none - Öğe sol veya sağ kayan öğelerin altına itilmez. Bu varsayılandır
+             left - Öğe, soldaki kayan öğelerin altına itilir
+             sağ - Eleman sağdaki kayan elemanların altına itilir
+             her ikisi - Eleman hem sol hem de sağ kayan elemanların altına itilir
+             inherit - Öğe, açık değeri üst öğesinden devralır
+         
+         Kayan noktaları temizlerken, kayan noktayı kayan noktayla eşleştirmelisiniz: Bir öğe sola doğru kayan bir öğeyse, o zaman sola doğru temizlemelisiniz. Kayan öğeniz yüzmeye devam edecek, ancak temizlenen öğe web sayfasında onun altında görünecek. */
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere inventore reiciendis aspernatur molestias laborum aperiam.
+         </div>
+      </div>
+
+      <p>
+         Lorem ipsum dolor sit amet, consectetur 
+            
+         <span class="spann">
+            adipisicing elit. Architecto qui blanditiis 
+         </span> 
+            
+         facere voluptatem, eos expedita, ducimus saepe inventore aliquid fuga ut necessitatibus distinctio voluptates voluptatum reprehenderit magni nesciunt optio, magnam quam reiciendis recusandae quis possimus officiis aliquam. Ipsa pariatur quod quo laborum harum nostrum impedit, rerum, unde illum maiores accusantium?
+      </p>
+      
+      <p class="display">
+         Burası Kaybolocak
+      </p>
+      
+      <button class="btn">
+         Beni tıklaaaaaaaa
+      </button>
+
+      <img src="../../firstHello/resmiler/360_F_136706734_KWhNBhLvY5XTlZVocpxFQK1FfKNOYbMj.jpg" class="image1">
+    
+      <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et provident eveniet quos, quisquam, molestiae qui sunt beatae minima quasi unde voluptas sint cumque, voluptatum quam. Modi adipisci enim sequi provident corporis vero possimus quas nisi eligendi, consectetur nostrum nemo tenetur pariatur, cupiditate sint laborum assumenda! Ut reprehenderit autem harum praesentium?
+      </p>
+      
+      <img src="../../firstHello/resmiler/360_F_136706734_KWhNBhLvY5XTlZVocpxFQK1FfKNOYbMj.jpg" class="image2">
+   </body>
+</html>
+
+<!-- Bunu açıkla iyice, nasıl yapılacağını açıklamamışsın. 
+ 
+   float ı önceki projelerde kullanmıştık ya o projeye ya da bu projeye bütün bilgileri içerecek şekilde ekle.
+   
+Bunları da projeye ekleyeblicek kadar ilerleyince yeni bir proje yaz.
+
+   <nav> - Bir dizi gezinme bağlantısını tanımlar.
+   <article> - Bağımsız, kendi kendine yeten bir içerik tanımlar
+   <aside> - İçeriğin dışındaki içeriği tanımlar (kenar çubuğu gibi)
+   <details> - Kullanıcının isteğe bağlı olarak açıp kapatabileceği ek ayrıntıları tanımlar
+   <summary> - <details> öğesi için bir başlık tanımlar 
+     -->

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{                                      /*positionu web sitesinde nasıl buluruz ? (300)*/
+            font-size: 32px;
+            height: 200vh;
+            border: 2px solid red;
+            margin: 1rem;
+        }
+        .parent{
+            border: 2px solid blue;
+            padding: 2rem;
+            background-color: rgb(255, 166, 0);
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+        }
+
+        /* Statik konumlandırılmış öğeler, top, bottom, left ve right özelliklerinden etkilenmez.
+
+        position: static; değerine sahip bir öğe herhangi bir özel şekilde konumlandırılmaz; her zaman sayfanın normal akışına göre konumlandırılır:
+        
+        position: relative;
+        olan bir öğe, normal konumuna göre konumlandırılır. Sağ sola komutları normal konumunun üzerine eklenir.
+        
+        position: fixed;
+        position: fixed; değerine sahip bir öğe, görünüm alanına göre konumlandırılır; yani sayfa kaydırılsa bile her zaman aynı yerde kalır. Öğeyi konumlandırmak için top, right, bottom ve left özellikleri kullanılır.
+
+        Sabit bir öğe, normalde bulunması gereken yerde sayfada boşluk bırakmaz.
+
+        position: absolute;
+        Konum: mutlak; değerine sahip bir öğe, en yakın konumlandırılmış atasına göre konumlandırılır (sabit gibi görünüm alanına göre konumlandırılmak yerine).
+
+        Ancak; mutlak konumlandırılmış bir öğenin konumlandırılmış bir atası yoksa, belge gövdesini kullanır ve sayfa kaydırmasıyla birlikte hareket eder.
+
+        Not: Mutlak konumlandırılmış öğeler normal akıştan kaldırılır ve öğelerle örtüşebilir.
+
+        position: sticky;
+        Konum: yapışkan; olan bir öğe, kullanıcının kaydırma konumuna göre konumlandırılır.
+
+        Yapışkan bir öğe, kaydırma konumuna bağlı olarak göreceli ve sabit arasında geçiş yapar. Görünüm alanında belirli bir ofset konumuna ulaşana kadar göreceli olarak konumlandırılır; ardından yerine "yapışır" (pozisyon: sabit gibi).
+            
+        Not: Yapışkan konumlandırmanın çalışması için en az bir üst, sağ, alt veya sol konum belirtmeniz gerekir.
+            
+        Bu örnekte, kaydırma konumuna ulaştığınızda yapışkan öğe sayfanın üst kısmına (üst: 0) yapışır.
+*/
+
+        .item1{
+            position:relative;
+            padding: 2rem;
+            right:-15px;
+            top:10px;
+            background-color: blue;
+        }
+        .item2{
+            padding: 2rem;
+            background-color: rgb(0, 255, 55);
+            position: absolute;
+            bottom:20px;
+            right: 10px;
+        }
+
+        /* gördüğün gibi item1 ve item2 üst üste geldi, yani absulute ve relative üst üste geldi. */
+
+        .item3{
+            padding: 2rem;
+            background-color: rgb(255, 0, 234);
+            position: fixed;
+            top:20px;
+            right: 50px;  
+            z-index: 99;                
+        }
+
+        /*z-index ile hangisinin üstte olduğunu anlatıyoruz. Hepsinde varsayılan olarak z-index:0; dır.*/
+        
+        .parent2{
+            background-color: gray;
+            border: 2px solit green;
+        }
+        .item10{
+            padding: 10px;
+            z-index: 30;
+        }
+        .item12{
+            position: sticky;
+            top:0px;
+        }
+
+        /* Bu da kayıyor ama parentinin dışına çıkamıyor gördüğün gibi. */
+        
+    </style>
+ </head> 
+ <body>
+    <div class="parent">Ana Taşıyıcı
+        <div class="item item1">item 1</div>
+        <div class="item item2">İtem 2</div>
+        <div class="item item3">İtem 3</div>
+    </div>
+    <div class="parent2">Ana Taşıyıcı
+        <div class="item10 item11">item 1</div>
+        <div class="item10 item12">İtem 2</div>
+        <div class="item10 item13">İtem 3</div>
+    </div>
+ </body>
+ </html>

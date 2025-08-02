@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,tr,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        img{
+            height: 50px;
+        }
+        caption{
+            caption-side: bottom;
+        }
+        tr:nth-child(2){
+            background-color: aqua;
+        }
+        th:nth-child(1),th:nth-child(3),th:nth-child(6){
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Başlık</caption>
+
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Yaş</th>
+            <th>Meslek - Hayal</th>
+            <th style="display: none;"></th>
+            <th>Fotoğraf</th>
+            <th>.</th>
+        </tr>
+        <tr>
+            <td>Çağlar</td>
+            <td>OKCU</td>
+            <td>25</td>
+            <td>Öğrenci -</td>
+            <td style="text-align: center;" colspan="2"><img src="../../resimler/Biometrik.jfif" alt=""></td>
+        </tr>
+    </table>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <ol>
+        <li><ol><li>1</li>
+        <li>2</li>
+        <li>3</li></ol></li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+
+    <dl>
+        <dt>i</dt>
+        <dd>b</dd>
+        <dt>a</dt>
+        <dd>c</dd>
+    </dl>
+</body>
+</html>

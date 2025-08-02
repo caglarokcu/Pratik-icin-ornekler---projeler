@@ -1,0 +1,190 @@
+<!DOCTYPE html> <!-- Css'de outline ve Html de <header> <nav> <section> <article> <aside> <footer> <details> <summary>
+    gibi kavramlar ve örnek proje. -->
+     <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Document</title>
+         <style>
+             body{
+                margin: 0px;
+                padding: 0px;
+                line-height: 1.5em; 
+             }
+             h5{
+                display:inline;
+             }
+             p{
+                display: inline;
+             }
+             img{
+                display: block;
+                height: 200px;
+                width: 300px;
+             }
+             label{
+                display: block;
+             }
+             #header{   
+                background-color: aqua;
+                padding: 1.5em;
+
+                /* htmlcolorcodes.com dan görerek daha iyi karar verebiliriz. Visualstudio nun sunduğu renk tablosundan tam olarak nasıl duracağını seçemiyoruz */
+             }
+             #hhakkımda{
+                font-size: 20px;
+             }
+             #hbaslik{   
+                
+                /*  body den margini 0 ladık ama h1 in kendine özel bir margini var.*/
+ 
+                text-align: center; 
+             }
+             #yetenekbolum{ 
+                
+                /* Burda #yeteneklerim h2 diyip yetenklerimin içindeki h2 yi de hedefleyebiliyoruz. Bunu da kullanmıyorsun. , koyarsan da ve anlamına gelir. */
+ 
+                background-color: rgb(182, 63, 63);
+                padding-block-end: 10px;
+                color: white;  
+             }
+             #projebolum{
+                background-color: rgb(94, 94, 236);
+             }
+             h2{
+                margin: 0px;
+                text-align: center;
+             }
+             input{
+                outline: none; 
+ 
+                /* input lara hover dayken varsayılan olarak siyah outline eklemişler mesela, bunu burda kaldırdık. */
+ 
+                border: none;
+                border: 1px solid red;
+                cursor: pointer; 
+ 
+                /* imleci değiştiriyordu. */
+             }
+             textarea{
+                resize: none; 
+ 
+                /* o sağ alttaki işeretten kurtulmuş olduk bunun sayesinde. */
+             }
+    
+        </style>
+     </head>
+     <body>
+          <header id="header">
+ 
+             <!-- <header> - Bir belge veya bölüm için başlığı tanımlar. İçinde h1 gibi bir başlık logo vs yazar, birden fazla header olabilir ama başka bir <header> <footer> yada <address> in içine konamaz.    -->
+        
+            <h1 id="hbaslik">Çağlar OKCU</h1>
+            <hr>
+            
+            <h3>Hakkımda</h3>
+            
+            <p id="hhakkımda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere esse vitae sit fuga. Soluta dolore rerum distinctio iusto alias facere mollitia hic ipsum aperiam, delectus a laboriosam. Expedita error dicta magnam iste et labore veritatis illo hic vero quae quidem quia nisi reprehenderit, unde, voluptatem esse consequuntur deleniti laboriosam? Perferendis.</p>
+        
+          </header>
+    
+          <section id="yetenekbolum">
+ 
+             <!-- <section> - Belgedeki bir bölümü tanımlar -->
+        
+             <h2>Yeteneklerim</h2>
+    
+             <ul>
+                <li><h5>Eğitim hayatım:</h5><p> Bok gibi</p></li>
+                <li><h5>Sosyal aktivitem:</h5><p> Asosyal bir piçim</p></li>
+                <li><h5>Hobilerim:</h5><p> Hayal dünyasında kaybolmak</p></li>
+                <li><h5>Hedeflerim:</h5><p> Geberene kadar yaşamak</p></li>
+             </ul>
+          </section>
+    
+          <section id="projebolum">
+    
+             <h2>Projelerim</h2><br>
+         
+             <ul>
+                 <li>
+                     <img src="https://source.unsplash.com/500x500" alt="" id="i1">
+                     
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae deleniti optio quisquam, exercitationem nemo amet inventore laboriosam? Illo similique ratione error assumenda tenetur totam incidunt, provident minima beatae distinctio asperiores fugit nihil sed accusamus illum voluptates placeat laudantium quae inventore, excepturi, dolorem blanditiis dolore. Voluptatum eligendi quae non incidunt harum?</p>
+                 </li>
+                 
+                 <li><img src="../YeniProjeler/resimler/1.jpg" alt="" id="i2">
+                     
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odio cumque ad facilis numquam. Perspiciatis ut, mollitia iusto velit numquam provident autem magnam porro asperiores officiis harum ipsum enim, nihil cupiditate laboriosam vitae itaque fugiat laudantium, architecto sit nobis dolor ducimus? Libero rerum molestiae beatae laboriosam dolores est, voluptatum numquam!</p>
+                 </li>
+                 
+                 <li><img src="../YeniProjeler/resimler/2.jpg" alt="logo"id="i2">
+ 
+                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, aliquam magnam porro illum repellendus eos asperiores quasi ab dicta numquam aut minus deleniti quo reprehenderit esse iusto quia suscipit adipisci libero similique laudantium. Maxime molestiae dignissimos fugit dolor repellendus quidem aperiam. Delectus mollitia magni id recusandae. Nemo temporibus sit praesentium?</p>
+                 </li>
+             </ul>
+          </section>
+    
+          <section id="mailbolum">
+             <label for="ad">Ad Soyad:</label>
+             <input type="text" name="ad" id="ad"><br><br>
+ 
+             <label for="email">E mail:</label>
+             <input type="text" name="soyad" id="soyad"><br><br>
+ 
+             <label for="adres">Adress:</label>
+             <textarea name="adres" id="adres" cols="30" rows="10"></textarea><br>
+ 
+             <input type="button" value="Gönder">
+          </section>
+    
+          <footer><h4>Teşekkürler Yarrağam</h4></footer>
+ 
+          <!-- <footer> - Bir belge veya bölüm için altbilgiyi tanımlar.Bunu en aşşağıya teşekkürler demek için kullandı. -->
+           
+     </body>
+     </html>
+
+     <!-- En sonda gönderi bölümünde formun içine yazmamışız, nereye gidiyor bu gönder. Gitmiyorsa formun içine mi yazmak lazım.
+
+         en başta methoda yazdığımız yere gidiyor, ama inputa ya da buttona yazarsan oraya gidiyor.
+
+         formaction ve formmethod ile nereye nasıl gideceğini yazabiliriz, zaten input submit direkt form elemtinde yazdığın şekilde gönderir. Ama istersen ona da yazabilirsin.
+
+     liste olarak hazıladık bölümleri ama o baştaki nokta resimlerin altında değil üstünde olmalı.
+
+     Listelemedeki noktaların fotoğrafların üstünde olmasını istiyorum ben, onu nasıl yapabiliriz bir araştır.
+
+         float ile bir şeyler yapabiliyorduk, o şekilde bir şeyler yap.
+
+     css ini farklı sayfada, ve ekranı ikiye bölerek css ve html kısmını da altlı üstlü ikiye bölerek ve classları vs düzgün yazarak yazmayı öğren.
+            
+     Bunu header e de yazabiliriz, ikisinde de ortalanıyor. Bu text-align'ın çalışma mantığını anlamam lazım. Araştır. 
+     
+         headeri text-align ile yazmaya çalış.
+         
+     roota veya parente göre yapman gerektiğini en başta belirt.
+     
+     Bu source.unsplash dan resim niye gelmiyor, bunu bir sor.
+     
+     farklı bir css dosyasında yapmayı ekle.
+     
+     borderini block elementlerde düzeltemk için yapısını değiştiriyorduk
+     
+     inline elementlerde text-align çalışmıyor. Direkt ebeveynine yazman lazım. zaten yatay bir hizalama.
+     
+     .h_hakkimda_yazi ya neden margin işlemiyor ? ama padding diyince tam istediğimiz oldu. Margin işliyor ama div onu kapsamıyor.
+     
+     burda da yine marginler birleşiyor.
+     
+     yeteneklerimde section margini kapsamıyordu, padding vererek çözdük o sorunu, margin ve paddin birleşmediği için de margini kaldırdık. Bunu iyice bir pratikle çöz sonra da ayrı bir projede bölüm yap.
+     
+     ul ye direkt flex center verince her şey yerli yerine oturdu, sangi bir dive veriyormuşuz gibi. Bunu bir çöz.
+     
+     ol li lerde numaralar linin içinde değil. ul li deki noktalar gibi aynı.
+     
+     görünüş için form ve fieldset de displayını değiştirdim acaba işleyişi bozuldumu, buna bak ve örneğine ekle.
+     
+     form sectionunda yanına footer eklemek için ilk inline yaptık ve backround coloru tamamen kayboldu, sonra inline-block yaptık o zaman istediğimiz oldu. Bunu bir araştır.
+     
+     footer ile formu birbirine oranlı yapmak için aynı divin içine koymak lazım. Hmm Bunu ekle, zaman kaybetmemek için bir şekilde bunu hatırlaman lazım. Bu projeyi flex den sonraya taşı ve burayı flex ile yap.--> 

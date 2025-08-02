@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- Css de rem ve em kavramı -->
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       html{ 
+         font-size:30px;
+       }
+            /* Bu bütün html dilindeki varsayılan font sizeleri değiştiriyor herhalde. */
+        
+       .parent{
+           font-size:15px;
+           width: 300px;
+           border:1px solid red;
+       }
+       .item{
+           height:30px;
+           background-color: orange;
+           margin:20px 0px;
+       }
+       .item-rem{
+           font-size: 2rem;                   
+       }
+       .item-em{
+           font-size: 2em;
+       }
+            /* em parente, rem ise root a bakar. 2rem diyince 60 px oldu çünkü root da 30 px di. 2em diyince 30 px oldu çünkü parent de 15px di. */
+       .item2-rem{
+            font-size: 2rem;
+       }
+       .item2-px30{
+            font-size: 30px;
+       }
+       .item2-px60{
+            font-size: 60px;
+       }
+
+            /* Burda da gördüğün gibi 2rem dedik ve roota bakıp iki katını yani 60px i ayarladı. */
+
+    </style>
+ </head>
+ <body>
+    <div class="parent">
+        <div class="item item-rem">Rem</div>
+        <div class="item item-em">Em</div>
+    </div>
+
+    <div class="parent">
+
+        <div class="item item2-rem">adadad</div>
+        <div class="item item2-px30">aldmas</div>
+        <div class="item item2-px60">aldmas</div>
+    </div>
+ </body>
+ </html>
+
+ <!-- px veya cm yerine rem ve em vererek yazmamız gerektiğini ekle, önce araştır tabii nedenlerini.
+  
+    Bu em ler önemli. Sayfanın ayarlarını değiştirsek de ona göre ayarlanıyor yine. px de aynı şey geçerli değil. Bunları kullanmayı alışkanlık haline getir.
+    
+        ekranı iki ye bölüp birince v studio birinde ise intarnet sayfasını aç.
+        hatta v stüdyoyu da dikey olarak ikiye böl, css ve html diye.
+        
+        html colors siteden baskın olan renk ailesini öğrenmeyi alışkanlık haline getir.
+        
+        font-size, padding vs her şeye rem veriyor. Sanırım bir boyut değişikliğinde rootu değiştirerek her şeyi değiştirebilmek için. -->

@@ -1,0 +1,47 @@
+Başlıkları Kullan.
+
+Paragarfı tanımlayan tag kullan.
+
+Sadece kalın gösteren ve tarayıcı için önemsiz olan tag kullan.
+
+Yeni satıra geçmek için kullanılan tag kullan.
+
+İçeriğin ayrılması için olan çizgisel tag kullan.
+
+Önceden biçimlendirilmiş metin tanımlayan tag kullan. İstediğin gibi biraz şekil ver.
+
+Tarayıcıya metnin ekstra önemli olduğunu anatan tag.
+
+Teknik terimi, başka dilden ifadeyi, gemi adını vs tanımlayan tag.
+
+Vurgulanan metni tanımlayan tag, ekran okuyucunun vurgulu okuması için de kullanılır.
+
+Telif hakları veya diğer yan yorumları tanımlayan tag.
+
+İşaretlenmesi ve vurgulanması gereken metni tanımlayan tag.
+
+Silinen, çıkarılan metni tanımlayan tag.
+
+içerisinde resim braındırabilen tagı kullan.
+
+Eklenen metni tanımlayan tag.
+
+Alt simge metnini tanımlayan tag.
+
+Üst simge metnini tanımlayan tag.
+
+Tanım ögesi anlamında olan ve ebeveyninin açıklamasını içermesi gereken tag. Ayrıca bir sıralaması vardı.
+
+Bir sayfadan diğerine köprü tanımlayan tag.
+
+Yine işaretlemek için kullanılan satır içi düzeyindeki tag.
+
+Kısa bir alıntıyı belirten tag.
+
+Başka kaynaktan alıntılanan bölümü belirten tag. Nasıl gösterdiğini de hatırla.
+
+Bir çalışmanın başlığını tanımlayan tag. (Adını değil.)
+
+Yazarın iletişim bilgilerini içeren tag. Ayrıca tarayıcı otomatik olarak ne yapıyordu.
+
+Metin için tanımlana yönü geçersiz kılmak için kullanılan tag.

@@ -1,0 +1,9 @@
+Bir buton kütüphanesi yap ve bu butonları şekillendir;yazıtipi, kenarlarını yuvarlaklaştırarak, gölge ekleyerek, üzerine gelme ve tıklanma durumlarında ayrı eylemler yaparak.
+
+    varsayılan, klasik, tarzlı, uyarı, büyük, küçük ve oval
+
+Artık bu ve bundan sonraki projelerde css i farklı bir belgeden al.
+
+Sonra yazma alanı kütüphanesi oluştur. Yine kenarlarını yuvarlaklaştırarak, gölge ekleyerek, üzerine gelme ve tıklanma durumlarında ayrı eylemler yaparak şekillendir.
+
+    varsaylan, başarı, uyarı, büyük, küçük, devre dışı.

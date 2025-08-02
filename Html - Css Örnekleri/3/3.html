@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ilk td:nth-child(odd), th:nth-child(odd){
+            background-color: aqua;
+
+        /* acaba bu sadece tablo için yapılmış bir özellik olabilir mi, çünkü her yerde tablo üzerinden gösteriliyor.
+
+        :nth-child() class veya id ile olmuyor, direkt elementin adını girmen lazım.
+
+        bunu td:nth-child(1), td:nth-child(2){ böyle tek tek yazmak lazım galiba. */
+
+        }
+        table, th, td{
+            border: 1px solid red;
+            border-collapse: collapse;
+
+            /* Buna sadece table dersek farklı oluyor; th,td,table dersek farklı oluyor. 
+            
+            Gördüğün gibi tableye böyle çerçeve veriyoruz, legend falan yok yani.*/
+
+        }
+        img{
+            height: 100px;
+        }
+        tr:nth-child(2) td:nth-child(5) {
+            display: none;
+        }
+
+        /* child de displayı da sayıyor ama displayın yerini öbür stünda olması gereken şey doldurur. Herhangi bir size farkı da olmuyor. */
+
+        tr:nth-child(2) td:nth-child(4){
+            text-align: center;
+        }
+        ul:nth-child(2){
+            list-style-type: georgian;
+        }
+
+        /* type satır stylesinde, list style type head da geçiyor ve özelliklerin adları da farklı.*/
+    
+        ul:nth-child(3){
+            list-style-type: circle;
+        }
+        ul:nth-child(4){
+            list-style-type: none;
+        }
+        caption{
+            caption-side: bottom;
+        }
+    </style>
+</head>
+<body>
+    <table id="ilk">
+        <caption>1. Tablo</caption>
+
+        <!-- <caption> etiketi bir tablo başlığını tanımlar. 
+
+        <caption> etiketi, <table> etiketinden hemen sonra eklenmelidir.
+
+        İpucu: Varsayılan olarak, bir tablo başlığı bir tablonun üzerinde ortalanmış olarak yer alır. Ancak, başlığı hizalamak ve yerleştirmek için CSS özellikleri text-align ve caption-side kullanılabilir.
+        
+        caption-side: Başlığın nerede olacağını belirtiyor. top ve bottom olarak kullanılabilir yazıyordu.
+
+        caption side sadece head a yazdığımız style de geçerli oluyor.
+        
+        İlk baş 2 kelimeyi alt alta yazdı çünkü tabloyu oluşturmadığımız için tablonun boyutu 0 px di. Ona göre hizalamaya ve uydurmaya çalıştı. 
+        
+        Text-align özelliği, bir öğedeki metnin yatay hizalamasını belirtir.
+
+            left Metni sola hizalar
+            right Metni sağa hizalar
+            center Metni ortalar
+            justify Satırları gerer, böylece her satır eşit genişliğe sahip olur (gazete ve dergilerdeki gibi)
+            initial Bu özelliği varsayılan değerine ayarlar. initial hakkında bilgi edinin
+            inherit Bu özelliği üst öğesinden devralır
+-->
+
+        <tr>
+
+            <!-- Bu sütun demek, bunun içine satırları yerleştiriyorsun. -->
+
+            <th  colspan="2">Ad & Soyad</th>
+
+            <!-- Bu satır başlık bloğu demek -->
+
+            <th>Yaş</th>
+            <th>Meslek</th>
+            <th>Fotoğraf</th>
+        </tr>
+
+        <tr>
+            <td>Çağlar</td>
+
+            <!-- Bu normal satır bloğu demek. -->
+
+            <td>OKCU</td>
+            <td>24</td>
+            <td>-</td>
+            <td>Öğrenci</td>
+            <td><img src="../../resimler/Biometrik.jfif" alt=""></td>
+
+            <!-- td ye 200px height vermeye çalıştım ama yine de img'nin boyutunu alıyor. İmg ye boyut verince düzeliyor.  -->
+        </tr>
+
+        <!-- tr lere border verilmiyor bu arada -->
+        
+    </table>
+
+    <ul>
+        <li>agu</li>
+        <li>bugu</li>
+        <li>cugu</li>
+    </ul>
+
+    <ul>
+        <li>xsx</li>
+        <li>ds</li>
+        <li>fe</li>
+    </ul>
+
+    <ul>
+        <li>fef</li>
+        <li>sad</li>
+        <li>das</li>
+    </ul>
+
+    <ul>
+        <li>asd</li>
+        <li>uw
+            <li>uwww
+                <li>uwwwww</li>
+            </li>
+        </li>
+        <li>re
+            <ul>
+                <li>wqe</li>
+                <li>q</li>
+                <li>ee
+                    <ul>
+                        <li>dw</li>
+                        <li>sad</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Burda da gördüğün gibi ul siz li lerin içine yazamıyoruz. 
+     
+            <ul>
+                <ul>
+                    1
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul> de o bir analmsuz çıkıyor ama ul kullanmamız lazım.
+    -->
+
+    <ol>
+        <li>s</li>
+        <li>qe</li>
+        <li>fg</li>
+    </ol>
+
+    <ol type="i" start="14">
+        <li>a</li>
+        <li>wqe</li>
+        <li>as</li>
+    </ol>
+
+    <ol type="I">
+        <li>ad</li>
+        <li>aw</li>
+        <li>af</li>
+    </ol>
+
+    <!-- list-style-type lar bunlarda işe yaramıyor. -->
+
+    <dl>
+        <dt>Silgi</dt>
+        <dd>silmeye yarar</dd>
+        <dt>Kalem</dt>
+        <dd>Yazmaya yarar</dd>
+    </dl>
+     
+        <!-- <dl> etiketi bir açıklama listesi tanımlar. <dl> etiketi, <dt> (terimleri/isimleri tanımlar) ve <dd> (her terimi/adını tanımlar) ile birlikte kullanılır. -->
+    
+</body> 
+</html>
+
+<!--
+    nth-child() çocuklarını değil, eşlerini kapsıyor. Ekle.
+    
+    :nth-child():nth-child() olmuyor, bunu yine de bir sor.
+    
+        denemede de en sonra list style type sadece nth-child(1) e etki ediyor, 2 3 e değil nedenini bul.
+
+        CSS :nth-child(n) sözde sınıfı, ebeveyninin n'inci çocuğu olan herhangi bir öğeyle eşleşir.
+
+            Bu sözde sınıf, öğeleri ebeveynlerinin çocuk listesindeki öğelerin dizinlerine göre eşleştirir.
+
+            n bir sayı/dizin, bir anahtar sözcük (tek veya çift) veya bir formül (an + b gibi) olabilir.
+
+            İpucu: Ebeveyninin aynı türünde (etiket adı) olan n'inci çocuğu olan öğeyi seçmek için :nth-of-type() sözde sınıfına bakın.
+        
+        Ben bunu bir tülü çözemedim. class veya id ile olmuyor, direkt elementin adını girmen lazım ama o zaman da ilk ögeyi seçemiyorsun. bir de nyh-of-type:() var, ebeveyni ile aynı olan çocuğu seçme.
+
+        ya div içinde div yapınca sadece çalışıyor yine direkt element adı ile ve 1 de hem belirttiğimiz ebeveyni hem de 1. çocuğu falan alıyor, çok garip bir şey. Neyse şuanlık birine sorulcak olarak ekleyelim, kullanmasak da olur gibi duruyor.
+
+        Bunun tablo için yapılan bir özellik olup olmadığını sor.
+
+        -webkit... gibi şeyler yani - ile başlayan şeyler nedir, bunları birine sor.
+
+        th lerin birini display le kaldırdın mesela ama ona nth-child ile bir şey verirsen ona sayılıyor yine, sırasına dikkat et.
+    -->

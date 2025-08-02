@@ -1,0 +1,11 @@
+En başta sayfanın varsayılan olarak koyduğu boşlukları kaldır. Boyutları ayarlarken işimize yarıyan hesaplama biçimini devreye sok. Yazı tipini ayarla.
+
+Bir başlık bölümü yap. Sol tarafında logo olsun ve sonra da anasayfa, iletişim gibi bir menü olsun. Yana doğru ve aynı hizada, boyutlarını ayarla.
+
+Menüye özel bir element vardı, sayfanın anlaması için onu kullan. Sonra kapsayıcısını değiştir ve Hizalarını, kaplıyacakları yerleri ayarla. Arka fonr rengi ve yazı rengi ata
+
+Sonra sayfa için bir açıklama yap, yine yazı boyutu, rengi, iç ve dış boşluklar olsun. başlık ve yazı diye iki element koy ve yer tutan elemtler ile pozisyonunu ayarla.
+
+Sonra sayfaya özgü içeriklerin olduğu bir bölüm olsun. Buna özel bir element vardı, içerde 3 başlık ve yazısı ve form bölümü olsun, yan yana yap, yine yer tutucu elementler ile pozisyonunu yap, form ve 3 yazı yan yana olsun.
+
+Sonra da bu siteyi sayfayı küçültünce yeniden pozisyonunu, elementlerin pozisyonunu ayarlıyacak şekilde yap.

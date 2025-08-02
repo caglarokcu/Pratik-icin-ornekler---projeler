@@ -1,0 +1,3 @@
+Spanı divleri ve btn yi şekillendir. Süsleme yap kafana göre. Bazı yerleri sayfada gözükmüyecek şekle getir.
+
+Elementleri en sağa ve sola yapıştıran üzerine de yanına gelecek elementleri, nasıl geleceğini yönlendirebildiğimiz bir yapı vardı. Onu kullanarak süsleme yap.

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b_klasik{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 0;
+            background-color: rgb(223, 223, 223);
+        }
+        .b_tarzli{
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 15%;
+            border-width: 2px;
+            background-color: rgb(242, 248, 204);
+            border-color: rgb(142, 146, 114);
+        }
+        .b_uyari{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(97, 26, 26);
+            background-color: rgb(245, 179, 179);
+            border: 2px solid rgb(128, 2, 2);
+            border-radius: 15%;
+        }
+        .b_buyuk{
+            font-size: 2rem;
+            border: 2px solid rgb(148, 147, 147);
+            border-radius: 7%;
+        }
+        .b_kucuk{
+            font-size: .5rem;
+        }
+        .b_oval{
+            border-radius: 50%;
+            width: 3rem;
+            height: 1.5rem;
+            border-width: 1.5px;
+        }
+        .b_klasik:hover,.b_buyuk:hover,.b_kucuk:hover,.b_oval:hover{
+            background-color: rgb(248, 247, 247);
+        }
+        input:hover{
+            box-shadow: -6px 5px 5px 1px rgb(110, 110, 110);
+        }
+    </style>
+</head>
+<body>
+    <button class="b_varsayilan">Varsayılan</button>
+    <button class="b_klasik">Klasik</button>
+    <button class="b_tarzli">Tarzlı</button>
+    <button class="b_uyari">Uyarı</button>
+    <button class="b_buyuk">Büyük</button>
+    <button class="b_kucuk">Küçük</button>
+    <button class="b_oval">Oval</button><br><br>
+
+    <input type="text" class="i_varsayilan" placeholder="Varsayılan">
+    <input type="text" class="i_basari" placeholder="Başarı">
+    <input type="text" class="i_uyari" placeholder="Uyarı">
+    <input type="text" class="i_buyuk" placeholder="Büyük">
+    <input type="text" class="i_kucuk" placeholder="Küçük">
+    <input type="text" class="i_devredisi" placeholder="Devredışı" disabled>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Şimdi kendimizi anlatan bir sayfa yapacağız. Bu sayfayı yaparken yazacağımız bölümleri tanımlayan bölüm kodlarıyla yaz.
+Bütün sayfada boşlukları kaldır ve yazı boyutu, satırlar arası boşluk gibi vs özellikleri bölümlere göre ayarla. Bu bölümlerde elemanların yan yana ya da alt alta gelmesi için yapılarını değiştir.
+
+Bir başlık bölümü yaz; adını yaz, büyük ve ortalı olsun. Altına bir çizgi çek ve hakkında bir yazı yaz, yazı kalınlığını ve arasındaki boşluğu ayarla, tabii roota oranla.
+
+Yetenklerim bölümü yaz, bölüm başlığı yaz, farklı renkte olsun ve bir liste şeklinde yetenklerini belirt, başlık ve birkaç kelime açıklama şeklinde olsun. 
+
+Projelerim bölümü yaz, bölüm başlığı yaz farklı renkte olsun ve bir liste şeklinde, fotoğraf ve altına proje açıklaması şeklinde yaz.
+
+Bir gönderi bölümü yaz. Ad soyad, email, adres ve gönder butonu olsun. Varsayılanlardan farklı yaz. Sadece border olsun ve imleci ayarla. Üstüne gelme ve odaklanma durumlarında değişmesin.
+
+En altta da bir teşekkürler bölümü olsun.

@@ -1,0 +1,11 @@
+Yine grid ile ilgili örnekler yapacağız.
+
+    sayfanın arka fon rengini, kapsayıcı etkinleştireceğimiz divi çocuklarının kaçıncı çocuk olduğuna göre arka fon renklerini ve o kapsayıcı divin arka fon rengini, yazı rengini, boyutunu vs ayarla.
+
+Sırasıyla örneklere gelecek olursak.
+
+    1) 3 eşit parçalı sütun ve 2 tane 200px satır ve 15px de boşluk olsun.
+
+    2) 11 eşit parça sütun olsun ve 40px 240px 40px şeklinde 3 satır olsun. Header, Menu, Content, footer diye 4 alan olsun. Birinin başlangıç ve bitiş noktalarını yazarak yerlerini belirle. Öbürlerinin de başlangıç ve kaç alan büyüyeceğini söyleyerek belirt.
+
+    3) Kapsayıcının olduğu elementin yüksekliği ekran kadar olsun. 8 eşit parça sütun ve 100px auto 100px satrılar olsun. Bu kez harita tarzıyla bölümlerin yerlerini belirle ve yukardaki gibi 4 bölüm olsun.

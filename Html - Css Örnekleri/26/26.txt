@@ -1,0 +1,7 @@
+tarayıcılar arası varsayılan element css farklarını kaldıran ve tarayıcıdaki varsayılan element csslerini silen iki hazır css dosyası vardı. Bunları bir çağır.
+
+bir div aç ve arka fonunu mavi yap.
+
+Sonra hangi tarayıcının neyi desteklediğini bulan site yardımı ile revert özelliğini destekleyenlar kullansın desteklemeyenlerin arka fonu green olsun. Şeklinde de.
+
+Sonra or ve and i kullanacak şekilde de bu özelliği kulandığın örenkler yap.

@@ -1,0 +1,1 @@
+Bir başlık, bir p, bir span ve bir tane daha p oluştur. Kökene bir ana renk ve border tanımla. Sonra bu elementleri o tanımladığımız renk kısa yolu ile renklendir ve border ver. Sadece span için o renki değiştir.

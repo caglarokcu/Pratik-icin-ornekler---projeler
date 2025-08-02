@@ -1,0 +1,8 @@
+.d1{
+    color: red;
+}
+.d1:hover{
+    border: 1px solid red;
+    background-color: rgb(252, 161, 161);
+    border-radius: 10%;
+}

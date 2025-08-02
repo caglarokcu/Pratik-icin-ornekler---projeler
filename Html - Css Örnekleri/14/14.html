@@ -1,0 +1,229 @@
+<!DOCTYPE html> <!-- flex ile örnek bir proje ve @media all and kullanımı. -->  
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/deneme.css"> <!-- Css dosyasını böyle bağlıyoruz. -->
+    <style>
+       *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ .container{
+    display: flex;
+    color: pink;
+    background-color: rgb(132, 0, 255);
+    justify-content: space-around;
+    align-items: center;
+ }
+ .logo{
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding: 1rem;
+    flex-grow: 1;
+ }
+ .nav{
+    flex-grow: 3;
+ }
+ .menu{
+    list-style: none;
+    display: flex;
+ }
+ .menu li{                             
+    flex-grow: 1;
+ }
+ ul li {
+    font-size: 1.2rem;
+    color:inherit;                     /*bunu yapmasak da aynı renk oluyordu, nedne?*/
+    text-decoration: none;             /*Buna gerek yoktu burda, neden adam bunu ekledi, bir şeyi kaldırmak için*/
+ }
+ .banner-text-item{            
+    margin:auto;              /*Sadece bunu yazdığımızda hiçbir şey olmadı neden ?*/
+    width: 70%;
+ }
+ .banner-text{ 
+    padding: 10%;                  /*Neden Bu kadar padding verdi, neye göre verdi acaba?*/
+    padding-bottom: 2%;
+    /* background-color: aqua;       böyle yapınca neden bütün alanı kaplıyor ki ?, resim gözükmüyor */
+ }
+ .banner-text-item h2{
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    color:#1d1b1b;                 
+ }
+ .banner-text-item p{
+    color:rgb(255, 22, 61);                 /*Buna inherit dediğimizde neden siyah renk oluyor.*/
+    font-size: 2rem;
+    line-height: 1.5;             /*Buna 1 rem verince neden birbirine giriyor.*/
+ }
+ .banner{
+    background: url('http://source.unsplash.com/1024x1024') no-repeat;
+    background-size: cover;         /*Bu olmayınca neden kaplamıyor?*/
+ }
+ .item{
+    flex:1;
+    padding: 2%;
+    line-height: 1.5;
+    text-align: center;      /*Bunun .bilig'ye yazılması gerekmiyor mu ?*/
+ }
+ .bilgi{
+    display: flex;
+    flex-wrap: wrap;  /*adam flex-wrap:wrap; yazdı. Bende olmadı ama, ya item'e width atayınca ya da nowrap yapınca oluyor.*/
+    flex-direction: row;
+    padding: 2%;
+ }
+ /* .item{
+    flex-grow:1;          burda herşeyi değiştiren bir şey var adam 295 in sonunda açıkladı.
+    padding: 2%;
+    line-height: 1.5;
+    text-align: center;      Bunun .bilig'ye yazılması gerekmiyor mu ?
+ }
+ .bilgi{
+    display: flex;
+    flex-wrap: nowrap;  /*adam flex-wrap:wrap; yazdı. Bende olmadı ama, ya item'e width atayınca ya da nowrap yapınca oluyor.
+    flex-direction: row;
+    padding: 2%;
+ } */
+ .item h2{
+    color:red;
+ }
+ .item p{
+    margin-top:.5rem;
+ }
+ .form-container{
+    background: url('http://source.unsplash.com/1024x1024') no-repeat;
+    background-size: cover;
+ }
+ .form-container h2{
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    background-color: red;
+    color: #1d1b1b;
+ }
+ .form{
+    display: flex;          /*ilk bunu yazdık ve bunu yazınca inputların ve textareanın şekli değişti, bu bize ne kanıtlar? */
+    flex-direction: column;
+    padding: 2rem;
+    width: 80%;
+    margin:auto;
+    align-items: center;
+ }
+ .form input, .form textarea{
+    width: 80%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    outline: none;
+    border: 1px solid black;
+    border-radius: .5em;
+ }
+ .form button{
+    width: 50%;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: white;
+    background-color: aqua;
+ }
+ @media all and (max-width:600px){   /* Bunu diyince büyütme ve küçültmede belli sınırlar koyabiliyoruz. all and demeden kabul etmiyor, neden acaba ?*/
+    .container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu{
+        flex-direction: column;
+        margin-top: .5rem;
+    }
+    .menu li{
+        padding:.5rem;
+    }
+    .banner-text-item h2{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        color:#1d1b1b;                 
+    }
+    .banner-text-item p{
+        color:rgb(255, 22, 61);        
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+    .banner-text{
+        flex-direction: column;     /*böyle yapınca adamda oldu ama*/
+    }
+ }
+
+    </style>
+ </head>
+ <body>
+    <div class="container">
+        <div class="logo">Logo</div>
+        <nav class="nav">
+                  <!-- <nav> etiketi bir dizi gezinme bağlantısı tanımlar.
+
+                  Bir belgenin tüm bağlantılarının <nav> öğesinin içinde olmaması gerektiğini unutmayın. <nav> öğesi yalnızca gezinme bağlantılarının büyük blokları için tasarlanmıştır.
+
+                  Engelli kullanıcılar için ekran okuyucular gibi tarayıcılar, bu öğeyi bu içeriğin ilk işlenmesinin atlanıp atlanmayacağını belirlemek için kullanabilir. -->
+
+            <ul class="menu">
+                <li>Ana Sayfa</li>
+                <li>Hakkımda</li>
+                <li>Portfolyo</li>
+                <li>Servsler</li>
+                <li>İletişim</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="banner">
+        <div class="banner-text">
+            <div class="banner-text-item">
+                <h2>Harika Web Sitem</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, debitis dolor? Praesentium modi, eaque itaque enim nemo, accusantium natus ipsum a sit cumque commodi dolor unde suscipit officiis ipsam esse dolorem nam mollitia sapiente illum? Natus atque eaque earum? Quidem nisi voluptate animi ea repellat esse dolore error modi molestias.</p>
+            </div>
+        </div>
+    </div>
+    <main class="bilgi">
+      <main> 
+      <!-- <main> etiketi bir belgenin ana içeriğini belirtir.
+
+      <main> öğesinin içindeki içerik belgeye özgü olmalıdır. Kenar çubukları, gezinme bağlantıları, telif hakkı bilgileri, site logoları ve arama formları gibi belgelerde tekrarlanan hiçbir içerik içermemelidir.
+
+      Not: Bir belgede birden fazla <main> öğesi olmamalıdır. <main> öğesi bir <article>, <aside>, <footer>, <header> veya <nav> öğesinin alt öğesi OLMAMALIDIR. -->
+            
+        <div class="item">
+            <h2>Ana Başlık</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, exercitationem aperiam! Quis repudiandae unde rem!</p>
+        </div>
+        <div class="item">
+            <h2>Ana Başlık</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, exercitationem aperiam! Quis repudiandae unde rem!</p>
+        </div>
+        <div class="item">
+            <h2>Ana Başlık</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, exercitationem aperiam! Quis repudiandae unde rem!</p>
+        </div>
+    </main>
+    <div class="form-container">
+        <h2>Bize Ulaşın</h2>
+        <form action="#" class="form"> HTML <form> <!-- öğesi, kullanıcı girişi için bir HTML formu oluşturmak için kullanılır: -->
+            <input type="text" placeholder="Adınız">
+            <input type="text" placeholder="Soyadınız">
+             <textarea name="" id="" placeholder="Mesajınız"></textarea> <!--Burda mesajınız çıkmıyordu, bir şey yaptık.-->
+            <button>Gönder</button>
+        </form>
+    </div>
+    </main>
+ </body>
+ </html>
+
+ <!-- flex:1 3 5; Bu bir kısaltma ve sırayla neler ifade ettiğini de yaz flexin örneğine ekle.
+  
+ .item e text-align:center; demişiz h2 ler falan bu yüzden prtalandı büyük ihtimal ama nasıl etki etti h2 nin içindeki yazıya, h2 ye yazılması gerekmiyormu bunu anlamadım bir araştır.
+
+ background diyip direkt url('') yazılabiliyor. backgound-image yazmamıza gerek yok acaba bu bir kısaltma mı bunu bir araştır.
+ 
+ main ile form-containeri bir divin içine almamış, iki tana iç içe main açmış, bu şekilde yapmış.
+ -->

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queryler ile Responsive Tasarımlar</title>
+    <style>
+    
+       body {
+           font-family: myfont, sans-serif;              /*nasıl bu ekranları intarnet sayfasında görebiliyorduk? 311*/
+       }
+
+       .div {
+           font-size: 200%;
+           color:purple;
+           font-weight: bold;
+       }
+
+       /* @media kullanımınada print screen speech olarak ayırabiliriz. print yazdırırken demek, screen monitör, telefon, tablet vs. ekranları demek ve speech de ekran okuyucu kullanımı için demek. Bir de pixel pixel ayırarak her ekrana göre ayarlayabiliyoruz.
+
+       Örenk olarak;
+
+       @media print{
+            .div{
+                color: orange;
+            }
+        }
+
+        Burda tarayıcıda normal gözüküyor ama yazdırma bölümüne girdiğimizde, ordaki ekranda yazının turuncu yazdığını görürüz.
+
+        @media all and (max-width:768px){
+            .div{
+                color: teal;
+            }
+        }
+
+        @media (min-width:1024px){
+            .div{
+                color: red;
+            }
+        }
+
+        Burda da all dedik ilk başta ama ikincisinde de default yani varsayılan özellik olarak all seçiliyor. Yani print, screen ve speech özellikleri. ilk baştki max-with ile 768px e kadar teal, 758px ve 1024px arası default renk ve 1024 den sonra red oluyor yazının rengi. */ 
+        
+        .container div{
+           display:none;
+           font-size: 200%;
+           font-weight: bold;
+       }
+       
+       @media (orientation:landscape){ /* Bu genişliği yüksekliğinden büyük oldu zaman demek.  */
+           .container div{
+               background-color: orange;
+           }
+       }
+
+       @media (max-width: 480px){
+           div.mobil{
+               display:block;
+           }
+       }
+       @media (min-width:481px) and (max-width:768px){
+        div.tablet{
+               display:block;
+           }
+       }
+       @media (min-width:769px) and (max-width:1024px){
+        div.laptop{
+               display:block;
+           }
+       }
+       @media (min-width:1025px) and (max-width:1200px){
+        div.desktop{
+               display:block;
+           }
+       }
+       @media (min-width:1201px){
+        div.large{
+               display:block;
+           }
+       }
+
+       /* Burda ilk baş block lardaki seçicilerde div i yazmamıştık ve ekrana çıkmıyorlardı, sonra dislpay:none; nin seçicisinin opacity sinin 011 olduğunu ve blocklarınkinin 010 olduğunu fark ettik. Bunun için block ların seçicilerine div ekledik ve aynı opacity değerine geldi ve onlar sonradan yazıldığı için geçerli oluyor.
+
+       f12 ye bastığında çıkan inceleme bölümünde üst tarafta ekran işareti ile toggle device toolbar var, lordan responsive ile ekranın büyüklüğünü ayarlayabilir ve orda yazan bazı telefon ve tabet ekranlarının ne görntülediğini görebilirsin. */
+ 
+    </style>
+ </head>
+ <body> 
+
+    <div class="container">
+        <div class="mobil">Mobil</div>
+        <div class="tablet">Tablet</div>
+        <div class="laptop">Laptop</div>
+        <div class="desktop">Desktop</div>
+        <div class="large">Büyük Ekran</div>
+    </div>
+ 
+ </body>
+ </html>

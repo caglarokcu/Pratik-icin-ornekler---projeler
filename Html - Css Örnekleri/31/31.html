@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       .div1{
+          width: 100px;
+          height: 100px;
+          color: white;
+          background-color: orange;
+          font-size: 2rem;
+       }
+ 
+       .div1:hover{
+
+          animation: name, duration, timing-function, delay, iteration-count, direction, fill-mode;
+
+          animation: renk-degistir 4s linear 1s infinite alternate forwards;
+       }
+
+       /* animationun özellikleri yukarda yazılı. ismi, süresi, ivmesi, gecikmesi, tekrarı(infinitie veya sayı), geri işleyip işlememesi, en son hangi halde kalması(altarnetive deme, forwards, backwards veya both). */
+
+       /* animasyonun adi ile aşşağıdaki keyframes den sonra gelen ad aynı olmalı ki bağlansınlar. */
+       
+       /* Burda animationu hover durumuna yazdığımız için tarayıcıda da hover durumunda gözüküyor incele de. */
+ 
+       @keyframes renk-degistir{
+ 
+          from{
+ 
+             background-color: red;
+          }
+ 
+          50%{
+             background-color: purple;
+          }
+ 
+          to{ 
+             background-color: teal;
+          }
+       }
+
+       /* Gördüğün gibi bu şekilde yazarak animasyonun her yerine müdahale edebiliriz. */
+ 
+       /* to yerine 100% de diyebiliriz, from yerine 0% da diyebiliriz */
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+       .div2{
+          width: 100px;
+          height: 100px;
+          color: white;
+          background-color: orange;
+          font-size: 2rem;
+       }
+       .div2:hover{
+
+        animation: renk-degistir-2 4s linear 1s 2 alternate backwards;
+       }
+
+       @keyframes renk-degistir-2{
+ 
+          from{
+ 
+             background-color: red;
+          }
+ 
+          50%{
+             background-color: purple;
+          }
+ 
+          to{
+             background-color: teal;
+          }
+       }
+
+       /* forwards animasyonun bitti yerde kal demek. backwards da ise beklemede froma gel orda bekle demek. both da ikisini de yap demek oluyor..  */
+  /* ----------------------------------------------------------------------------------------------------------------------- */
+       
+        .div3{
+          width: 100px;
+          height: 100px;
+          color: white;
+          background-color: orange;
+          font-size: 2rem;
+       }
+       .div3:hover{
+        background-color: black;
+
+        animation: renk-degistir-3 4s linear 1s 1 alternate forwards;
+       }
+
+       @keyframes renk-degistir-3{
+ 
+          from{
+ 
+             background-color: red;
+          }
+ 
+          50%{
+             background-color: purple;
+          }
+ 
+          to{ 
+             background-color: teal;
+          }
+       }
+
+
+       /* hover a başka bir background rengi verirsen beklemede ona geçer, animasyon bitince de ona geçer. Ama backwards ve forwards ile yani both ile çalıştırırsan o renk hiç gözükmez. */
+
+  /* ----------------------------------------------------------------------------------------------------------------------- */
+
+        .div4{
+          width: 100px;
+          height: 100px;
+          color: white;
+          background-color: orange;
+          font-size: 2rem;
+       }
+       .div4:hover{
+
+        animation: renk-degistir-4 4s linear 1s infinite alternate forwards,
+                   boyut-degistir 2s 1s 3 alternate forwards;
+       }
+
+       @keyframes renk-degistir-4{
+ 
+          from{
+ 
+             background-color: red;
+          }
+ 
+          50%{
+             background-color: purple;
+          }
+ 
+          to{ 
+             background-color: teal;
+          }
+       }
+
+       @keyframes boyut-degistir{
+          to{
+             width: 200px;
+             height: 200px;
+          }
+       }
+  
+       /* Bu şekilde iki farklı animasyon yazarak farklı özelliklere farklı değişimler ekleyebiliyorsun. */
+  /* ----------------------------------------------------------------------------------------------------------------------- */
+
+        .div5{
+          width: 100px;
+          height: 100px;
+          color: white;
+          background-color: orange;
+          font-size: 2rem;
+
+          animation: renk-degistir-5 4s linear 1s infinite alternate forwards,
+                     boyut-degistir-2 2s 1s 3 alternate forwards;
+
+          animation-name: renk-degistir-5, boyut-degistir-2;
+          animation-duration: 2s;
+          animation-timing-function: ease;
+          animation-delay: 1s;
+          animation-iteration-count: 2;
+          animation-fill-mode: both;
+          animation-direction: alternate;
+       }
+       .div5:hover{
+        animation-play-state: paused;
+       }
+
+       /* Bu şekilde bir kontrol durumu da yazabiliriz ve bu şekilde tek tek de tanımlayabiliriz.*/
+
+       @keyframes renk-degistir-5{
+ 
+          from{ /* 0% de diyebiliriz */
+ 
+             background-color: red;
+          }
+ 
+          50%{
+             background-color: purple;
+          }
+ 
+          to{ /* 100% de diyebiliriz */
+             background-color: teal;
+          }
+       }
+
+       @keyframes boyut-degistir-2{
+          to{
+             width: 200px;
+             height: 200px;
+          }
+         }
+    </style>
+ </head>
+ <body>
+
+    <div class="div1">DİV1</div><br>
+    <div class="div2">DİV2</div><br>
+    <div class="div3">DİV3</div><br>
+    <div class="div4">DİV4</div><br>
+    <div class="div5">DİV5</div><br>
+ 
+ </body>
+ </html>

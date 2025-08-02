@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            height: 200px;
+            width: 200px;
+            border: 1px solid red;
+            overflow: hidden;     
+            
+            /*Taşma özelliği, bir öğenin içeriği belirtilen alana sığmayacak kadar büyük olduğunda içeriğin kırpılıp kırpılmayacağını veya kaydırma çubukları eklenip eklenmeyeceğini belirtir.
+
+            Taşma özelliği aşağıdaki değerlere sahiptir:
+
+            visible - Varsayılan. Taşma kırpılmaz. İçerik, öğenin kutusunun dışında oluşturulur.
+            hidden - Taşma kırpılır ve içeriğin geri kalanı görünmez olur.
+            scroll - Taşma kırpılır ve içeriğin geri kalanını görmek için bir kaydırma çubuğu eklenir.
+            auto - Kaydırma özelliğine benzer, ancak yalnızca gerektiğinde kaydırma çubukları ekler.
+            Not: Taşma özelliği yalnızca belirtilen yüksekliğe sahip blok öğeler için çalışır.
+
+            Not: OS X Lion'da (Mac'te), kaydırma çubukları varsayılan olarak gizlidir ve yalnızca kullanıldıklarında gösterilir ("overflow:scroll" ayarlanmış olsa bile).*/
+            
+            /*overflow-x ve overflow-y özellikleri, içeriğin taşmasının yalnızca yatay mı yoksa dikey mi (veya her ikisi birden) değiştirileceğini belirtir:
+
+            overflow-x, içeriğin sol/sağ kenarlarıyla ne yapılacağını belirtir.
+            overflow-y, içeriğin üst/alt kenarlarıyla ne yapılacağını belirtir.*/
+        }
+    </style>
+ </head>
+ <body>
+    <div class="parent">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nisi illo illum. Minus aspernatur tempora amet, eaque molestias sunt libero animi id deleniti quasi incidunt fuga laborum ab, repellendus non facilis reiciendis vitae veritatis nemo, porro nobis labore quod mollitia tenetur? Aut eligendi perferendis cupiditate laboriosam consequatur officia soluta maiores!</p>
+    </div>
+ </body>
+ </html>

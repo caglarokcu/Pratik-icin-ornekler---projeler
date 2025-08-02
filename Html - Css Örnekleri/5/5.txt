@@ -1,0 +1,58 @@
+Bir form yap kısaca, şimdilik bir yere yollamamasını sağlıyorduk. Nasıl gönderilmesi gerektiğini de yaz ve hata vermemeis için bir attiribute ekle. 
+ 
+Formdaki girdileri forma özel bir guruplandırma elementi vardı ve tabii bir de başlık. İsim soy isim, cinsiyet, renk, şehir ve ekstra istekleri bölüm 1 de diğerlerini de bölüm 2 de iste. 
+
+girdi ve girdi başlıklarını bağla, girdinin ismine tıklanınca o girdiye focuslansın otobatik olarak. Bir de seçilen kutu Bunlardan aldığı değeri bilgisayarın hangi bölüme kaydedip nasıl ulaşacağımızı, işaretlemelerde ise o kutucuk işaretlenince farklı, istediğimiz başka bir değerde algılayabilmesini kontrol et. Bütün formda her istenilen bilgi için bunu kontrol et. Bunlara dikkat ederek forma şunları koy. 
+
+    İsim ve soyisim yazılacak bölümler(ad:___ şeklinde)
+
+        Bunların isim ve girdi kısmı(adınız: yazısı ve adını girmen gereken kutucuk) birbiri ile bağlantılı olmalı. İsime tıklayınca kutucuğa fokus atmalı. Yazacağımız her kutucukta böyle olmalı.
+    
+    Cinsiyet(tek seçim yapabilmeliyiz),Sevdiğin renk (birden fazla seçim) için kutucuklar koy. Bağzıları da seçili halde gelsin. Bir renk seçeneği de tıklanamaz olsun. 
+    
+    Şehir seçilecek bir yer(liste şeklinde aşşağı doğru açılan bir alan), yol-yemek tarzı istekleri belirtebileceğimiz bir yer(yine bir liste tarzı ama birden fazla seçim yapabileceğimiz, bir önceki listeden farklı). 
+    
+    Ekstra özellikler ve adres için yazabileceğimiz alan(Bunun boyutunu iki farklı şekilde ayarlıyabiliyorduk).
+
+    Bu bölümün hemen altına; gönder, sıfırla, üzerine basılaınca uyarı şeklinde teşekkürler yazdıran bir de içine resim olan 3 buton ekle.(gönder butonuna da gönderilecek yeri ekleyebiliyorduk ama bir durumda işe yaramıyordu)
+    
+    Bunun altına diğer seçenekleri kullanacağımız bir bölüm aç ve içine şu seçenekleri koy.
+
+        Bir text alanı
+
+            Bunu sadece okunur bir alan yap.
+    
+        Bir şifre kutucuğu
+
+            Burda girilebilcek en fazla karakteri belirt.
+        
+        Bir arama yapma kutucuğu
+    
+        Bir renk seçme kutucuğu
+    
+        Bir tarih seçme kutucuğu(normal, sadece ay veya hafta şeklinde farklı farklı yap. Hem tarih ve saati veya sadece saati de isteyebiliyorduk onları da yap.)
+        
+        Bir email kutucuğu
+
+            Bu alanı devre dışı bırak.
+    
+        Bir dosya yükleme alanı
+    
+        Bir sayı seçme kutucuğu 
+
+            Hangi aralıkta ve hengi kat sayıya sahip sayıları seçebileceğimizi ayarla.
+    
+        Bir ayarlama çubuğu
+
+            En az ve fazla hangi sınırlarda olacağını ayarla.
+
+        Bir telefon numarası kutucuğu
+        
+            Burda yer tutucu özelliğini kullan.
+
+        url yazabileceğimiz bir alan kullan.
+
+            Burda yardım edici ve o url nin açılmasını sağlayan iki kod vardı, onları kullan.
+        
+        Bir sorgu ve bir ilerleme etiketi vardı, bunları kullan.
+     

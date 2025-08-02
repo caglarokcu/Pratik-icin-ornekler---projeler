@@ -1,0 +1,5 @@
+İlk önce bütün html de font-sizeyi değiştir.
+
+Sonra çerçeveli bir divin içinde iki div şeklinde yap ve font-sizesini html in yarısı yap, arka fon renkleri ile göstererek oluştur. Sonra bir divin içini 2 roota bakan ölçü birimi öbürünü ise 2 parente bakan ölçü birimi yap ve yazı yaz.
+
+Aynı şekilde 3 div koy bu kez ve 2 roota bakan ölçü birimi yap. Öbürerlini ise bu kez piksel ile ayarla ve bu kez de böyle göster.

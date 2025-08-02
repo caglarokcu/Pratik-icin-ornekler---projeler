@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="css/normalise.css">
+     <link rel="stylesheet" href="css/reset.css">
+
+     <!-- normalise.css tarayıcılar arasındaki varsayılan element css i farklarını ortadan kaldırıyor. reset.css ise varsayılan element css lerinin çoğunu ortadan kaldırıyor. -->
+
+     <style>
+ 
+         div{
+             background-color: blue;
+             font-size: 2rem;
+             color: red;
+         }
+ 
+         @supports (background-color: revert){
+             .div{
+                 background-color: revert;
+             }
+         }
+ 
+         @supports not (background-color: revert){
+             .div{
+                 background-color: green;
+             }
+         }
+ 
+         /* background-color:revert; özelliği bütün arka plan özelliklerini siliyor, yani varsayılan haline geri getiriyor. */
+
+         /* Burda @supports ile background-color:revert; özelliğini destekleyen browser ler revert i kullansın, desteklemeyenler ise green yapsın dedik. Ama internet explorer, supports u da desteklemiyor. Bu yüzden hala mavi gösterecektir.*/
+
+         /* https://caniuse.com/ ile hangi tarayıcının neyi desteklediğini öğrenebilirsin. */
+
+ 
+         @supports (background-color: aqua) or (background-color: revert){
+             .div{
+                 background-color: aqua;
+             }
+         }
+ 
+         /* Bu şekilde or veya and ile bunu destekleyen yada bunu destekleyen, bunu ve bunu destekleyen de diyebiliyoruz. Şuna dikkat et div den önce . kullanıyoruz. Bu olmadığında hata veriyor. */
+         
+     </style>
+ </head>
+ <body>
+     
+     <div>CAN I USE ?</div>
+ </body>
+ </html>

@@ -1,0 +1,7 @@
+1 p ve 2 div oluştur, içine bir şeyler yaz.
+
+p nin ilek harfini büyük yap. İlk projede yaptığın yolla değil. Sonra ilk satırın arka fon rengini değiştir.
+
+Sonra ilk divin arka fon rengini değiştir ve boyutunu 100px 100px olarak ayarla. Sonra da öncesine ve sonra sına birer kelime ekle.
+
+Sonra aynı şekilde 2. divinde boyutunu ayarla, arka fon rengi değişik olsun. Bu kez öncesine ve sonrasına block olan 10px 10px boyutunda sarı arka fonlu bir kare ekle.

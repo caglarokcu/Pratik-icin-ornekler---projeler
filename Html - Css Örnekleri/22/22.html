@@ -1,0 +1,124 @@
+<!DOCTYPE html> seçiciler detaylı
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 2rem;
+        }
+        h3{
+            display: block;
+        }
+
+        /* element seçici */
+        
+        #h2ID{ 
+            background-color: red;
+        }
+
+        /* id seçici */
+
+        .paragrafsinif{
+            color: green;
+        }
+
+        /* sınıf seçici */
+        
+        div span{
+            color: purple;
+        }
+
+        /* divin içindeki spanları seç demek. Gördüğün gibi divin içindeki spanın çocuğu olan span da seçildi, yani divin içindeki bütün spanlar seçildi. */
+
+        div > span{
+            color:red;
+        }
+
+        /* Bu da divin direk çocuğu olan spanları seç demek. O yüzden divin içindeki spanın çocuğu olan span seçilmedi. */
+
+        div ∼ p{
+            background-color: blue;
+        }
+
+        /* bu işaretin nasıl yapıldığını bulamadım. Bunu bulunca buraya yaz */
+
+        /* Bu kardeşlerini seç demek ama gördüğün gibi üstteki p ler seçilmedi. Bu komut etki ettiği elementin altı için geçerli sadece. */
+
+        div + p{
+            background-color: green;
+        }
+
+        /* Bu da divden hemen sonra gelen p leri seç demek. */
+
+        h2:not(.h2sinif):not(.h222){
+            background-color: blue;
+        }
+
+        /* Bu da, not yani değil demek. Sınıf adı h2sinif olmayan h2 leri seç demek. */
+
+        input:not(:checked){
+            margin: 20px;
+        }
+
+        input[type="text"]:not(:checked){
+            background-color: red;
+        }
+
+         /* Gördüğün gibi checked kavramı bütün inputlara işlenebiliyor ama text de checked gibi bir olay yok, o yüzden sürekli kırmızı oldu. [type="text"] de attiribute oluyor. Attiributesi ile seçmiş oluyoruz. */
+
+        input[type]{
+            background-color: green;
+        }
+
+         /* Bak mesela direk sadece attiributenin ismini yazdık. İkisinde de type var o yüzden ikisini de seçti. Sadece checkbox a background-color atanmıyor. Ondan belli olmadı. Belki kafadan uydurduğumuz bir attiribute yi bile kullanabiliriz çünkü bu kod ona bakmıyor. Attiribute olarak yazılmış öyle bir şey var mı diye bakıyor.*/
+
+        input[data-margin*="co"]{ 
+            background-color: yellow;
+        }
+
+        /* Burada = den önce gelen * a dikkat et. Bu işaret içinde c ve o harfleri olan data-margin attiribute değerini aramasını sağlıyor. */
+    </style>
+ </head>
+ <body>
+    <input type="checkbox" name="" id="">
+    
+    <input data-margin="cacoooooo"type="text">
+    
+    <h2 id="h2ID" class="h2sinif">Başlık</h2>
+    
+    <h2>Başlık</h2>
+    
+    <h2>Başlık</h2>
+    
+    <p class="paragrafsinif">Paragraf1</p>
+    
+    <p>paragraf2</p>
+    
+    <div>
+        <p>bu etkilenmeyecek</p>
+        
+        <span>
+            
+            dışardaki span elementi
+            
+            <span>içerdeki span elementi</span>
+        </span>
+        
+        <p>bu etkilenmeyecek</p>
+        
+        <span>2.span</span>
+    </div>
+    
+    <p>paragraf3</p>
+    
+    <p>paragraf4</p>
+    
+    <div>Div 2</div>
+    
+    <p>paragraf5</p>
+ </body>
+ </html>
+
+ <!-- Bu projeyi 21 ile birleştirip tekrardan yaz. -->

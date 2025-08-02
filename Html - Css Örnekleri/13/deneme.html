@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con1_1,.con1_2,.con1_3,.con1_4,.con1_5,.con2_1,.con2_2,.con2_3,.con2_4,.con2_5{
+            height: 50px;
+            width: 50px;
+            background-color: orange;
+        }
+        .con1{
+            display: flex;
+            border: 1px solid red;
+            height: 200px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .con2{
+            border: 1px solid red;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .con2_1{
+            order: -50;
+            flex-grow: 0;
+        }
+        .con2_2{
+            order: 50;
+            flex-grow: 0;
+            align-self: flex-start;
+        }
+        .con2_3{
+            order: 0;
+            flex-grow: 0;
+            align-self: flex-end;
+        }
+        .con2_4{
+            order: -5;
+            flex-grow: 0;
+        }
+        .con2_5{
+            order: 5;
+            flex-grow: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="con1">
+        <div class="con1_1">1</div>
+        <div class="con1_2">2</div>
+        <div class="con1_3">3</div>
+        <div class="con1_4">4</div>
+        <div class="con1_5">5</div>
+    </div>
+
+    <div class="con2">
+        <div class="con2_1">1</div>
+        <div class="con2_2">2</div>
+        <div class="con2_3">3</div>
+        <div class="con2_4">4</div>
+        <div class="con2_5">5</div>
+    </div>
+</body>
+</html>

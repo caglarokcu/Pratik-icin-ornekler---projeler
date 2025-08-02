@@ -1,0 +1,311 @@
+<!DOCTYPE html> <!-- Html de form, label, input, legend, fieldset, datalist, select ve button özellikleri ve bunları nasıl çalıştıkları; name, action, method, value... -->
+<html lang="en">
+
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">                  
+    </head>
+    <style>
+        img{
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+
+    <body>
+        
+        <form action="değerleri al bla bla" method="post"> 
+
+            <!-- form> etiketi, kullanıcı girişi için bir HTML formu oluşturmak için kullan -->
+
+            <!-- <form action="#" method="get" novalidate>     action demek nereye yollayacağını söyler, # ile şimdilik bir yere yollama diyoruz  novaludate diyince uyarılar çıkmıyor direk gönderiyor. Bu özellik doğru ya da yanlış olmasıyla ilgilenme demek, bu yüzden hata vermiyor ve direkt kabul ediyor. -->
+
+            <!-- Method niteliği, form verilerinin nasıl gönderileceğini belirtir. Form verileri, URL değişkenleri (method="get" ile) veya HTTP post işlemi (method="post" ile) olarak gönderilebilir.
+            
+            GET ile ilgili notlar:
+                Form verilerini ad/değer çiftleri halinde URL'ye ekler
+                URL'nin uzunluğu sınırlıdır (yaklaşık 3000 karakter)
+                GET'i asla hassas verileri göndermek için kullanmayın! (URL'de görünür olacaktır)
+                Kullanıcının sonucu yer imlerine eklemek istediği form gönderimleri için yararlıdır. POST içeren form 
+             gönderimleri yer imlerine eklenemez.
+                Google'daki sorgu dizeleri gibi güvenli olmayan veriler için daha iyidir. 
+                
+            POST ile ilgili notlar:
+                Form verilerini HTTP isteğinin gövdesine ekler (veriler URL'de gösterilmez)
+                Boyut sınırlaması yoktur. -->
+
+            <fieldset>
+
+                <legend>İsim Bilgileri</legend>
+
+                <!-- <fieldset> etiketi, bir formdaki ilgili öğeleri gruplamak için kullanılır. <fieldset> etiketi, ilgili öğelerin etrafına bir kutu çizer. <legend> etiketi, <fieldset> öğesi için bir başlık tanımlamak için kullanılır. -->
+
+                <label for="ad">Adınızı Giriniz:</label>
+                <input type="text" id="ad" name="ad">
+            
+                <!-- <label> etiketi çeşitli öğeler için bir etiket tanımlar.
+
+                Labeli tıklayıncı id ile atanmış inputa gider. Labeldeki for ile inputtaki id nin aynı olması bunarı birbirine bağlar.
+
+                Yukarıdaki öğelerle etiketlerin doğru kullanımı şunlara fayda sağlayacaktır:
+                Ekran okuyucu kullanıcıları (kullanıcı öğeye odaklandığında etiketi yüksek sesle okuyacaktır)
+                
+                Çok küçük bölgelere (örneğin onay kutuları) tıklamakta zorluk çeken kullanıcılar - çünkü bir kullanıcı <label> öğesi içindeki metne tıkladığında, girdiyi değiştirir (bu, isabet alanını artırır).
+                
+                İpucu: Bir etiket, öğeyi <label> öğesinin içine yerleştirerek de bir öğeye bağlanabilir.
+
+                <input> etiketi, kullanıcının veri girebileceği bir giriş alanı belirtir. <input> öğesi en önemli form öğesidir. Type niteliğine bağlı olarak çeşitli şekillerde görüntülenebilir.  -->
+
+                <label for="soyad">Soyadınızı Giriniz:</label>
+                <input type="text" id="soyad" name="soyad">
+
+                <!-- Name yazdığımız kelime o girdiden alınacak değerin neyi temsil ettiğini belirler. Bu name ye yazdığın isim ile o değere ulaşırız. Value ise bilgisayarın hangi değeri anlaması gerektiği. -->
+            
+                <br><br>
+        
+            </fieldset>
+
+            <Fieldset>
+                <legend>Sikko bilgiler</legend>
+
+                <label for="erkek">Erkek:</label>
+                <input type="radio" name="cinsiyet" value="erkek" id="erkek" checked="checked">
+
+                <!-- "Onay kutusu", "radyo", "image" için - girişle ilişkili değeri tanımlar (bu aynı zamanda gönderim sırasında gönderilen değerdir) -->
+
+                <label for="kadın">Kadın:</label>
+                <input type="radio" name="cinsiyet" value="kadın" id="kadın"><br><br>                                   
+    
+                <label for="yeşil">yaşil:</label>
+                <input type="checkbox" name="renk" id="yeşil" value="yeşil" checked="checked">
+                
+                <!-- checked de seçili olmasını sağlar.  -->
+    
+                <label for="mavi">mavi:</label>
+                <input type="checkbox" name="renk" id="mavi" value="mavi">
+    
+                <label for="sarı">sarı:</label>
+                <input type="checkbox" name="renk" id="sarı" value="sarı" disabled><br><br>
+
+                <!-- Checkbox ve radio arasındaki fark checkboxlar birden fazla işaretlenebiliyor, sanki bu özellik sende varsa tik at gibi bir kullanımı var. Radioda ise tek biri seçilebiliyor. Hangisi sende varsa onu seç gibi bir kullanımı var. -->
+
+                <!-- disabled in farkı submit edildiğinde karşıya gitmez bu alan. Zaten tıklanamıyor da -->
+
+                <label for="sehir">Şehir girin</label>
+                <input list="sehirler" id="sehir" name="sehir" multiple>   
+            
+                <datalist id="sehirler">                                  
+                    <option value="İstanbul">
+                    <option value="Ankara">
+                    <option value="İzmir">
+                </datalist><br><br>
+
+                <!-- type="" yerine list="" yapınca aşşağdaki data list ile böyle bir şey de yapabilirsin. datalist in id si list ile aynı olmalı.-->
+
+                <label for="ekstra">Ekstra istekler</label>
+                <select name="ekstra" id="ekstra" multiple size="2" multiple>  
+            
+                    <option value="Yol">Yol</option>
+                    <option selected value="Yemek">Yemek</option>
+                    <option value="Esnek iş saatleri">Esnek iş saatleri</option>
+                    <option value="Hafta sonu ek mesai">Hafta sonu ek mesai</option>
+                    <option value="Primler">Primler</option>
+
+                </select>
+            
+                <!-- Select ve içine de option koyarak böyle bir şey yapabiliyoruz, size genişliği ve multiple de ctrl tuşu ile birdan çok seçeneği birden seçmemiz sağlıyor. -->
+
+                <br><br>
+
+                <label for="adres">Adress</label>
+                <textarea name="adres" id="adres" cols="50" rows="3">adwad</textarea>
+
+                <br><br>
+
+                <label for="ozellik">Ekstra özellikler</label>
+                <textarea name="ozellik" id="ozellik" style="width: 200; height:300;"></textarea> 
+                
+            </Fieldset>
+        
+            <input type="submit" value="gönder" formaction="test.php">
+        
+            <!-- formaction ile form daki hedef gibi bir hedef belirleyebilirsin ve gördüğün gibi ikisi de olunca form actionun söylediği yere gidiyor. -->
+            
+            <input type="reset" value="temizle">
+            
+            <!-- Value; "Düğme", "sıfırla" ve "gönder" için düğmedeki metni tanımlar -->
+            
+            <button type="button" onclick="alert('Teşekkürler')" class="b1">
+                <img src="../../resimler/360_F_136706734_KWhNBhLvY5XTlZVocpxFQK1FfKNOYbMj.jpg" alt="">
+            </button><br><br> 
+            
+            <!-- Bunun <input type="button"> dan bir farkı var o da bunun içine bir resim vs. koyabiliriz.-->
+            
+            <fieldset>
+                <legend>Diğerleri</legend>
+
+                type text: <input type="text" value="Çağlar OKCU" size="20" readonly>
+                
+                <!-- Readonly de o değerin değiştirilememesini, salt okunur olmasını sağlıyor. Salt okunur bir giriş alanı değiştirilemez ancak kullanıcı sekmeyle bu alana gidebilir, onu vurgulayabilir ve buradan metni kopyalayabilir.
+
+                Salt okunur öznitelik, diğer bazı koşullar karşılanana kadar (bir onay kutusunun seçilmesi vb.) kullanıcının değeri değiştirmesini engellemek için ayarlanabilir. Daha sonra bir JavaScript salt okunur değeri kaldırabilir ve giriş alanını düzenlenebilir hale getirebilir.
+
+                Not: Bir form salt okunur bir giriş alanı göndermeye devam eder, ancak devre dışı bırakılmış bir giriş alanı göndermez! -->
+                
+                <br><br>
+
+                type pasword: <input type="password" maxlength="20">
+                
+                <!-- Maxlength yazabilceğin karakter, size="" ise kutucuğun görüntü olarak karakter büyüklüğü. -->
+
+                <br><br>
+
+                type search: <input type="search">
+                
+                <br><br>
+
+                type color: <input type="color" name="color">
+                
+                <br><br>
+
+                type date: <input type="date" name="date" max="2022-04-04" min="2019-04-04">
+
+                <br><br>
+
+                type mounth: <input type="month" min="2020-04" max="2020-09">
+                
+                <br><br>
+
+                type week: <input type="week">
+                
+                <br><br>
+
+                type time: <input type="time">
+                
+                <br><br>
+
+                Birthday (date and time): <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+                
+                <br><br>
+                
+                type e mail: <input type="email" name="email" value="xxx@gmail.com" disabled>
+
+                <!-- Bu da yukarda bahsettiğimiz devre dışı bırakma özelliği -->
+                
+                <br><br>
+
+                type file: <input type="file"> 
+
+                <!-- Not: Value özelliği <input type='file'> ile kullanılamaz. -->
+                
+                <br><br>
+
+                type number: <input type="number" min="19" max="99" required step="5">
+                
+                <!-- Bu alanı doldurmadan göndermiyor, step de sayıları 1 er arttırılmasını değiştiriyor ve step e uygun olmayan sayıyı göndermiyor.-->
+
+                <br><br> 
+
+                type range: <input type="range" min="5" max="10">
+                
+                <br><br>
+
+                type tel: <input type="tel" name="telefon" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="555-22-444">
+                
+                <!-- Yer tutucu özelliği, bir giriş alanının beklenen değerini açıklayan kısa bir ipucu belirtir (örn. örnek değer veya beklenen formatın kısa açıklaması).
+
+                Kullanıcı bir değer girmeden önce giriş alanında kısa ipucu görüntülenir.
+
+                Not: Yer tutucu özelliği şu giriş türleriyle çalışır: metin, arama, url, numara, tel, e-posta ve şifre. -->
+
+                <br><br>
+
+                type url: <input type="url" autofocus autocomplete> 
+                
+                <!-- Sayfa açılınca direk bu alanın seçilmesini autofocus sağlar. Autocomplate de tarayıcının yardımcı olmasını sağlar, url giriyorsa daha önce girilmiş url ler gelir. -->
+
+                <br><br>
+
+                <label for="disk_c">Disk usage C:</label>
+                <meter id="disk_c" value="2" min="0" max="10">2 out of 10</meter>
+                <br>
+                <label for="disk_d">Disk usage D:</label>
+                <meter id="disk_d" value="0.6">60%</meter>
+
+                <!-- <meter> etiketi, bilinen bir aralıktaki skaler ölçümü veya kesirli bir değeri tanımlar. Buna aynı zamanda ölçü aleti de denir. Örnekler: Disk kullanımı, sorgu sonucunun alaka düzeyi vb.
+
+                Not: <meter> etiketi ilerlemeyi belirtmek için kullanılmamalıdır (ilerleme çubuğunda olduğu gibi). İlerleme çubukları için <progress> etiketini kullanın. -->
+
+                <label for="file">Downloading progress:</label>
+                <progress id="file" value="32" max="100"> 32% </progress>
+
+                <!-- <progress> etiketi bir görevin tamamlanma ilerlemesini temsil eder. 
+                İpucu: Bir görevin ilerlemesini görüntülemek için <progress> etiketini JavaScript ile birlikte kullanın.
+                Not: <progress> etiketi, bir göstergeyi temsil etmek için uygun değildir (örneğin, disk alanı kullanımı veya bir sorgu sonucunun alaka düzeyi). Bir ölçeri temsil etmek için bunun yerine <meter> etiketini kullanın. -->
+       
+            </fieldset>
+        </form>    
+    </body>
+</html>
+
+
+ <!-- Eklenecekler:
+
+    Sorgu dizesini birine sor. Sanırım web tasarımı ile yazdığımız bu form kodunu diyor. Get in özelliklerinde sondaki özelliğe ek olarak yazmışım.
+
+    name her şeyde olması lazım geliba. Sonuçta hangi değer olarak kaydedileceğinü söylüyor.
+
+    Bir de inputlar ve gönder butonu bir form elementinin içinde olmadığında çalışmıyor.
+
+    bir etiketi veya öğeyi labele yerleştirerek de ögeye bağlayabiliyoruz. Projeye ekle.
+
+    button da formaction un gönderdiği yere gidiyor, fomr elementindeki actiondansa, bunu ekle.
+
+    list ile select arasında sanırım birden fazla seçenek farkı var. Ekle.
+
+    Tarih seçmede max ve min kavramlarını ekle.
+
+    Aylara göre tarih seçmeyi araştır max ve min kavramlarını ve ekle, aynı şekilde haftaları da.
+
+    url sanırım sayfaya bağlamıyor, sadece sizden bir adres alıyor ve o adresi de kontrol ediyor. url demek, https://youtube.com gibi bir adres. www yok.
+
+    mater etiketini kullanmayı araştır ve ekle. Sanırım doğru bilgi vermesi için value ye js ile bir kod yazmamız lazım.
+
+    http nedir araştır.
+
+    legend ve fieldsed i iste.
+
+    tamizle yazısını butonun içine yazdırmayı iste.
+
+    sizenin de her şeyde çalışıp çalışmadığını bul ve ekle.
+
+    sanırım o gönder sadece içinde olduğu fieldseti kapsıyor.
+
+    sayıya kaçar kaçar artçağını ve en fazla en az kavramlarını ekle.
+
+    ayarlama çubuğuna max min ve range katmanlaırını ayarlamayı ekle.
+
+    gösterge için mater, ilerleme için progress
+
+    Baya bir eksik var, örnek proje'de olan şeyleri iste.
+
+    dive, p ye span a yapılabiliyor ve satırın yükseklik boyutunu belirtiyor. Bu elemendtin içindeki satırlar da justify-content: speace-around; daki gibi yer alıyor. Zatan bu satırların şekillenmesi de flexe göre yapılmış. Yazıları şekillendirirken text-align, justify-contetn falan diyorduk hatırla. Bunu uygun projeye kele.
+
+    vertical-align kavramını uygun projeye kele.
+
+    İkince bölümde yazlılanları yapacak şekilde iste.
+    
+    name ile tek çatı altına toplanıyor radio da.
+
+    Renkleri de yapılacak maddelere ekle.
+
+    datalist ve selecta hangisinde multiple nin işe yaradığını da ekle.
+
+    butonları 1. bölümün altına koy. value ve formactionu ekle. Butonla da bunları yap.
+
+    2 kısımda text alanındaki sizeyi iste.
+
+    2. Kısımda valueler ile içinin bir değerde olmasını sağlamayı iste.
+
+    tel de pattern i iste
+    -->

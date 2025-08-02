@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .header{
+            background-color: aquamarine;
+            margin: 10px;
+            margin-bottom: 0px;
+        }
+        .h_baslik{
+            text-align: center;
+            color: rgb(65, 65, 65);
+            padding-block: 10px;
+        }
+        .h_hakkimda{
+            background-color: rgb(250, 196, 96);
+            width: 75vw;
+            text-align: center;
+            margin-inline: auto;
+        }
+        .h_hakkimda_baslik{
+            text-align: center;
+            color: rgb(90, 90, 90);
+            padding-block: 10px;
+        }
+        .h_hakkimda_yazi{
+            padding-block-end: 10px;
+        }
+        .yet_baslik{
+            text-align: center;
+            margin:10px;
+            margin-top:0px;
+        }
+        .yet_list_1,.yet_list_2,.yet_list_3{
+            margin-block: 10px;
+            margin-inline: 30px;
+        }
+        .yet{
+            background-color: rgb(168, 58, 58);
+            margin-inline: 10px;
+            padding-block:10px ;
+        }
+        img{
+            height: 200px;
+        }
+        .pro_list{
+            display: flex;
+            margin: 20px;
+            margin-bottom: 0px;
+            text-align: center;
+            gap: 15px;
+        }
+        .pro_baslik{
+            text-align: center;
+        }
+        .pro{
+            background-color: rgb(142, 250, 142);
+            padding-top: 10px;
+            margin-inline: 10px;
+        }
+        /* .form_form{
+            display: inline;
+        } */
+        .foot_div1_form_field{
+            display: inline;
+            padding: 10px;
+            margin-inline: 15px;
+            text-align: center;
+        }
+        .foot{
+            display: flex;
+            margin: auto;
+        }
+        .foot_baslik{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="h_baslik">Çağlar OKCU</h1>
+
+        <div class="h_hakkimda">
+
+            <h3 class="h_hakkimda_baslik">Hakkimda</h3>
+
+            <p class="h_hakkimda_yazi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nesciunt natus officia iusto reiciendis? Cumque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem animi tempore repellat nam recusandae reiciendis ipsum minima dolorum, omnis harum.</p>
+        </div>
+    </header>
+    
+    <hr>
+
+    <section class="yet">
+        <h3 class="yet_baslik">Yeteneklerim</h3>
+
+        <ul class="yet_list">
+            <li class="yet_list_1"><strong>Lorem, ipsum dolor.</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolor nulla praesentium repellendus ut corrupti.</p>
+            </li>
+
+            <li class="yet_list_2">
+                <strong>Lorem, ipsum dolor.</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolor nulla praesentium repellendus ut corrupti.</p>
+            </li>
+            
+            <li class="yet_list_3">
+                <strong>Lorem, ipsum dolor.</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolor nulla praesentium repellendus ut corrupti.</p>
+            </li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section class="pro">
+        <h3 class="pro_baslik">Projelerim</h3>
+
+        <ol class="pro_list">
+            <li class="pro_list_1">
+                <img src="../../resimler/1.jpg" alt="" class="pro_list_1_img">
+
+                <p class="pro_list_1_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eius dolores omnis, officiis molestiae qui.</p>
+            </li>
+            
+            <li class="pro_list_2">
+                <img src="../../resimler/2.jpg" alt="" class="pro_list_2_img">
+
+                <p class="pro_list_2_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eius dolores omnis, officiis molestiae qui.</p>
+            </li>
+
+            <li class="pro_list_3">
+                <img src="../../resimler/3.jpg" alt="" class="pro_list_3_img">
+
+                <p class="pro_list_3_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eius dolores omnis, officiis molestiae qui.</p>
+            </li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <footer class="foot">
+        <div class="foot_div1">
+            <form action="#" class="foot_div1_form" method="get">
+
+                <fieldset class="foot_div1_form_field">
+                
+                    <label for="ad" class="foot_div1_form_ad_label">Adınız:</label>
+                    <input type="text" id="ad" class="foot_div1_form_ad_input"><br><br>
+
+                    <label for="soyad" class="form_form_soyad_label">Soyadınız:</label>
+                    <input type="text" id="soyad" class="foot_div1_form__soyad_input"><br><br>
+
+                    <label for="email" class="foot_div1_form_email_label">eMail:</label>
+                    <input type="email" id="email" class="foot_div1_form_email_input"><br><br>
+
+                    <input type="submit" class="foot_div1_form_submit">
+            
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="foot_div">
+            <h3 class="foot_baslik">Teşekkürler</h3>
+        </div>    
+    </footer>
+</body>
+</html>

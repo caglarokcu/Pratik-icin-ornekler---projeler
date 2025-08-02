@@ -1,0 +1,23 @@
+Şimdi birkaç örnek yapacağız. Örnekler şu şekilde olacak:
+
+    Bir divin içinde 5-6 tana div oluştur. Sonra ızgara kaplayıcısı ile o divlerin nerede olacağını belirle ve tabii o divlere çerçeve, arkafon rengi ve aralarına boşluk atayarak örnekte anlatmak istediğimizi önplana çıkar.
+
+Örnekler:
+
+    1) Sütunları 300px auto 300px olsun.
+
+    2) Sütunları oranlayarak yap, 2 sütun olsun ve 2 ye 1 oranında olsun. Sonra da divlere isimler tanıyarak bir harita şeklinde hangisinin nerde olacağını belirle ve farklı boyutlarda olsun.
+
+    3) Bu kez de sütunlar tekrar komutuyla ve hepsi aynı oranda olan 3 sütun olacak şekilde olsun.
+
+    4) Yine repeat komutu ile yap ve en az 300px ve en fazla da eşit boyutta bölünecek şekilde olsun.
+
+    5) Yine 3 sütün ve farklı oranlarda olsun. Divlerin konumunu belire, harita tarzında yer belirleme kullanmadan.
+
+    6) Bu kez de çocuklara göre otamatik olarak kendi sütun oluşturacak şekilde yaz.
+
+    7) 3 sütun olsun ve 200px (en az 200px, en fazla da olduğu kadar.) 200px şeklinde olsun.
+
+    8) 3 sütun olsun ve auto (en az yer kaplıyacak şekilde) auto olsun.
+
+    9) 3 sütun olsun ve auto (en fazla yer kaplıyacak şekilde) auto olsun. 

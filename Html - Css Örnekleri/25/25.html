@@ -1,0 +1,164 @@
+<!DOCTYPE html> tooltip yapımı
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,*::before,*::after{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin-top: 300px;
+            font-size: 2rem;
+        }
+
+        [data-tooltip]{                   
+            background-color: red;
+            position: relative;
+        }
+
+        /*Tooltip dediğimiz şey yazının üstünde çıkan açıklama kutucuğu gibi şeylerdir. Burda attribute si data-tooltip i içeren her şey her şey dedik. Bu arada .data-tooltip yazmak ile bunun hiçbir farkı yok, birinde attiribute atıyor öbüründe calss 1. örnekte bu tooltipi kullandık mesela. */
+
+        /* position relative önemli çünkü eğer bunu yapmazsak body e göre konumlanır. */
+
+        /* display: inline-block; Bunu yapmazsan eğer çıkan tooltip kendini alt satıra göre konumlandırıyordu, span inline bir element olduğu için. Burda dedi inline elementlerde genişlik yükseklik kavramları kullanılmaz. Ama inline block diyince demiş oluyoruz ki sen inlinasın ama block gibi davran. Burda aslında spanın yapısını değiştiriyoruz, ne demiştik ha .class ha [data-tooltip], yani sapan yerine div kullanarak da bu sorunu çözebiliriz, ya da bu şekilde spanın displayını değiştirerek de. */
+
+        [data-tooltip]:hover::before{
+            content: attr(data-tooltip); 
+            position: absolute;
+            /* top: -100%;*/
+            left: 50%;
+            transform: translate(-50%, calc(-100% - 30%)); 
+            background-color: black;
+            color: white;
+            border-radius: .3rem;
+            padding: .5rem;
+            text-align: center; 
+            width: max-content;
+            max-width: 100%;
+        }
+
+        /*contentin içini sürekli tekrar tekrar yazıp içeriğini değiştirmektense bu komut ile data-tooltip attribute sine yazılan yazıyı çağırıyoruz direkt. Yani 1-2-3-4-5 gelmiş oldu ve bu elementten elemente değişecek.*/
+
+        /* Burda absolute dedik ve yukarıya da relative çünkü çıkan tooltipin yazıya göre olmasını istiyoruz.*/
+        
+        /* top: -100%; yokardan aşşağı içeriğin kadar in demek. */
+
+        /* Bu da yeni bir method, içeriğin kendi boyutlarına göre hizalanmasına yarıyor. Yoksa top left ::beforaye göre değil de elemente göre haraket ediyor. yukarda top: -100%; yi bu yüzden yorum satırına aldık, çünkü burda ilk belirttiğimiz % lik x ekseninde, sonraki de y ekseninde kaydırıyor ve işimizi haletmiş olduk. Bunu kullanmak zorundayız çünkü left:50%; çıkan içeriğin sabitlenmiş içeriğin tam yarısından itibaren başlamasını sağlıyor, ortalayamıyoruz bununla yani.*/
+
+        /* width: max-content; Genişliğin kadar yer tut diyoruz max-content ile yoksa kendi kendine satırlara bölüyor. */
+        
+        /* max-width: 100%; Burda da en fazla genişliğin content ini yani o asıl içeriği geçmesin, o yazıyı geçmesin diyoruz. Böylece yukarıdaki width ile birlikte olabildiğince genişliyor ve contentini geçtiği zaman wrap yapıyor.*/
+        
+        /* Bir de calc(-100% -30%) var bildiğin 4 işlem yapmamızı sağlıyor. 100% - .5rem gibi kavramları bu şekilde yapabiliriz. transform: translate(50%, -130%) demek yerine transform:translate(-50%, calc(-100% - 30%)) dedik, ikisi de aynı şeyi ifade etti.*/
+
+        /*text-align: Birden fazla satır koyduk mesela, düz yazı gibi çıkmasın da satırlar ortalansın diye bunu yaptık. */
+
+        [data-tooltip]:hover::after{
+            content: '';
+            color: white;
+            border: .5rem solid transparent;
+            border-top-color: #333;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -100%);
+        }
+
+        /* Burayı border verip 3 kenarının rengiyle oynayarak o oku yaptık, sonra da pozisyondan ayarladık. left:50%; ve transform: translate(-50%, -100%); nin ikisini de yazman gerekiyor, buna dikkat et. */
+
+        /* transparent şeffaflık demek. Bunu bir resimdede opacity ile yapabilirsin. */
+
+        /* Bu content'' i içerik olsun olmasın yazmak zorundasın. */
+
+        [x-data]{                   /* Bu x-data yı yaparken burayı unutmuştum ve neden olmadı diye 2 saat düşündüm. Burayı unutma.*/
+            background-color: blue;
+            position: relative;
+        }
+
+        [x-data]:hover::before{
+            content: attr(x-data);
+            position: absolute;
+            /* top: -100%;*/
+            left: 50%;
+            transform: translate(-50%, -130%); /* Bu calc, eksinin etrafında iki boşluk bırakmazsan çalışmıyor. */
+            background-color: black;
+            color: white;
+            border-radius: .3rem;
+            padding: .5rem;
+        }
+
+        [x-data]:hover::after{
+            content: '';
+            color: white;
+            border: .5rem solid transparent;
+            border-top-color: #333;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            top: 0px; 
+        }
+        
+        /* Burda yaptığımız ok eğer divimiz 2 satır ve üstü olursa altta kalıyor, bunun sebebi kendini son satıra göre konumlaması. top:0px; yazdık ki her zaman üstte kalsın. */
+
+        [deneme-data]::before, [deneme-data]::after{
+            position: absolute;
+            left: 50%;
+            --tooltip-color: #333;
+            --tooltip-size: 1rem;
+        }
+
+        [deneme-data]{
+            background-color: blue;
+            position: relative;
+        }
+
+        [deneme-data]:hover::before{
+            content: attr(deneme-data);
+            transform: translate(-50%, calc(-100% - 1rem));
+            background-color: black;
+            color: white;
+            border-radius: .3rem;
+            padding: .2rem;
+            width: max-content;
+            max-width: 50%;
+        }
+
+        /* Zaten en üstte left:50%; dedik o yüzden burada yazmadık. Normalde yazmamız gerek. */
+
+        [deneme-data]:hover::after{
+            content: '';
+            color: white;
+            border: calc(var(--tooltip-size) / 2) solid transparent;
+            border-top-color: #333;
+            transform: translate(-50%, -100%);
+            top:0px;
+            /* width: 1rem; */
+            /* height: 1rem; */
+            width: var(--tooltip-size);
+            height: var(--tooltip-size);
+        }
+
+         /* Gördüğün gibi width ve height ı böyle de yapabiliyoruz, var ile. */
+
+    </style>
+ </head>
+ <body>
+
+    <span class="data-tooltip" data-tooltip="1-2-3-4-5">1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 </span><br><br>
+
+    <!-- Gördüğün gibi alttaki yeni satıra göre kendini tekrardan ayarlıyor, o yüzden div kullanmalıyız ki block element olsun ve algıladığı genişlik aynı olsun. -->
+
+    <div class="x-data" x-data="1-2-3-4-5">1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5</div><br><br>
+    
+    <div class="deneme-data" deneme-data="Bu bir deneme tooltipidir. Bu bir deneme tooltipidir.Bu bir deneme tooltipidir.Bu bir deneme tooltipidir.Bu bir deneme tooltipidir.Bu bir deneme tooltipidir.Bu bir deneme tooltipidir.">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi consequatur rem quisquam velit voluptates provident illum ipsam maiores placeat! Itaque deleniti recusandae architecto pariatur incidunt modi numquam nobis hic consequatur! Alias ut in expedita laboriosam, iste unde officia culpa illum non! Excepturi dignissimos, alias sed vel ducimus expedita asperiores eligendi!</div>
+
+ </body>
+ </html>
+
+ <!-- [deneme-data]:hover::after Burda yarısını verdik bozulmasın diye, acaba neden bozuluyordu bunu araştır. -->
+
+ <!-- [deneme-data]:hover::after; Burda yorum satırı yani content 1 satırdan fazla olunca oktan uzaklaşıyordu, bu yüzden yükseklik ve genişlik verdik ve yukarda calc dan bu verdiğimiz değer kadar ekliyoruz. ama bunları kaldırınca bir değişiklik olmuyor, neden acaba. -->
+
+ <!-- şu --tooltip-size yi ikiye bölme muhabbeti sanırım yanlış yazıldığından, tam bilemiyorum, videoya birkere daha bak, istediği boyuta getirebiliyordu sanki -->

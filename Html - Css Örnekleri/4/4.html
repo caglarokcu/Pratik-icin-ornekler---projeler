@@ -1,0 +1,309 @@
+<!DOCTYPE html> <!-- Html de img, workmap. Css de vertical-align, title, float özellikleri. -->
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osman aga</title>
+    <style>
+        span {
+            float: left;
+            width: 0.7em;
+            font-size: 400%;
+            font-family: algerian, courier;
+            line-height: 80%;
+        }
+
+        .seher{
+            font-size:34px;
+        }
+        .sekil{
+            color: red;
+        }
+        #a{background-color: aquamarine;}
+
+        #b{background-color: purple;}
+        #B{background-color: gray;}   /* Gördüğün gibi büyük küçük harf uyumu da önemli. id ler # ile seçiliyor.*/
+        
+        #12c{   /*  Demek ki id ler sayı ile başayamıyor. */
+            background-color: aqua;
+        }
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }       
+        li {
+          float: left;
+        }
+        li a {
+          display: inline-block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        li a:hover {
+          background-color: #111;
+        }
+    </style>   
+   </head>
+   <body>
+
+    <h2>float: right</h2>
+
+    <img src="360_F_136706734_KWhNBhLvY5XTlZVocpxFQK1FfKNOYbMj.jpg" alt="Smileface" width="42" height="42" style="float:right"> 
+
+    <img src="360_F_136706734_KWhNBhLvY5XTlZVocpxFQK1FfKNOYbMj.jpg" alt="Smileface" width="42" height="42" style="float:left">
+
+    <!-- Float özelliği, bir öğenin sola mı yoksa sağa mı yüzeceğini veya hiç yüzmeyeceğini belirtir.
+
+          none - Öğe yüzemez (sadece metinde geçtiği yerde görüntülenecektir). Bu varsayılan değerdir
+          left - Öğe, kapsayıcısının solunda yüzer
+          right - Öğe, kapsayıcısının sağında yüzer 
+          initial - Bu özelliği varsayılan değerine ayarlar. initial hakkında bilgi edinin
+          inherit - Bu özelliği üst öğesinden devralır. inherit hakkında bilgi edinin
+      
+    Not: Kayan bir öğenin yanındaki öğeler onun etrafından akacaktır. Bunu önlemek için clear özelliğini veya clearfix  hack'i kullanın (bu sayfanın altındaki örneğe bakın). -->
+
+
+    <p style="clear:none;">1This is some text. This is some text. This is some text. This is some text.</p>
+    
+    <p style="clear:right;">2This is some text. This is some text. This is some text. This is some text.</p>
+
+    <p style="clear:left;">3This is some text. This is some text. This is some text. This is some text.</p>
+
+    <p>
+      <span>T</span> his is some text.
+      This is some text. This is some text.
+      This is some text. This is some text. This is some text.
+      This is some text. This is some text. This is some text.
+      This is some text. This is some text. This is some text.
+      This is some text. This is some text. This is some text.
+      This is some text. This is some text. This is some text.
+      This is some text. This is some text. This is some text.
+      </p>
+
+      <p>Yukarıdaki paragrafta, metnin ilk harfi bir span öğesine gömülüdür. span öğesinin genişliği, geçerli yazı tipinin boyutunun 0,7 katıdır. span öğesinin yazı tipi boyutu %400'dür (oldukça büyük) ve satır yüksekliği %80'dir. span'daki harfin yazı tipi "Cezayir" olacaktır.</p>
+
+    <!-- clear özelliği, yüzen öğelerin yanındaki akışı kontrol eder.
+
+        clear özelliği, yüzen bir öğenin yanındaki öğeye ne olması gerektiğini belirtir.
+    
+        none - Varsayılan. Öğe sol veya sağ yüzen öğelerin altına itilmez
+        left - Öğe sol yüzen öğelerin altına itilir
+        right - Öğe sağ yüzen öğelerin altına itilir
+        both - Öğe hem sol hem de sağ yüzen öğelerin altına itilir
+        initial - ​​Bu özelliği varsayılan değerine ayarlar. başlangıç ​​hakkında bilgi edinin
+        inherit - Bu özelliği üst öğesinden devralır. devralma hakkında bilgi edinin.
+
+        clear, float olmayan ögelere yazılıyor sanırım. Ve zaten sıralamyı clear ile bozamıyorsun ki, Yani şu an çok da bir işlev göremedim, sadece 1 altta mı yoksa yanında mı olmasını belirliyorsun.
+
+    https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML -->
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul><br>
+
+    <img title="blablabla">
+
+    <img src="../../resimler/work-table.webp" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+    <map name="workmap">
+
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.google.com/search?q=computesca_esv=561614363&tbm=isch&sxsrf=AB5stBhFQpTVScvb7zrN0UlCRmtIuzbAkQ:1693485128468&source=lnms&sa=ved=2ahUKEwiv347c84aBAxWe1AIHHXewAhQQ_AUoAXoECAIQAw&biw=1366&bih=619&dpr=1">
+
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.google.com/search?q=phontbm=isch&ved=2ahUKEwjaj-_c84aBAxX9zQIHHTx8D3sQ2-cCegQIABAA&oq=phongs_lcp=CgNpbWcQAzIECCMQJzIICAAQgAQQsQMyCggAEIoFELEDEEMyBwgAEIoFEEMyCAgAEIAEELEDMgUIABCABDIICAAQgAQQsQMygAEIAEMggIABCABBCxAzIFCAAQgAQ6BAgAEAM6CwgAEIAEELEDEIMBUIcIWMwNYPIOaABwAHgAgAFziAH7BJIBAzAuNpgBAKABAaoBC3cy13aXotaW1nwAEB&sclient=img&ei=SojwZNrCAv2bi-gPvPi92Ac&bih=619&biw=1366">
+
+        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="https://www.google.com/searcq=coffee&tbm=isch&ved=2ahUKEwivsYnx84aBAxXYhaQKHWE-DKQQ2-cCegQIABAA&oq=coffegs_lcp=CgNpbWcQAzIKCAAQigUQsQMQQzIHCAAQigUQQzIHCAAQigUQQzIICAAQgAQQsQMyCggAEIoFELEDEEMyBQgAEIAEMgUIABCAIFCAAQgAQyBQgAEIAEMgUIABCABDoECCMQJzoLCAAQgAQQsQMQgwFQ9wZYtSZgiS9oA3AAeACAAZsBiAHpBJIBAzEuNJgBAKABAaoBC3cy13aXotaW1nwAEB&sclient=img&ei=dIjwZK-nGdiLkgXh_LCgCg&bih=619&biw=1366">
+    </map>
+
+    <!-- atturubutes: crossorigin  ismap   loading   longdesc  referrerpolicy  sizes  srcset
+    https://www.w3schools.com/tags/tag_img.asp -->
+
+    <!-- map elementi bir görüntü haritası tanımlar ve resimde işaretlediğimiz yerleri bağlantı olarak kullanabiliriz. bir img ye usemap="#..." ile bir id gibi bir şey atıyoruz ve map elementinde name ile o resmi gösteriyoruz. map elementinin içine de area ile seçeceğimiz areaları tanımlıyoruz. Kordinatların yazım sırası da sırasıyla sol, üst, sağ, alt. -->
+
+    <!-- PixGrid ruler diye bir Chrome eklentisi var, ben onu kullanıyorum bu kordinat işlerinde. Ama bilgisayardan aldığımız resimlerde bu işe yaramıyor. Sadece intarnet üzerinden açılan resimlerin üzerinde kullanabiliyoruz. -->
+
+    <div class="seher" class="a" id="a">
+        <p>bu nedir aga</p>
+
+        <h2>Boş işlerr</h2>
+    </div>
+
+    <div class="seher sekil" class="B" id="B">       <!-- İkisi arasında virgül yok demek ki her kelime bir class olarak değerlendiriliyor. -->
+        <p>bu nedir aga</p>
+
+        <h2>Boş işlerr</h2>
+    </div>
+
+    <div class="şeher" class="12c" id="12c">
+        <p>bu nedir aga</p>
+
+        <h2>Boş işlerr</h2>
+    </div>
+
+    <iframe name="frame1" frameborder="0" src="https://www.youtube.com/embed/_S8-xEelfnQ" width="600" height="500">
+        <!--  frameborder="" sadece 1 ve 0 değeri alabiliyor. name="" de id gibi bir şeydi sanki, sadece birden fazla aynı isimde olabiliyordu. -->
+
+    </iframe>   
+
+        <!-- Görüdğün gibi bir video içerisinde video olarak alıntı yapabiliyoruz. src de ifirame ye özel bir adres olması lazım, onu bulup kullanmalısın youtube veya diğer sitelerde. -->
+
+    <p>
+        <a href="http://google.com" target="frame1">
+            tıkla googlen olayım
+        </a>
+
+        <!-- Burda da iframe1 diyerek bizim iframe alanını gösteriyoruz, iframe elementinde name="iframe1" olarak tanımladık -->
+
+    <p>
+    </body>
+ </html> 
+
+ <!-- 
+        Not: Kesinlikle konumlandırılmış öğeler float özelliğini yok sayar! Bunu da bir örenk olarak yap positionu öğrenince. 
+
+        * {
+          box-sizing: border-box;
+        }
+
+        .header, .footer {
+          background-color: grey;
+          color: white;
+          padding: 15px;
+        }
+
+        .column {
+          float: left;
+          padding: 15px;
+        }
+
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+        .menu {
+          width: 25%;
+        }
+
+        .content {
+          width: 75%;
+        }
+
+        .menu ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .menu li {
+          padding: 8px;
+          margin-bottom: 8px;
+          background-color: #33b5e5;
+          color: #ffffff;
+        }
+
+        .menu li:hover {
+          background-color: #0099cc;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="header">
+          <h1>Chania</h1>
+        </div>
+
+        <div class="clearfix">
+          <div class="column menu">
+            <ul>
+              <li>The Flight</li>
+              <li>The City</li>
+              <li>The Island</li>
+              <li>The Food</li>
+            </ul>
+          </div>
+      
+          <div class="column content">
+            <h1>The City</h1>
+            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+            <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+          </div>
+        </div>
+
+        <div class="footer">
+          <p>Footer Text</p>
+        </div>
+
+        </body>
+        </html>
+
+        Bunu ::after i görünce iste.
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+        div {
+          border: 3px solid #4CAF50;
+          padding: 5px;
+        }
+        
+        .img1 {
+          float: right;
+        }
+        
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        .img2 {
+          float: right;
+        }
+        </style>
+        </head>
+        <body>
+        <h1>The Clearfix Hack</h1>
+        
+        <p>Here, the floating image is taller than the element containing it, so it overflows outside its container:</p>
+        <div>
+        <img class="img1" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+        
+        <p style="clear:right">Add the clearfix hack to the containing element, to fix this problem:</p>
+        <div class="clearfix">
+        <img class="img2" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+        
+        </body>
+        </html>
+
+        Bunu after:: komutunu öğrenince bir kere daha bak.
+    
+        text-indent özelliği, bir metin bloğundaki ilk satırın girintisini belirtir.
+    
+        Not: Negatif değerlere izin verilir. Değer negatifse ilk satır sola doğru girintilenir.
+
+        text-decoration, title, kavramlarını ekle, yeni bir örenk yap.
+
+        overflow araştır.
+
+        şu id ve class vermeyi ekle, düzenle.
+
+        2 class birden atamayı farklı bir örneğe taşı.
+
+        clear dedik ve sonra header yaptık. Orda anladık ki clear eklenen komutlar da float gibi artık yüzdürülüyor.
+
+        span ile başlayan bir paragraf yapmada direkt float ile yüzdürdüğümüz ögenin yanından başladı, bir block element olmasına rağmen, bunu clear ile çözdük, bu işe de yarıyormuş clear
+
+        p nin içindeki spana float atayınca direkt yazılar onun yanına geldi. Bu da önemli bence, bir elementin içindeki konumlanmayı da belirtiyor.
+    -->

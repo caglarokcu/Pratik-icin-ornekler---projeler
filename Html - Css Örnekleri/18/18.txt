@@ -1,0 +1,3 @@
+Bir divin içine 3 tane div ekle. ebeveyn div in konumunu ayarla, kod yapısı olarak 1. çocuğun normal olması gereken yere göre konumunu  ayarla. 2. çocuğu ebeveynine göre ayarla. 3. çocuğu ise sayfaya sabitle.
+
+Sonra bir divin içine yine 3 div koy. 2. çocuğu ekrana göre haraket edecek şekilde yap ama ebeveyninin dışına çıkmayacak.

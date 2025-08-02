@@ -1,0 +1,9 @@
+İlk öncelikle bütün sayfanın boyut hesaplarken işimize yarayan kodu etkin yap.
+
+Sonra 4 tane input label koy, birbirine bağla.
+
+İnputların pozisyonlarını değiştirerek sayfanın görünmeyen tarafına it.
+
+Sonra labellerin önüne, puseudo elementleri kullanarak bir kutu ekle.
+
+Checked durumunda içinde bir sembol belirsin, hover, focus ve display durumlarını da gölge, arkadon gibi özelliklerle şekillendir.

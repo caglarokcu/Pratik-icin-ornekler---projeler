@@ -1,0 +1,13 @@
+Ekran boyutunu baza alıp one göre boyut belirtebiliyorduk, iki farklı şekilde yapabiliyrduk. 2 div hazırla ve ikisinde de farklı şekilde bu ölçümü kullan. İlkinde margin auto olsun, padding koyma. İkincisinde margin ve padding i px cinsinden belirt, bu elementin boyutunu komple belirt. Tek bir kod sayesinde belirtebiliyorduk.
+
+4 tane p elementi aç. Her birinde farklı bir renk belirtme şekli kullan. 
+
+İlkinin yazı boyutunu ayarla, yazıyı tersten yazdır ve satırda ortalanmasını sağla.
+
+İkincisinde yazının altını üstünü çizerek vurgula. Bunu kısa yoldan yaptıracak bir komutumuz vardı.
+
+Üçüncüsünde bütün harfleri küçük yazdır, satır başını ayarla, satırlar arası boşluğu ayarla ve aynı şekilde harfler arası boşluğu da ayarla.
+
+Dördüncüsünde ilk harfleri büyük yazdır, kelimelere arası boşluğu ayarla ve font family i ayarla.
+
+Beşincisinde de bütün harfleri büyük yazdır, bir de yazıya gölge ekle.

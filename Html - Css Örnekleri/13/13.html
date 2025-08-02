@@ -1,0 +1,147 @@
+<!DOCTYPE html> <!-- Display:flex; ve onun özelliğkleri. -->
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ctr{
+            display: flex; 
+            
+            /* Bunun sayesinde aşşağıdaki öğeleri kullanabiliyoruz. Esnek kapsayıcı olarak tanımlıyor. */
+
+            flex-direction: row; 
+            
+            /*row\column\reverse-column\reverse-row*/
+
+            gap: 10px; 
+            
+            /* Aradaki boşluğu tanımlar, üsten alttan ve yanlarda, row-gap ve column-gap diye kısıtlanabilir. */
+            
+            align-items: stretch; 
+            
+            /* Dikey olarak nesnelerin hizalanmasını sağlar. Uygun alan yoksa hizalanmaz. stretch\flex-end\flex-start\center\baseline\first-baseline*/
+
+            justify-content: space-around; 
+            
+            /*Aynı şekilde yatay olarak hizalanma. speace-around\speace-between\speace-evenly\center\start\flex-start\left*/
+
+            align-content: space-between; 
+            
+            /* Bu da justify-content in birden fazla satırlı hali. 
+            flex-start\center\speace-between\speace-around\stretch
+            
+            Not: Bunu yazınca align-items in etkisi kalktı, ikisi aynı şeyi etkiliyor olabilir.*/
+            
+            flex-wrap: wrap; 
+            
+            /* Bu satıra şekilde davranması gerektiğini söylüor. nowrap, olabildiğince satır değiştirme oraya       sıkıştırmaya çalış. nowrap, sıkıştığı anda alt satrıa geç vs.nowrap\wrap<*wrap-reverse\inherit\initial\revert\revert-layer\unset*/
+            
+            /* flex-flow, bu da hem flex-direction u hem de flex-wrap ı aynı seferde yazmamız yarıyor. flex-flow: column wrap; gibi. */
+        }
+        .item{
+            width: 100px; height: 100px;
+            background-color: orange;
+        }
+        .kalip{
+            height: 50vh;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: row;
+            justify-content: stretch;
+        }
+        .nesne{
+            background-color: orange;
+            width: 100px;
+            min-height: 100px;
+            margin:10px;
+        }
+        .nesne1{
+            flex-grow:0;
+
+            /* Bu flex-grow oğelerin 1 den fazla yer kaplamasını sağlıyor. */
+
+            order:50;
+
+            /* Bu da sıralama işte. - den + ya doğru gider. */
+
+            flex-shrink: 1;
+            
+            /* Bu da şöyle, atıyorum yeteri kadar yer yok ve sıkıştırmaya başlıyor, bu hangi elemanın ne oranda küçülceğini söylüyor. */
+
+            align-self: flex-end;
+
+            /* ögeinin kendini nerede konumlandıracağını söyler */
+        }
+        .nesne2{
+            flex-grow:1;
+            flex-basis: 0;          
+            
+            /* Bu da başlangıç uzunluğunu belirtir. 0 diyince 1 yer kaplar, 1 diyince 2 vs. hep bir fazlası.*/
+            
+            order:-999;
+            flex-shrink: 2;
+            align-self: flex-start;
+
+            /* direk flex:; diyerek grow,shrink ve basis i tanımlayabiliyoruz. */
+        }
+        .nesne3{
+            flex-grow:2;
+            flex-basis: 0;
+            order:2;
+            flex-shrink: 0;
+            align-self: center;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="ctr" style="border: 1px solid red; height: 500px;">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>        
+    </div>
+
+    <div class="kalip">
+        <div class="nesne nesne1">1</div>
+        <div class="nesne nesne2">2</div>
+        <div class="nesne nesne3">3</div>
+        <div class="nesne"></div>
+        <div class="nesne"></div>
+        <div class="nesne"></div>
+        <div class="nesne"></div>
+        <div class="nesne"></div>
+        <div class="nesne"></div>
+    </div>
+    <span>asdmja hfjaksmfhaısfk</span>
+ </body>
+ </html>
+
+ <!-- 
+ iki classı birden tanımlamayı yapamadım. 
+ 
+ 3 container yap ilk ikisi yine satırı kapsayan flexler sadece flex_wrap ı göstermek için yapıcağız.
+
+ align-content sanırım birden fazla satır varken kullanılıyor, tek satır için align-items.
+
+ conteiner 2 de min ve max width ögelerini kullandım, justify-content ne sadece en az şekilde yer kaplamasını dağlıyor, daha doğrusu dokunmuyor, div yapısında var bu özellik. İçine nesne koyunca ona göre şekil alıyordu, o yüzden İçine nesne koyarak yap.
+
+ flex-grow:0; da öge min-width da kalıyor.
+
+ order - olanlar ilk başa geliyor öyle sıralanıyor.
+
+ align-self dikey olarak hizalanmayı sağlıyor ve sanırım c ye yazdığımız komutu kırıyor.
+
+ shirik ile grow arasındaki farkı çözemedim.
+
+ text-align: bunu diyince divlerin içindeki yazılar ortalandı, sanki yazı ortalanması için yapılmış bir şey, bunu bir araştır.
+
+ directionun dieğişmesine göre jutify-content ve align-items in etkileri de yön değiştiriyordu bunu dene.
+
+ birden fazla satırlı ve satıra nasıl davranması gerektiği gibi özellikleri iste, gerekirse farklı örneklerle.
+
+ flex-grow da hepsine 0 verip birine 1 verince o geri kalan bütün yeri kaplıyor.
+
+ order ile align-self sanırım birbirini kırıyor yada order her türlü baskın. Buna bakıp ona göre örnekleri düzenle.
+ -->

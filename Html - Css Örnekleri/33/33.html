@@ -1,0 +1,97 @@
+<!DOCTYPE html> 
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <style>
+       *{
+          box-sizing: border-box;
+       }
+       html{
+          font-size: 2rem;
+       }
+       body{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: blueviolet;
+          min-height: 100vh;
+          overflow: hidden;
+       }
+
+       /* min-height ile yükseklik atıyoruz body e ve ortalama komutları dikey olarak da işe yarıyor. Yoksa body nin içinde yükseklik algılayamadığı için hizalama yapmıyor. */
+
+       /* overflow da scroolbar ları kapatıyordu. Yükseklik verince ortaya çıktı.*/
+
+       .btn{
+          color: white;
+          background-color: #0AC;
+          border:none;
+          outline:none;
+          font-size: 1rem;
+          padding: .5em 1em;
+          border-radius: .5rem;
+          cursor: pointer;
+       }
+
+       /* outline ve borderi kaldırarak button elementini varsayılan olarak gelen css lerini düzlemiş olduk. */
+
+       /*Burda yukarda font size yi 2 rem, html 2 rem demiştik ya, 1 rem diyince direkt 32px yaptı bu yüzden. Paddingdeki emler için de bu geçerli.*/
+ 
+       .btn:hover{
+          animation:goz-kirpma 500ms ease-in-out infinite, buyut 1s ease-in-out infinite;
+       }
+ 
+       .btn:focus{
+          animation: kac-git 500ms ease-in-out forwards;
+       }
+ 
+        /*forwards ile son halinde kalmasını sağladık.*/
+        
+       @keyframes goz-kirpma {
+          0%{
+             opacity: 1;
+          }
+          50%{
+             opacity: .75;
+          }
+          100%{
+             opacity: 1;
+          }
+       }
+ 
+       @keyframes buyut {
+          0%{
+             transform: scale(1);
+          }
+          50%{
+             transform: scale(1.1);
+          }
+          100%{
+             transform: scale(1);
+          }
+       }
+ 
+       @keyframes kac-git {
+          33%{
+             transform: translate(100px, 50px) rotate(30deg) scale(.9);
+          }
+          66%{
+             transform: translate(0px, 25px) rotate(90deg) scale(.75);
+          }
+          100%{
+             transform: translate(-100px, 75px) rotate(200deg) scale(.0);
+          }
+       }
+ 
+    </style>
+ 
+ </head>
+ <body>
+    
+    <button class="btn">Üzerime Gelsene</button>
+ 
+ </body>
+ </html>

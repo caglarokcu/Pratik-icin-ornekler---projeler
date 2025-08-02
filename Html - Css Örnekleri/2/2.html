@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+            background-color: aqua;
+            border: 1px solid red;
+            font-size: 2rem;
+            color: black;
+        }
+
+        /* a nın yapısın heightine müdahale edebiliyoruz. Ama tam değil, font size ile yazıyı ayarla onun yerine veya içine ne koyduysan onun sizesini, a zaten onun kadar yer kaplar. */
+        
+        a:link{
+            color: black;
+            background-color: blueviolet;
+        }
+        a:hover{
+            color: chartreuse;
+            background-color: chocolate;
+        }
+        a:active{
+            color: cornflowerblue;
+        }
+        a:visited{
+            color: crimson;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <a href="https://sabah.com.tr/" class="a">Sabah Gazetesi</a> <br>
+
+    <!-- url de www yoktur. www yazarsan çıkmaz. -->
+
+    <!-- Eğer adresi yazmazsak tıklanış durumu kabul ediyor, galiba adrese bakıp ona göre visited olup olmadığına karar veriyor. -->
+    
+    <a href="https://sabah.com.tr/" target="_self" class="b"><img src="unnamed.png" alt=""></a><br>
+
+    <a href="../../../Cağlar okcu CV-TR.pdf" target="_blank" class="c">Benim CV'm</a><br>
+
+    <a href="mailto:caglarokcu0@gmail.com" class="d">Bana ulaşın</a><br>
+
+    <a href="#x" class="e"> yazdığım metin </a>
+
+    <!-- Sanırım # sitede id olarak bir şey aramasına sebep oluyor, bulamayınca bir yere gitmiyor ama ziyaret kontrolü yine oluyor, şu spana olan köprüden çıkardım. -->
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ratione officia harum facere voluptatibus deserunt laborum, culpa numquam beatae quis, voluptatem sunt minima voluptas minus illum iste molestiae impedit! Nemo consectetur mollitia eos cum laborum, fugit, obcaecati debitis magni saepe aperiam ea. Temporibus recusandae alias id? Dicta minima non facere ex eum maiores nemo laudantium suscipit possimus voluptate eligendi omnis quaerat nam mollitia, hic veritatis ipsum, illum ea obcaecati modi at fugit. Neque quas rem esse, excepturi beatae minus accusamus sapiente molestias voluptas est molestiae saepe quo. Ut enim veniam ducimus dolorum quis voluptatibus, voluptate, harum culpa fuga, eligendi voluptates laudantium ipsam mollitia? Laborum voluptatibus ipsam a, itaque dolore minus assumenda molestiae sapiente <span id="x">autem nostrum quia ut sit </span> tempore dolores? Possimus delectus, architecto, consequatur cum aliquam neque vitae, quas consequuntur inventore cupiditate numquam vero ipsa veritatis omnis saepe excepturi libero error molestiae maiores harum. Cupiditate quidem ipsum dolore quas sunt!
+    </p>
+</body>
+</html>
+
+<!-- 
+    tıklanmış linkte yazdığımız hover durumu etkinleştirilmiyor. mailto da oluyor ama. Bunu birine sor.
+
+    50. satır bir varsayım.
+-->

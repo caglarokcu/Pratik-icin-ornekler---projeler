@@ -1,0 +1,13 @@
+5 tane divi oluştur ve bunların hover durumlarında rengi, arkafon rengi veya boyutları gibi şeylri değişik yap.
+
+Bunlara geçiş yaz. 
+
+    ilkinde sadece süre olsun. 
+
+    2. sinde 2 farklı özellik farkli şekilde geçsin.
+
+    3. sünde geçiş ivmesi farklı olsun ve gecikme koy.
+
+    4. sünde geçiş özelliklerini ayrı ayrı yaz.
+
+    4.sinde ise özellikler ayrı yarı ve farklı özellikler farklı zamanlama, ivme falan olsun.

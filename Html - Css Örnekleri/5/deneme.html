@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Bölüm 1</legend>
+
+            <label for="ad">Adınızı giriniz:</label>
+            <input type="text" name="ad" id="ad"><br><br>
+
+            <label for="soyad">Soyadınızı giriniz:</label>
+            <input type="text" name="soyad" id="soyad"><br><br>
+
+            <label for="erkek">Erkek</label>
+            <input type="radio" name="cinsiyet" id="erkek" value="erkek">
+
+            <label for="kadın">kadın</label>
+            <input type="radio" name="cinsiyet" id="kadın" value="kadın"><br><br>
+
+            <label for="sehir">Şehir:</label>
+            <input list="sehirler" id="sehir" name="sehir">
+
+            <datalist id="sehirler">
+                <option value="istanbul">İstanbul</option>
+                <option value="ankara">Ankara</option>
+                <option value="izmir">İzmir</option>
+            </datalist><br><br>
+
+            <label for="ekstra">Ekstra İstekler:</label>
+            <select name="ekstra" id="ekstra" multiple>
+                <option value="yol">Yol</option>
+                <option value="yemek">Yemek</option>
+                <option value="avans">Avans</option>
+            </select><br><br>
+
+            <label for="adres">İletişim bilgileri:</label>
+            <textarea name="adres" id="adres" cols="50" rows="3"></textarea><br><br>
+
+            <input type="reset">
+            <input type="submit">
+        </fieldset>
+
+        <fieldset>
+
+            <label for="t">Hadi buraya bir şey yaz</label>
+            <input type="text" id="t" readonly><br><br>
+
+            <label for="p">Kredi kartı şifren</label>
+            <input type="password" id="p" size="2"><br><br>
+
+            <input type="color"><br><br>
+
+            Arama
+            <input type="search"><br><br>
+
+            <input type="date">
+            <input type="week">
+            <input type="month">
+            <input type="time">
+            <input type="datetime-local"><br><br>
+
+            email<input type="email" disabled><br><br>
+
+            <input type="file"><br><br>
+
+            <input type="number" max="25" min="10" required step="5"><br><br>
+
+            <input type="range" max="40" min="-5"><br><br>
+
+            <input type="tel" placeholder="333-55-6789"><br><br>
+
+            <input type="url" autofocus autocomplete="">
+
+            <label for="c">Disk c</label>
+            <meter value="5" max="10" min="2" id="c"></meter>
+
+            <label for="i">ilerleme</label>
+            <progress id="i" value="32" max="100" >%32</progress>
+
+        </fieldset>
+    </form>
+</body>
+</html>

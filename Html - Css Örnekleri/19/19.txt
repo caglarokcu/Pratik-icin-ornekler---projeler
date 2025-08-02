@@ -1,0 +1,1 @@
+bir divin içine bir p elementi koy ve dive boyut ver, p ye de taşacak kadar yazı koy sonra da bu durumda ne yapılmasına ilişkin kod yaz ve farklı örneklerle farlı durumları göster

@@ -1,0 +1,140 @@
+<!DOCTYPE html> <!-- Css de cursor, border-radius ve box-shadow kavramı. -->
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../firstHello/css/1.css">
+ <style>
+ *{
+    box-sizing: border-box;                      
+    
+ }
+
+ .btn{
+    background-color: #eee;
+    border:1px solid #ccc;
+    outline:none;                      
+    
+    /* Butonların varsayılanında outline de kullanılıyor, odaklandığında outline siyah oluyor. */
+
+    cursor: pointer;
+    
+    /* Bir öğenin üzerine gelince fare şeklini belirtiyor.*/
+    
+    font-size: 1em;
+    padding: .5em 1em;
+    
+    /*burda .5em yaptınca 0.5 em algılıyor.*/
+    
+    border-radius: .4em;
+ }
+ .btn:hover, .btn:focus{
+    background-color: #ddd;
+    box-shadow: -13px -5px 15px 2px;        
+    
+    /*Ögeyi incelede, style de .hov diye bir seçenek var. Oraya basınca hover halini vs görebiliyoruz ögenin. Ordan borde-shadow a daha detaylı bakabilirsin. */
+ 
+}
+ .btn-accent{
+    background-color: hsl(54, 76%, 32%);
+    border-color: hsl(54, 76%, 20%);
+    color: white;
+ }
+ .btn-accent:hover, .btn-accent:focus{
+    background-color: hsl(54, 76%, 40%);
+    box-shadow: -13px -5px 15px 2px hsl(54, 76%, 50%);
+ }
+ .btn-danger{
+    background-color: hsla(0, 98%, 50%, 0.651);
+    border-color: hsla(0, 99%, 49%, 0.315);
+    color: white;
+ }
+ .btn-danger:hover, .btn-danger:focus{
+    background-color: hsla(0, 100%, 50%, 0.925);
+    box-shadow: 0 0 5px 0 hsla(0, 100%, 50%, 0.623);
+ }
+ .btn-large{
+    font-size:1.25em;
+ }
+ .btn-small{
+    font-size:0.75em;
+ }
+ .btn-oval{
+    border-radius: 100000px;
+ } 
+ input{
+    margin:.5em;
+ }
+ .input{
+    border: 1px soldi black;
+    outline: none;
+    font-size: inherit;
+    padding: .5em;
+    border-radius: .25em;
+ }
+ .input:focus{
+    border-color: 1px solid black;
+    box-shadow: 0 0 5px 0 black;
+ }
+ .Success{
+    border-color: rgba(0, 146, 0, 0.767);
+    box-shadow: 0 0 5px 0 black;
+ }
+ .Success:focus{
+    border-color: rgba(3, 255, 3, 0.842);
+ }
+ .Error{
+    border-color: rgb(136, 0, 0);
+    box-shadow: 0 0 5px 0 black;
+ }
+ .Error:focus{
+    border-color: rgba(255, 3, 3, 0.842);
+ }
+ .Large{
+    font-size: 1.25em;
+ }
+ .Small{
+    font-size: 0.75em;
+ }
+ .Disabled{
+    background-color: rgb(139, 139, 139);
+ }
+ </style>
+ </head>
+ <body>
+    <button class="btn">default</button>
+    <button class="btn btn-primary">primary</button>
+    <button class="btn btn-accent">accent</button>
+    <button class="btn btn-danger">danger</button>
+    <button class="btn btn-large">large</button>
+    <button class="btn btn-small">small</button>
+    <button class="btn btn-oval">oval</button><br>
+    
+    <input type="text" value="Default" class="input Default">
+    <input type="text" value="Success" class="input Success">
+    <input type="text" value="Error" class="input Error">
+    <input type="text" value="Large" class="input Large">
+    <input type="text" value="Small" class="input Small">
+    <input type="text" value="Disabled" disabled="disabled" class="input Disabled">
+
+ </body>
+ </html>
+
+ <!-- 
+   
+   Burda outline:none; komutu bir şey değiştirmiyormuş gibi. Galiba bazı yerlerde karışıklığa neden oluyor diye adam hemen kaldırıyor. Aklında bulunsun, bir sorunla karşılaşınca bunu kontrol et.
+
+   şu kısayıldan classli bir şekilde yapmayı araştır ve ekle.
+
+      p(.d)*3 gibi kısaltmalı kullan daha detaylısı basıl yapılıyor bilmiyorum. Bunu sor.
+
+   Bu outline yı araştır ve ekle.
+
+      Bunu sanırım önceki projelerde eklemiştik. eklemediysek buraya ekle, style olmadan hiçbir komut işlemiyor, zaten 4 şekilde belirtmesi var, yön belirtmesi de olabilir.
+
+   ovali yaparken box-sizing:context-box yapmamız lazım bunu ekle.
+
+   Sonra inputlara text halinde yapmışız başarı falan diye. Bunları ekle input btn değil. button larda yaptığımız her şey input btn için de geçerli sanırım. İnput btn de yapalım en iyisi, yapıştırır geçeriz.
+   
+   -->

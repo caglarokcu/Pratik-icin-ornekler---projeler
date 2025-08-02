@@ -1,0 +1,1 @@
+svg formatında ve i kullanarak iconlar çağır. Bu iconlara boyut ve renk ata.

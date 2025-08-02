@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         body{
+             font-size: 2rem;
+         }
+         div span{
+             color: red;
+         }
+
+         /* specificity kavramı, önem sırası gibi düşün, önem sırası yüksek olan seçici diğerlerini ezer. Gördüğün gibi spanın içindeki spanı da etkiledi. */
+
+         span{    
+             color: blue;
+         }
+
+         /* id ler en önemli ve specificity de ilk basamak, sonra classlar 2. basamak ve en sonra da genel elementler. Mesela ne kadar çok class tanımlarsan orta basamak o kadar artar. */
+
+         .h2 .h .hh{
+             background-color: yellow !important;
+         }
+
+         /* Bu specificity numarısının dışında bu !important direk bütün kuralları ezmesine neden oluyor. Bir de inline style ler bu specifiticity numarasını direk eziyor. */
+
+         #h2{
+             background-color: purple;
+         }
+     </style>
+ </head>
+ <body>
+     
+     <h2 class="h2 h hh" id="h2" style="background-color: pink;">Başlık H2</h2>
+     
+     <p>paragraf 1</p>
+     
+     <p>paragraf 2</p>
+     
+     <div>
+         <p>Bu etkilenmeyecek</p>
+         
+         <span>
+             Dışarıdaki Span elementi
+
+             <span>İçerideki span elementi</span>
+         </span>
+         
+         <p>Bu etkilenmeyecek</p>
+         
+         <span>2. span</span>
+     </div>
+     
+     <p>paragraf 3</p>
+     
+     <p>paragraf 4</p>
+     
+     <div>Div 2</div>
+     
+     <p>paragraf 5</p>
+
+ </body>
+ </html>
+
+ <!-- Bu basamak numarasını daha göstererek yap. -->
+
+ <!-- Bu projeyi 22 ile birleştirip tekrar yaz. -->

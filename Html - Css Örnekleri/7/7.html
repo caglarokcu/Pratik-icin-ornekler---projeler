@@ -1,0 +1,196 @@
+<!DOCTYPE html> Css de box-sizing'e bir örnek.
+ <html lang="en">
+ <head>
+    <style>
+        #div1{
+            background-color: aqua;
+            
+            width:50%;                              
+                
+                /* Burda wh falan demememize ramen yine de ekranın boyutunu alıyor. */
+            
+            height: 80%;                                     
+                
+                /* Ekarnı aşşağı doğru kaydırabildiğimiz için, sınırsız bir şeyin yüzdesi bir anlam ifade etmez.*/
+            
+            margin: auto;
+                
+                /* burda da yine ekranın boyutuna göre şekillendi, ama height olarak değil, sonuçta sınırsız bir şeye oran yapamaz. */
+        }
+        #div2{
+            width:20vw;
+            height:30vh;
+            margin:20px;
+            padding:50px;
+            border: 5px solid green;
+            background-color: crimson;
+            box-sizing: border-box; 
+        }
+        #para1{
+            color:red;
+            color:#ff0000;
+            color:rgb(255 0 0);
+            color: rgba(255, 0, 0, 0.333);
+                
+                /* Gördüğün gibi 4 tane renk belirtme şeklimiz var. Direk renk ismi. 16 lık sayı sisteminde bütün renklerin numarası kayıtlı, ordan bulma. Red, green ve blue nin karışımı olduğu için bütün renkler, bunların karışımını beliterek bulma(Max 255). Sonuncusu da buna opacity(Şefaflık) değeri ekleyerek verme. */
+
+            font-size: 32px;
+            background-color: green;
+            text-align: center;
+                
+                /* Bu ise paragrafın ortada hizalanmasını sağlar. */
+            
+            direction: rtl;                                
+            unicode-bidi: bidi-override;                   
+                
+                /* Unicode-bidi özelliği, aynı belgede birden fazla dili desteklemek için metnin geçersiz kılınıp kılınmayacağını ayarlamak veya döndürmek için Direction özelliğiyle birlikte kullanılır. */
+        }
+        #para2{
+            color: black;
+            background-color: aqua;
+            text-decoration: line-through;
+            text-decoration: overline;
+            text-decoration: underline overline;
+            border-color: green;                          
+                
+            /* Gördüğün gibi renkler işe yaramıyor ve bir de öbür yazlınaları da iptal etti.*/
+        }
+        #para3{
+            color: aqua;
+            text-transform: lowercase;  
+                
+                /* Bütün harfelri küçük yazar.*/
+            
+            text-indent: 100px;   
+                
+                /* Satır başının genişliğini belirler.*/
+            
+            letter-spacing: 4px;  
+                
+                /* Karakterler arası boşluğu belirliyor.*/
+            
+            font-size: 32px;
+            line-height: 4;                                    
+                
+                /* Satrılar arası boşlupu belirliyor, px koymayınca em oldu sanırım.*/
+        }
+        #para4{
+            color: aqua;
+            word-spacing: 4px;    
+                
+                /* Kelimeler arası boşluğu belirler.*/
+            
+            white-space: nowrap;       
+                
+                /* Yazılan yazıyı nasıl yazacağını söyler, nowrap, normal, pre.*/
+            
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;      
+                
+                /* font-family nasıl indirilip kullanılıyor anlamadım*/
+                
+            text-transform: capitalize; 
+                
+                /* Sadece ilk harfleri büyük yazar.*/
+        }
+        #para5{
+            text-transform: uppercase;
+            color: aqua;
+            text-shadow: 2px 2px blue;
+
+                /* box-shadow gibi text shadow da var gördüğün gibi. */
+            
+            font-size: large;
+        }
+    </style>
+    </head>
+    <body style="background-color:black;">
+    
+    <div id="div1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, laudantium aliquid ea fugit nostrum dolorem fuga aut. Ab voluptatum necessitatibus quae laboriosam. Eaque iusto corporis officia atque deleniti provident vero. Illum reiciendis laborum atque dignissimos et deserunt nisi esse eveniet, incidunt reprehenderit facilis possimus sint error provident perspiciatis sed ea! Tenetur aut incidunt illo, consequatur vero atque consequuntur ad! Officia minus accusamus consequuntur quidem sint reiciendis animi dignissimos id, eos minima odit sunt, magnam totam expedita. Quos, doloribus. Quasi voluptate repellendus iste aut, nulla odit fugit magnam optio aspernatur nemo molestiae debitis quos! Magni, ea! Similique, iure eum distinctio harum sapiente itaque nam, impedit dicta soluta delectus vero vel odio quod saepe obcaecati laborum velit! Deserunt quos nostrum nesciunt animi iste error beatae id totam recusandae molestiae fugit, quaerat voluptatibus, voluptatum officia odio facere autem tenetur voluptates eveniet. Id quasi mollitia vero blanditiis amet consectetur laudantium, suscipit obcaecati asperiores ullam quod quidem eum nulla. Molestiae culpa dolores odit fugiat distinctio perferendis reprehenderit laborum ullam cum dicta, harum eos at ab repudiandae reiciendis placeat quibusdam consectetur id. Accusamus nostrum facilis porro saepe aliquid sapiente incidunt veritatis ad molestiae ipsam iure tempora reprehenderit a eaque deleniti laudantium placeat, perferendis maxime quasi ullam. Ut, quam eligendi dolorem asperiores nam fugiat magni impedit nemo excepturi, quo inventore rerum odio, explicabo harum. Odio voluptas aliquam excepturi sed quis perferendis ea accusantium deserunt magnam repellat incidunt aliquid corporis consectetur facilis numquam inventore, id cumque non? Dolorem harum molestiae facilis inventore, numquam explicabo eius provident modi error soluta exercitationem unde architecto quod debitis quas necessitatibus aliquam at officia tempore quam! Debitis eum quidem harum at, temporibus exercitationem obcaecati sint sed, officia, ipsa tempora perspiciatis. Nam consectetur harum architecto eveniet illo debitis temporibus ullam minima amet qui libero odit, itaque quia modi animi cupiditate dolores sequi recusandae asperiores!</div>
+
+    <div id="div2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nihil</div>
+
+    <p id="para1" class="money1">Lorem ipsum dolor sit amet.</p>
+    <p id="para2" class="money2">Lorem ipsum dolor sit amet.</p>
+    <p id="para3" class="money3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit solutaccusamus itaque recusandae deleniti ipsam?.</p>
+
+    <p id="para4" class="money4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipbeatae quasi quo nobis mollitia, tenetur dolore aut necessitatibus cum in optio vel molestiae repellminus impedit neque ducimus ullam, dignissimos aliquid exercitationem officia cupiditate tempore ut. itaque architecto tenetur harum nihil maxime commodi voluptates iure necessitatibus optio. Rem..</p>
+
+    <p id="para5" class="money5">Lorem ipsum dolor sit amet.</p>
+
+   </body>
+ </html>
+
+
+<!-- 
+     border-box genişlik, border gibi şeyleri de o verdiğin size ya dahil ediyor ve bunu bütün sayfaya yapınca p gibi elementler etkilenmiyor.
+        
+     text-decoration da sanırsam border gibi rengini tarzını vs belirtebiliyoruz, bunu da araştır ve ekle.
+
+        text-decoration özelliği metne eklenen dekorasyonu belirtir ve şu özellikler için bir kısaltma özelliğidir:
+
+        text-decoration-line (gerekli)
+        text-decoration-color
+        text-decoration-style
+        text-decoration-thickness
+
+     no-wrap ı araştır ve ekle.
+
+        White-space özelliği, bir öğenin içindeki boşlukların nasıl işleneceğini belirtir.
+
+        white-space: normal|nowrap|pre|pre-line|pre-wrap|initial|inherit;
+
+        normal Boşluk dizileri tek bir boşluk haline çökecektir. Metin gerektiğinde sarılacaktır. Bu varsayılan değerdir
+        nowrap Boşluk dizileri tek bir boşluk haline çökecektir. Metin asla bir sonraki satıra sarılamaz. Metin, bir <br> etiketiyle karşılaşana kadar aynı satırda devam eder
+        pre Boşluk tarayıcı tarafından korunur. Metin yalnızca satır sonlarında sarılır. HTML'deki <pre> etiketi gibi davranır
+        pre-line Boşluk dizileri tek bir boşluk haline çökecektir. Metin gerektiğinde ve satır sonlarında sarılacaktır
+        pre-wrap Boşluk tarayıcı tarafından korunur. Metin gerektiğinde ve satır sonlarında sarılacaktır
+        initial Bu özelliği varsayılan değerine ayarlar. initial hakkında bilgi edinin
+        inherit Bu özelliği üst öğesinden devralır. inherit hakkında bilgi edinin
+
+     her dive etki etmemiz için 2 class birden vermek. Bunu ekle.
+
+     2. divin margin-block:247.250; vermeyi ekle.
+
+     Bu projeyi 8 ile yer değiştir.
+
+     bak ilk dive margin var ama ilk body nin alabileceği yere göre hesaplıyor sanırım, body nin paddinglerini saymıyor.
+
+     unicode-bidi yi ekle.
+
+            Unicode-bidi özelliği, aynı belgede birden fazla dili desteklemek için metnin geçersiz kılınıp kılınmayacağını ayarlamak veya döndürmek için direction özelliğiyle birlikte kullanılır.
+
+            normal Öğe ek bir yerleştirme düzeyi açmaz. Bu varsayılan değerdir
+            embed Satır içi öğeler için bu değer ek bir yerleştirme düzeyi açar
+            bidi-override Satır içi öğeler için bu bir geçersiz kılma oluşturur. Blok öğeler için bu, başka bir blok öğesi içinde olmayan satır içi düzeydeki alt öğeler için bir geçersiz kılma oluşturur
+            isolate Öğe kardeşlerinden yalıtılmıştır
+            isolate-override; kılma
+            plaintext
+            başlangıç ​​Bu özelliği varsayılan değerine ayarlar. başlangıç ​​hakkında bilgi edinin
+            miras Bu özelliği üst öğesinden miras alır. miras hakkında bilgi edinin
+
+     text-indent de % kavramı satırın yüzdesini alıyor.
+
+     yeni font family eklemeyi göster.
+
+            google fonts da get fonts linkleri yapıştır, sonra ordaki fontun ismini tırnak içinde font family e tanımla.
+
+     text-shadow u ayarlamayı ekle.
+
+     text-align ile ortaladık ama dikey olarak ortalayamadım. Dikey olarak ortalamak için sanırım flex lazım.
+     
+     Sonra box sizing ve * yi ekle. Farkı bütün sayfa da görelim. Bunu 8 e ekle.
+     
+        margin:0px;                                  
+           padding: 0px;
+        };
+
+            Bu komut satırını ekleyince varsayılan olarak gelen marginler ve paddingler kalkıyor ama fark ettiysen aşşağıdaki div de bozuluyor.
+
+            margin:none; diye bir şey yok sanırım. margin:0px; yazınca oluyor.
+
+    Marginler birleşiyordu hatırlıyor musun ama padding ve margin birleşmiyor, bir divin içinde bir div yaparken özellikle.
+
+    box sizing ekleince sadece border-width çıktı, başka bir şey olmadı yine fark aynı. Marginlerdeki hesaplamalarda aynı duruyor. Ama 6. örnekte öyle olmamıştı, bunu bir araştır.
+
+    Sanırım bu örnekte % den bahsetmiyordu, bunu daha iyi açıkla.
+-->

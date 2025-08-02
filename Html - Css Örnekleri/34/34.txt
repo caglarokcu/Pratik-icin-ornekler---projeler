@@ -1,0 +1,5 @@
+4 tane menü oluştur ve css ile navbar olacak şekilde ayarla. 4 tane ayrı alt alta navbar yapacağız. Li lerin içinde de bir a elementi olacak. 
+
+Bu a elementlerinin üzerine geldiğimizde altından uzayan, başta olmayan bir çizgi olsun istiyoruz.
+
+    ilki soldan sağa, ikincisi sağdan sola, 3. de ortadan kenarlara, 4. de ise soldan sağa uzayıp hover dan çıkınca soldan sağa çekilen ve sağda kaybolan bir çizgi yap.

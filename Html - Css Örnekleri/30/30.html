@@ -1,0 +1,106 @@
+<!DOCTYPE html> transition kullanımı.
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .div1{
+          background-color: orange;
+          color: red;
+          width: 200px;
+          height: 200px;
+          font-size: 2rem;
+          transition: 2s;
+          transition: all 5s;
+        }
+ 
+        /* transition geçiş demek. */
+
+        /* Bu tansitionun varsayılan değeri zaten all dır. */
+
+       .div1:hover{
+          background-color: teal;
+          color: black;
+       }
+
+       .div2{
+         background-color: orange;
+          color: red;
+          width: 200px;
+          height: 200px;
+          font-size: 2rem;
+          transition: color 1s, background-color 3s;
+       }
+
+       /* Bu şekilde farklı farklı da ele alabiliriz. */
+
+       .div2:hover{
+         background-color: teal;
+          color: black;
+       }
+
+       .div3{
+          background-color: orange;
+          color: red;
+          width: 200px;
+          height: 200px;
+          font-size: 2rem;
+          transition: 5s cubic-bezier(0.42, 0, 1, -0.21) 2s; 
+       }
+
+       /* bunun varsayılanı linear dır. incelede styles den bunun nasıl bir ivme izleyeceğini istediğin gibi ayarlayıp buraya yapıştırabilirsin. ilki kaç saniyede olacağı, ikincisi ivmesi, 3. değer ise kaç saniye gecikme ile yapacağı. 2 saniye sonra başlıyor geçiş */
+
+       .div3:hover{
+         background-color: teal;
+         color: black;
+         width: 300px;
+         height: 300px;
+       }
+
+       .div4{
+         background-color: orange;
+         color: red;
+         width: 200px;
+         height: 200px;
+         font-size: 2rem;
+         transition-delay: 2s;
+         transition-timing-function: cubic-bezier(0.42, 0, 1, -0.21);
+         transition-duration: 5s;
+         transition-property: color, background-color, width, height;
+       }
+
+       /* Bu şekilde hepsini teker teker de belirtebiliriz. */
+
+       .div4:hover{
+         background-color: teal;
+         color: black;
+         width: 300px;
+         height: 300px;
+       }
+
+       .div5{
+         background-color: orange;
+         color: red;
+         width: 200px;
+         height: 200px;
+         font-size: 2rem;
+         transition:width 2s 1s, height 2s 3s;
+       }
+       /* Bu şekilde farklı zamanlama da atayabiliyorsun özelliklere. */
+       .div5:hover{
+         background-color: teal;
+         color: black;
+         width: 300px;
+         height: 300px;
+       }
+    </style>
+ </head>
+ <body>
+    <div class="div1">div1</div><br>
+    <div class="div2">div2</div><br>
+    <div class="div3">div3</div><br>
+    <div class="div4">div4</div><br>
+    <div class="div5">div5</div><br>
+ </body>
+ </html>

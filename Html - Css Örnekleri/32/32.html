@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .div1{
+         margin: 100px;
+         width: 100px;
+         height: 100px;
+         background-color: red;
+         font-size: 2rem;
+      }
+      .div1:hover{
+         transform: translateX(50px);
+         transform: translateY(50%);
+         transition: 2s;
+      }
+
+      /* transition 2 parça arası geçiş gibi düşün, animasyonlar daha işe yarar ama o da her saniye öbür elemanları da etkilediği için sayfanın sürekli yenilenmesine neden oluyor, yani yük oluyor. transfromlar en işe yarar method ve transfromların onun içinde transition ve animation da kullanabiliyoruz. */
+
+      /* Yukarda gördüğün gibi translateX ve y yi yazınca ikisi bir olmuyor. transition ile güzel bir görsel ekledik, normalde direkt o yere geçiyorud ve öbür parçala oynamadı gördüğün gibi. */
+
+      .div2{
+         margin: 100px;
+         width: 100px;
+         height: 100px;
+         background-color: red;
+         font-size: 2rem;
+      }
+      .div2:hover{
+         transform: translate(50px,50%);
+         transition: 2s;
+      }
+
+      /* Burda iki eksende birden haraket ettirebiliyoruz. */
+
+      .div3{
+         margin: 100px;
+         width: 100px;
+         height: 100px;
+         background-color: red;
+         font-size: 2rem;
+      }
+      .div3:hover{
+         transform: rotate(-180deg);
+         transition: 2s;
+      }
+
+      /* Bu şekilde kendi etrafında da döndürebiliyoruz. */
+
+      .div4{
+         margin: 100px;
+         width: 100px;
+         height: 100px;
+         background-color: red;
+         font-size: 2rem;
+      }
+      .div4:hover{
+         transform: rotatex(-2turn);
+         transition: 2s;
+      }
+
+      /* Bu şekilde sadece x veya y ekseninde de döndürebiliyoruz. */
+
+      .div5{
+         margin: 100px;
+         width: 100px;
+         height: 100px;
+         background-color: red;
+         font-size: 2rem;
+      }
+      .div5:hover{
+         transform: scaley(1.1);
+         transform: scalex(1.1);
+         transform: scale(1.1);
+         transition: 2s;
+      }
+
+      /* Bununla da x, y ya da her ikisinde büyütebiliyoruz. */
+
+      .div6{
+         margin: 100px;
+         width: 100px;
+         height: 100px;
+         background-color: red;
+         font-size: 2rem;
+      }
+      .div6:hover{
+         transform: skew(20deg,10deg);
+         transition: 2s;
+      }
+
+      /* Burda css transform generatör diye bir siteden bunları ayarlayabilirsin diyordu ama bence inceleden de gayet iyi ayarlanabiliyor, belki birkaç kodun birleşimi için iyidir. skew, scale, rotate vs. */
+
+      .div7{
+         margin: 100px;
+         width: 100px;
+         height: 100px;
+         background-color: red;
+         font-size: 2rem;
+      }
+      .div7:hover{
+         transform:scale(1.5) rotatex(1turn) translate(50%);
+         transition: 2s;
+      }
+
+      /* Gördüğün gibi böyle yan yana yazınca hepsi geçerli oluyor. Alt alta da olmuyordu. */
+
+      /* Şu matrix olayını alaştır, hover durumuna alıp computed bölümünden aratınca çıkıyor ve bu yazdığımız transformların hepsini içeren bir değer ama tam anlamadım ve yapamadım. */
+
+      .div8{
+         margin: 100px;
+         width: 100px;
+         height: 100px;
+         background-color: red;
+         font-size: 2rem;
+         transform-origin: 100% 0%;
+      }
+      .div8:hover{
+         transform:rotate(2turn);
+         transition: 2s;
+      }
+
+      /* Bu şekilde kendi etrafında vs dönmesi yerine döneceği noktayı belirleyebiliyoruz. divin kendisine yazdığımız transform-origin komutu ile. Bunu hovere yazma ama yoksa sonuç alamazsın. 0% 0% sol üst, 100% 0% sağ üst vs. bu şekilde gidiyor. */
+   </style>
+</head>
+<body>
+   <div class="div1">Div1</div><br>
+   <div class="div2">Div2</div><br>
+   <div class="div3">Div3</div><br>
+   <div class="div4">Div4</div><br>
+   <div class="div5">Div5</div><br>
+   <div class="div6">Div6</div><br>
+   <div class="div7">Div7</div><br>
+   <div class="div8">Div8</div><br>
+</body>
+</html>

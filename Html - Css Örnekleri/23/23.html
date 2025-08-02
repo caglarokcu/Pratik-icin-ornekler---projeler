@@ -1,0 +1,82 @@
+<!DOCTYPE html> pseudo elementler.
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-letter{ 
+            font-size: 2rem;
+        }
+
+         /* :: demek pseudo element oluyor yani aynı hover gibi bunun bir özelliğini seçmiş oluyoruz. Letter ile ek harf demek ve line de ilk satır demek mesela. : ise sınıfını belirtiyoruz.*/
+
+        p:first-line{                         
+            background-color: red;
+        }
+        p::selection{
+            background-color: purple;
+            color: blue;
+        }
+
+        /* CSS ::selection sözde öğesi, kullanıcı tarafından seçilen bir metin parçasının stilini belirlemek için kullanılır. 
+
+        Not: ::selection ile aşağıdaki özellikler kullanılabilir:
+
+        color
+        background-color
+        text-decoration
+        text-shadow */
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+        }
+        .box::before{ 
+            content: 'sa';
+        }
+
+        /* Burda da before after pseudo larını görüyoruz. gördüğün gibi divin başına ve sonuna değil, divin içindeki elementin başına ve sonuna ekliyor bunu. */
+        
+        .box::after{
+            content: 'asfadwa';
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .box2::before{ /* Burda da boş bir kutu oluşturmak istedik bunun için display i kullan çünkü bu pseudo lar inline element olarak geçiyor. content i de mutlaka kullanmak zorundayız, boş da olsa. */
+            width: 10px;
+            height: 10px;
+            content: '';
+            display: block;
+            background-color: yellow;
+        }
+        .box2::after{
+            width: 10px;             
+            height: 10px;
+            display: block;
+            content: '';
+            background-color: yellow;
+        }
+        /* https://medium.com/@onur.kaplan/frontend-u%C4%9Fra%C5%9Fan%C4%B1n%C4%B1n-gizli-kahramanlar%C4%B1-before-after-karde%C5%9Fler-be8e0c3ca346  Buna bir bak. */
+    </style>
+ </head>
+ <body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repudiandae asperiores fugiat labore molestiae. Optio temporibus magnam culpa nam, facilis eligendi magni, porro cumque veritatis saepe deserunt nemo nobis commodi nesciunt laboriosam eius vero repellendus unde in dolorem debitis maxime enim nostrum praesentium. Ab quisquam aspernatur, ullam iure dolorum aperiam.
+    </p>
+    
+    <div class="box2">
+        Çağlarrrr
+    </div>
+    
+    <div class="box">
+        Çağlarrrr
+    </div>
+ </body>
+ </html>
+
+<!-- Mesela ::selection ile direkt o özelliği belirtmek arasında ne fark var. -->

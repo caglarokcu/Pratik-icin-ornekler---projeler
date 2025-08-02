@@ -1,0 +1,47 @@
+<!DOCTYPE html> Html de input tipleri.
+ <html lang="en">
+
+ <head>  
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">                  
+ </head>
+
+ <body>
+    <form action="xd.php" method="get" novalidate>        <!-- novaludate diyince uyarılar çıkmıyor direk gönderiyor.-->
+       type text: <input type="text" value="Çağlar OKCU" readonly size="20"><br><br> <!-- Value orda yazılı olanı belirliyor, readonly de o değerin değiştirilememesini. -->
+       type pasword: <input type="password"><br><br>
+       type submit: <input type="submit" formaction="test.php"><br><br> <!-- formaction ile form daki hedef gibi bir hedef belirleyebilirsin ve gördüğün gibi ikisi de olunca form actionun söylediği yere gidiyor. -->
+       type reset: <input type="reset"><br><br>
+       type button: <input type="button" onclick="alert('S A')" value="Kahveye girdin ilk ne dersin"><br><br>
+       type color: <input type="color" name="color"><br><br>
+       type date: <input type="date" name="date" max="2022-04-04" min="2019-04-04"><br><br>
+       type e mail: <input type="email" name="email" value="xxx@gmail.com" disabled><br><br> <!-- disabled in farkı submit edildiğinde karşıya gitmez bu alan. -->
+       type file: <input type="file"><br><br>
+       type mounth: <input type="month" min="2020-04" max="2020-09"><br><br>
+       type number: <input type="number" min="19" max="99" required step="5"><br><br> <!-- Bu alanı doldurmadan göndermiyor, step de sayıları 1 er arttırılmasını değiştiriyor ve step e uygun olmayan sayıyı göndermiyor.-->
+       type range: <input type="range" min="5" max="10"><br><br>
+       type search: <input type="search" maxlength="20"><br><br> <!-- Bu yazabilceğin değer size="" ise görüntü. -->
+       type tel: <input type="tel" name="telefon" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="555-22-444"><br><br> <!-- Bunda ve search da hata vermesi lazım acaba neden hata vermiyor.-->
+       type time: <input type="time"><br><br>
+       type url: <input type="url" autofocus autocomplete><br><br> <!-- Sayfa açılınca direk bu alanın seçilmesini autofocus sağlar. Autocomplate de tarayıcının yardımcı olmasını sağlar, url giriyorsa daha önce girilmiş url ler gelir. -->
+       type week: <input type="week"><br><br>
+       <label for="birthdaytime">Birthday (date and time):</label>
+       <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br>
+       <!-- Bir tarih seçiciyi tanımlar. Ortaya çıkan değer yılı, ayı, günü ve saati içerir. -->
+       <label for="disk_c">Disk usage C:</label>
+      <meter id="disk_c" value="2" min="0" max="10">2 out of 10</meter><br>
+      <label for="disk_d">Disk usage D:</label>
+      <meter id="disk_d" value="0.6">60%</meter>
+      <!-- <meter> etiketi, bilinen bir aralıktaki skaler ölçümü veya kesirli bir değeri tanımlar. Buna aynı zamanda ölçü aleti de denir. Örnekler: Disk kullanımı, sorgu sonucunun alaka düzeyi vb.
+      Not: <meter> etiketi ilerlemeyi belirtmek için kullanılmamalıdır (ilerleme çubuğunda olduğu gibi). İlerleme çubukları için <progress> etiketini kullanın. -->
+      <label for="file">Downloading progress:</label>
+      <progress id="file" value="32" max="100"> 32% </progress>
+      <!-- <progress> etiketi bir görevin tamamlanma ilerlemesini temsil eder. 
+      İpucu: Bir görevin ilerlemesini görüntülemek için <progress> etiketini JavaScript ile birlikte kullanın.
+      Not: <progress> etiketi, bir göstergeyi temsil etmek için uygun değildir (örneğin, disk alanı kullanımı veya bir sorgu sonucunun alaka düzeyi). Bir ölçeri temsil etmek için bunun yerine <meter> etiketini kullanın. -->
+            
+
+
+    </form>   
+    </body>
+    </html>

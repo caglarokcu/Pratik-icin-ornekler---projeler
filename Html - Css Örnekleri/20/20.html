@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --ana-renk:green;
+            --my-border:1px solid red;
+        }
+
+        /*anarenk tanımladık ve onu sayfamızda direk kullanıyoruz.*/
+
+        p{
+            color: var(--ana-renk);
+            border: var(--my-border);
+        }
+
+        /* Tanımladığımız rengi verirken var() ile veriyoruz gördüğün gibi. */
+
+        span{
+            --ana-renk:blue;        
+            color: var(--ana-renk);
+        }
+
+        /* Gördüğün gibi sadece span için --ana-renk i değiştirebiliyoruz. */
+
+        h2{
+            color: var(--ana-renk);
+            border: var(--my-border);
+        }
+    </style>
+ </head>
+ <body>
+    <h2>Başlık</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ab numquam magni error eum est debitis deserunt odit, molestiae rerum nobis delectus quas. In, cum?</p>
+
+    <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente in modi sint saepe qui vero!</span>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae magnam eligendi, repudiandae, ipsa perspiciatis rerum alias animi officiis dignissimos commodi vel facilis doloremque ad eum omnis libero debitis, facere dolorum.</p>
+ 
+    
+    <button>Tıkla</button>
+    
+    <script>
+        const buton = document.querySelector('button').addEventListener('click', ()=>{
+            document.documentElement.style.setProperty('--ana-renk','pink');     /*burası javascript kısmı.*/
+        });
+    </script>
+ </body>
+ </html>

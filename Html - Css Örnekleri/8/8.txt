@@ -1,0 +1,1 @@
+ İki div oluştur ve birini ekrana oranla, birini de ekranın oranını ekleyerek boyutlandır. Alt alta, aradaki fark gözükecek şekilde yap.

@@ -1,0 +1,15 @@
+Bir tablo yap;
+    Tablonun başlığı olsun ve tablonun altında olsun, tabii tabloya bağlı.
+    Sonra bir satır başlık satırı olsun altına da istediğin kadar normal satır ekleyebilirsin.
+    Bir satır veya bir sütun iki alanlık yer kaplasın ve herhangi bir bölmede resim olsun. Resimli olan bloğa nasıl 
+   doğru boyutları vereceğimizi hatırla.
+    Bir bölmeyi yok et, kod satırında yer alsın ama sayfada yer almasın. Bunun nasıl bir tepki verdiğini, tabloda boşluk
+   kalıp kalpmadığını hatırla.
+    Görünümünü tanımlarken şunda sunlar, şu ve şu, şunun çiftleri, tekleri ve 3. si, 4.sü. Bunları kullan. Bu şekilde 
+   arka fon rengi, çerçeve vs ekle, 2 çerçeve çizgisi hiçbir yerde olmasın.
+
+    Liste yap, listelerin tipleri(O maddelerdeki semboller) farklı olsun. Bir listede de maddenin maddesi tarzı yap.
+
+    Sıralı liste yap ve yine stilleri farklı olsun ve bir tanesi 10 küsürlü basamklardan başlasın.
+
+    Açıklamalı liste yap.

@@ -1,0 +1,1 @@
+Burda bir divin içen birkaç div oluştur. Ekran kısaldıkça sıra sıra görünür hale gelsinler ve eskileri  görünmez hale.

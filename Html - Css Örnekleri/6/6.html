@@ -1,0 +1,278 @@
+<!DOCTYPE html> <!-- Css de background-image, background-attachment, background-position, background-repeat. -->
+ <html lang="en">
+
+ <head>  
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-size: 200px 300px;
+
+                /* auto da resmi orjinal bouyları ile arkaplana yayıyor. Burda verdiğimiz ilk uzunluk genişliğini 2. si ise uzunluğunu belirtiyor. */
+
+            background-image: url(../../resimler/1.jpg);
+            background-repeat: repeat-x repeat-y;
+            background-position: top;
+
+                /* Burda bottom olmuyor, çünkü left, right ve top bir sınır belirtirken bottom aşşağı doğru genişlediği için bir sınır belirtmiyor sanırsam.*/
+
+            background-attachment: fixed;
+
+                /*
+                Scroll Arka plan resmi sayfayla birlikte kaydırılacaktır. Bu varsayılandır.
+
+                fixed Arka plan resmi sayfayla birlikte kaydırılmıyor
+
+                local Arka plan resmi öğenin içeriğiyle birlikte kaydırılacaktır
+
+                initial ​​Bu özelliği varsayılan değerine ayarlar. Başlangıç ​​hakkında bilgi edinin
+
+                inherit Bu özelliği üst öğesinden devralır. Miras hakkında bilgi edinin
+                */
+        }
+        #p1{
+            margin: 20px;
+            border: 4px solid red;
+            border-style:outset;
+            border-color:aqua blue;
+            border-width: 10px 2cm 15px; 
+            padding: 20px 2px 2px 30px;
+        }
+
+        /* Bu kenarlarının genişliğini belirler, 4 kenarı da belirler, border-height diye bir şey yok. 1px 30px; üst alt 1px, yanlar 30px. 1px 15px 30px; üst 1px, yanlar 15px alt 30px. 1px 15px 30px 50px; üst 1px, alt 15px, sağ 30px, sol 50px.*/
+
+        /* ctrl + speace ile seçilebilecek seçenekleri görebiliyoruz. Mesela border-style:; da boşluk olan yere gelip ctrl + speace yaparsak seçenekler çıkar. */
+
+        /* border komutu ile hızlıca kalınlığı; tarzı ve rengi ayarlayabiliyoruz. İlk baş bir borderin olması lazım öbür komutları yazabilmemiz için sanırım. */
+
+        /* bu alt üst ayarlamaları padding, margin, border-width gibi her şeyde ayarlayabiliyoruz gördüğün gibi.  */
+        
+        #p2{
+            height: 100px;
+            width: 900px;
+            box-sizing: border-box;
+            border-right: 1px solid green;
+            border-left: 1px solid blue;
+            border-top: 1px solid black;
+            border-bottom: 1px solid gray;
+            border-top-width: 5px;
+            border-right-width: 10px;
+            border-bottom-width: 15px;
+            border-left-width: 20px;
+            border-bottom-style: dashed;
+            border-top-style: dotted;
+            border-right-style: double;
+            border-left-style: groove;
+            margin-top:10px;
+            margin-bottom:2px;
+            margin-right:30px;
+            margin-left:4px;
+            padding-inline-start: 5px;
+            padding-inline-end: 10px;
+            padding-block-start: 15px;
+            padding-block-end: 20px;
+        }
+
+        /* Gördüğün gibi top, bottom, inline_start diye özel olarak da belirtebiliyoruz. */
+
+        /* box-sizing: border-box; komutu ile yazdığın size = öge boyutu + padding + border-width diye hesaplıyor, eğer bu olmaz ise yazdığın size sadece ögeyi belirler. */
+
+        #p3{
+            border: 20px solid red;
+            border-style: double;
+            border-style: ridge outset inset inherit;
+            border-style: dashed solid;      
+        }
+
+        /* Bu geçerli olmadı, alttaki gibi 2 tarz geçerlli ama. */
+
+        #div1{
+            background-color: chartreuse;
+            width: 300px;height: 300px;
+            margin: auto;
+            padding: 50px;
+            border-width: 5px;
+        }
+
+        /*   Burda margin auto dedik ya, ekranın geri kalanını doldurcak şekilde margini ayarladı. */
+
+        #div2{                
+            border: 5px solid red;                                           
+            background-color: chartreuse;
+            width: 300px;height: 300px;
+            margin: auto;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        /* 
+        Biz ögenin boyutunda sırayla; içerik boyutu, padding, border, outline, margin. Sen ögeye verdiğin genişliğin üzerine paddingden başlayarak sırayla eklenir. box_sizin:border_box; diyince verdiğin genişliğe padding ve borderi de hasaplayarak ayarlar.
+
+        zaten varsayılan olarak tarayıcılar border_box u kullanır. Ama hepsi için değil. O yüzden width:100%; de farklı gözükür, taşar. 
+        */
+ 
+    </style>                  
+ </head>
+    <body>
+        <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente optio impedit asperiores? Beatae, officia obcaecati?</p><br>
+
+        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, non accusantium ratione expedita dolore dicta.</p><br>
+
+        <p id="p3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam distinctio ipsum ab perspiciatis, id nobis?</p><br>
+
+        <div id="div1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae temporibus quibusdam obcaecati nam recusandae veniam excepturi labore! Labore impedit a id unde! Velit sequi optio inventore tenetur ipsa minus incidunt cum, totam perspiciatis voluptatem delectus in et quo, quasi quae at ea exercitationem vero ipsum placeat id blanditiis ab animi?</div>
+    
+        <div id="div2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae temporibus quibusdam obcaecati nam recusandae veniam excepturi labore! Labore impedit a id unde! Velit sequi optio inventore tenetur ipsa minus incidunt cum, totam perspiciatis voluptatem delectus in et quo, quasi quae at ea exercitationem vero ipsum placeat id blanditiis ab animi?</div>     
+    </body>
+ </html>
+
+ <!-- 
+ acaba iki img gelebilir mi backrounda, bunu birine sor.
+
+ p gibi bir elemente de backround img ekleyebilirsin. Bunu ekle. Ama resmi boyutlandıramıyoruz, bunu nasıl yapıcaz bunu bir sor.
+ 
+ background a opacity eklemeyi bulamadım, body e ekleyip öle yapmıştım. Bunu birine sor.
+ 
+ outline nin boyutunu ayarlayamadım bunu araştır ve ekle.
+
+    Anahat, öğenin sınırının dışına çizilen bir çizgidir.
+
+    Anahat, öğenin "dikkat çekmesini" sağlamak için öğelerin etrafına, sınırların DIŞINDA çizilen bir çizgidir.
+
+    CSS'de şu anahat özellikleri bulunur:
+
+    outline-style
+    outline-color
+    outline-width
+    outline-offset
+    outline
+
+    Not: Anahat, kenarlıklardan farklıdır! Kenarlığın aksine, anahat öğenin kenarının dışına çizilir ve diğer içeriklerle örtüşebilir. Ayrıca, anahat öğenin boyutlarının bir parçası DEĞİLDİR; öğenin toplam genişliği ve yüksekliği anahat genişliğinden etkilenmez.
+
+    outline-style özelliği, taslağın stilini belirtir ve aşağıdaki değerlerden birine sahip olabilir:
+
+    dotted - Noktalı bir taslağı tanımlar
+    dashed - Kesikli bir taslağı tanımlar
+    solid - Katı bir taslağı tanımlar
+    double - Çift taslağı tanımlar
+    groove - 3B oluklu bir taslağı tanımlar
+    ridge - 3B oluklu bir taslağı tanımlar
+    inset - 3B iç içe geçmiş taslağı tanımlar
+    outset - 3B dış dış taslağı tanımlar
+    none - Anahat tanımlamaz
+    hidden - Gizli bir taslağı tanımlar
+    Aşağıdaki örnek, farklı anahat stili değerlerini gösterir:
+
+    Not: Diğer anahat özelliklerinin hiçbiri (sonraki bölümlerde daha fazla bilgi edineceksiniz) anahat stili özelliği ayarlanmadığı sürece HİÇBİR etkiye sahip olmayacaktır!
+
+    Outline-width özelliği, anahat genişliğini belirtir ve aşağıdaki değerlerden birine sahip olabilir:
+
+    ince (genellikle 1 piksel)
+    orta (genellikle 3 piksel)
+    kalın (genellikle 5 piksel)
+    Belirli bir boyut (px, pt, cm, em, vb. cinsinden)
+
+    ilk border tanımlıyor sonra outline. Acaba zorunlu mu.
+
+    Anahat-renk özelliği, anahat rengini ayarlamak için kullanılır.
+
+    Renk şu şekilde ayarlanabilir:
+
+    name - "kırmızı" gibi bir renk adı belirtin
+    HEX - "#ff0000" gibi bir hex değeri belirtin
+    RGB - "rgb(255,0,0)" gibi bir RGB değeri belirtin
+    HSL - "hsl(0, 100%, 50%)" gibi bir HSL değeri belirtin
+    invert - bir renk ters çevirme gerçekleştirir (bu, anahat renginin arka plan renginden bağımsız olarak görünür olmasını sağlar)
+
+    Anahat özelliği, aşağıdaki bireysel anahat özelliklerini ayarlamak için kullanılan bir kısaltma özelliğidir:
+
+    anahat-genişliği
+    anahat-stili (gerekli)
+    anahat-rengi
+    Anahat özelliği, yukarıdaki listeden bir, iki veya üç değer olarak belirtilir. Değerlerin sırası önemli değildir.
+
+    Outline-offset özelliği, bir anahat ile bir öğenin kenarı/kenarı arasına boşluk ekler. Bir öğe ile anahat arasındaki boşluk şeffaftır.
+
+ p elementinde boyut orjinal boyut +paddin ... ya göre ayarlanmıyor direkt ekranı doldurcak şekilde ayarlanmış. Bunu değiştirebiliyormuyuz bunu araştır ve ekle.
+
+    block elementlerin özellikleri şunlar, ekranı en olarak kaplar ve verdiğin padding vs içindeki öğeyi küçültür. p yi şekillendirdiğimiz de p kalıbı şekilleniyorü yazıya hiçbir şekilde müdahale edemiyoruz.
+
+ bu border-style yazsam da border diyip hızlıca yazdığım komutu kıramadım ama satırı en sonra, 2 satır aşşağa alınca kırıldı bunu bir araştır.
+
+    Kırılıyor, sadece double de borderin width i 3px olması lazım en az
+
+ outline varsayılan none sanırım, style ekleyince geliyor. Zaten marginin içinde sayılıyor. Bunu araştır ve ekle.
+
+    outline box sizinge girmiyor.   
+
+ margine ve paddinge renk ve style atanmıyor sanırım.
+
+ border de önemli olan style, yoksa gelmiyor. Sanırım her şeyde öyle.
+
+ 3 belirtmede sıralama farklı.
+
+ border radiusu da ekle.
+
+    border-radius özelliği, öğenin köşelerinin yarıçapını tanımlar.
+
+    İpucu: Bu özellik, öğelere yuvarlatılmış köşeler eklemenize olanak tanır!
+
+    Bu özellik bir ila dört değere sahip olabilir. İşte kurallar:
+
+    Dört değer - border-radius: 15px 50px 30px 5px; (ilk değer sol üst köşeye, ikinci değer sağ üst köşeye, üçüncü değer sağ alt köşeye ve dördüncü değer sol alt köşeye uygulanır):
+
+    Üç değer - border-radius: 15px 50px 30px; (ilk değer sol üst köşeye, ikinci değer sağ üst ve sol alt köşelere ve üçüncü değer sağ alt köşeye uygulanır):
+
+    İki değer - border-radius: 15px 50px; (ilk değer sol üst ve sağ alt köşelere, ikinci değer ise sağ üst ve sol alt köşelere uygulanır):
+
+    Bir değer - border-radius: 15px; (değer eşit şekilde yuvarlanan dört köşeye uygulanır:
+
+    Not: Her yarıçap için dört değer sol üst, sağ üst, sağ alt, sol alt sırasıyla verilmiştir. Sol alt atlanırsa sağ üst ile aynıdır. Sağ alt atlanırsa sol üst ile aynıdır. Sağ üst atlanırsa sol üst ile aynıdır.
+
+ alanları belirtme ve hem 4 farklı sıralama, hem de her alanı teker teker belirtme.
+
+ o her yönü belirtmeyi, iki farklı şekilde belirtmeyi önceye al.
+
+ border image vs var onları araştır, border image opacity falan var, bunların da farklı belirtme tarzları var.
+
+    border-image özelliği, bir öğenin etrafındaki kenarlık olarak kullanılacak bir görüntü belirtmenize olanak tanır.
+
+    border-image özelliği, şunun için bir kısaltma özelliğidir:
+
+        border-image-source Kenarlık olarak kullanılacak görüntünün yolu
+        border-image-slice Kenarlık görüntüsünü nasıl dilimleyeceksiniz
+        border-image-width Kenarlık görüntüsünün genişliği
+        border-image-outset Kenarlık görüntü alanının kenarlık kutusunun ötesine uzanma miktarı
+        border-image-repeat Kenarlık görüntüsünün tekrarlanması, yuvarlanması veya uzatılması gerekip gerekmediği
+        initial Bu özelliği varsayılan değerine ayarlar. initial hakkında bilgi edinin
+        inherit Bu özelliği üst öğesinden devralır. inherit hakkında bilgi edinin
+
+    Atılan değerler varsayılan değerlerine ayarlanır.
+    
+    border-image-source: url(border.png);
+
+    border-image-slice: 10;
+
+    border-image-width: 10px;
+
+    border-image-outset: 2px;
+
+    border-image-repeat: stretch;
+
+    border-image-opacity: 40%;
+
+    borderin width i önemli, Sanırım kısa olarak şu şekil yazdırılıyor. border-image:url(border.png) 10 repeat; Bir de aynı border-block-end gibi bunların da farklı belirtme tarzları var.
+
+    background img ın url olarak başka yerden getirileceği ipucunu verme.
+
+    margine ve paddinge color,style atayamıyoruz, bunu hatırlatacak şekilde iste.
+
+    outline marginlerin içinde ve marginin öbür marginle çakışıp çakışmaması önemsiz, önemli olan öbür element ile arasında margin kadar boşluk olup olmaması. outline ve diğre style verilebilen ögelerde de ilk style vermemiz lazımdı yoksa öbür komutlat geçersiz sayılıyordu. border da padding ya da margine girmiyoru.
+
+    outline, inline,block diye yarılmıyor. Aynı şekilde color ve background color da, margin ve paddinge de style ce color veremiyoruz.
+
+    3 lü yazarken sıralamanın nasıl olduğunu hatırlamamızı sağla.
+
+    Son olarak da box-sizingin margine kadar normalde elemtin olması gereken alanda olduğunu hatırlat.
+
+ -->

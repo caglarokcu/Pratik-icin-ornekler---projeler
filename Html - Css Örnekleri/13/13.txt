@@ -1,0 +1,3 @@
+Bir çerçeve yap ve içine beş tane içi dolu kutu koy. Bu çerçevenin kapsayıcısını değiştirerek bu kutuların yatay ve dikey olarak nasıl hizalanacağını belirle. Tabii ilk bu kapsayıcının yönünü ve aradaki boşlukları belirle. İki tane birbirini ezen komut vardı, onları da yaz. Sonra bir satırı öğeleri nasıl yerleştireceğini belirleyen bir element de vardı, onları da yaz.
+
+Yine aynı sistemde bu kez içerdeki elementleri etkileyen komutları kullan. O elementin nasıl yer kaplıyacağını, ne kadar küçüleceğini, hangi sırada olduğunu ve kendini nerde konumlayacağını ve başlangıç büyüklüğünü yazabiliyorduk.

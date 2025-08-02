@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* 1) */
+    .container{
+        display: grid;
+        grid-template-columns: 300px auto 300px;
+        border: 1px solid red;
+        gap: 10px;
+     }
+     .d1,.d2,.d3,.d4,.d5,.d6{
+        border: 1px solid black;
+     }
+
+     /* 2)  YAPAMADIM */
+    /* .grid-container{
+         display: grid;
+         grid-template-columns: 300px auto 300px;
+         border: 1px solid red;
+         }
+
+     div div{
+        border: 1px solid red;
+     }
+     header,main,aside,footer{
+        border: 1px solid black;
+        display: block;
+     } */
+     
+     /* 3) */
+     
+     /* Fraction diye bir kavram var, şuna şu kadarlık alan, buna bu kadarlık alan ayır diyoruz. */
+     
+     .site3{
+         grid-template-columns: 2fr 1fr 1fr;
+     }
+
+     .site3{
+         display:grid;
+         grid-template-columns:2fr 1fr;
+         grid-gap:10px;
+
+     /* grid-column-gap: 10px;
+        grid-row-gap:    10px;
+        
+        Böylece ikisini birden yazmış oluruz.
+        */
+
+      /* Grid Areas ile de bu alanları isimlendirebiliyoruz: */
+ 
+         grid-template-areas:"header header"
+                             "title sidebar"
+                             "main sidebar"
+                             "footer footer"
+     }
+     .mastheader3{grid-area:header;}
+     .page-title3{grid-area:title;}
+     .main-content3{grid-area:main;}
+     .sidebar3{grid-area:sidebar;}
+     .footer3{grid-area:footer;}
+
+     .mastheader3,.page-title3,.main-content3,.sidebar3,.footer3{
+        border: 1px solid black;
+     }
+
+     /* 4) */
+
+     /* repeat diye bir komutumuz var: */
+ 
+     .div-repeat {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         grid-gap: 10px;
+       }      
+     .div-repeat1,.div-repeat2,.div-repeat3,.div-repeat4,.div-repeat5,.div-repeat6{
+        background-color: orange;
+     }
+       
+       /* Satırları 1fr lik 3 parçaya böl demek. */
+ 
+     .div-auto-fit {
+         display: grid;    
+         grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+         gap: 10px;
+     }
+     .div-auto-fit1,.div-auto-fit2,.div-auto-fit3,.div-auto-fit4,.div-auto-fit5,.div-auto-fit6{
+        background-color: orange;
+     }        
+     
+     /* auto-fit sığdır demek ve hepsi eşit ve en az 300 px olacak demek.
+
+     Bir de auto-fill var. Bu da doldur demek. fit de yayıyor yeni eleman gelemiyorsa ama fill de yayma yok boşluk  bırakıyor.
+     */
+
+     /* 5) */
+
+     /* Bir örnek, kısa yollarıyla. */
+
+     .site5 {  
+       display: grid;
+       grid-template-columns: 2fr 1fr 1fr;
+       grid-template-rows: 1fr 2fr 2fr;
+       border: 1px solid red;
+     }
+     .mastheader5 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+     }
+     /*  * OR *  
+     .mastheader5 {
+        grid-column: 2 / 4;      
+        grid-row: 2 / 3;
+     }
+
+     /* Bunlarda bir üsteki paragrafın kısa yolu. */
+
+     /* 6) */
+
+      /* Bir de auto-flow var, yeni bir satır/sütun yapmak için kullanılıyor. */
+ 
+     .site6 {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 5px;
+     }       
+     
+     /* Böylece bu yukardaki elemanlar grid yapısının altında yeni bir sütun olarak hepsi yan yana gelecek. */
+
+     .d61,.d62,.d63,.d64,.d65{
+      border: 1px solid red;
+     }
+
+     /* 7) */
+
+     /* minmax a bir örnek: */
+ 
+     .cont7-1{
+         display: grid;
+         grid-template-columns: 200px minmax(200px , auto) 200px;
+         grid-gap: 10px;
+     }     
+     
+     /* En az 200 px ve en fazla da doldurabildiğin kadar olsun demiş burda. */
+ 
+     .cont7-1-1,.cont7-1-2,.cont7-1-3,.cont7-1-4,.cont7-1-5{
+         border: 1px solid red;
+     }
+
+     /* fit-content de sabit genişliği belirtir. */
+ 
+     /* .cont7-2{   YAPAMADIM
+         display: grid;  
+         grid-template-columns: auto fit-content(800px) auto;
+         gap: 10px;
+     }      
+     
+         Ortadaki 800px ve geri kalan da otomatik doldur demiş mesela. */
+ 
+     .cont7-2-1,.cont7-2-2,.cont7-2-3,.cont7-2-4,.cont7-2-5{
+         background-color: orange;
+     }
+
+      /* min-content ve max-content var, en küçük ve en geniş şekilde sığdır. */
+     
+     .cont7-3{
+         display:grid;
+         grid-template-columns:auto min-content auto;
+         gap: 10px;
+     }
+
+     .cont7-3-1,.cont7-3-2,.cont7-3-3,.cont7-3-4,.cont7-3-5{
+         background-color: orange;
+     }
+     
+     .cont7-4{
+      display: grid;
+      grid-template-columns: auto max-content auto;
+      gap: 10px;
+     }
+
+     .cont7-4-1,.cont7-4-2,.cont7-4-3,.cont7-4-4,.cont7-4-5{
+         background-color: orange;
+     }
+    </style>
+</head>
+<body>
+    <!-- 1) -->
+    <div class="container">
+        <div class="d1">1</div>
+        <div class="d2">2</div>
+        <div class="d3">3</div>
+        <div class="d4">4</div>
+        <div class="d5">5</div>
+        <div class="d6">6</div>
+    </div><br><br>
+
+    <!-- 2) YAPAMADIM -->
+    <!-- <div class=”grid-container”>
+         <header class=”main-header”>header</header>
+         <main class=”main-content”> main</main>
+         <aside class=”main-side”>
+            
+            <div class=”child-of-child”>aside-div</div>
+            
+         </aside>
+         <footer class=”main-footer”>footer</footer>
+     </div> -->
+
+    <!-- 3) -->
+      <div class="site3">
+         <header class="mastheader3">Main Header</header>
+         <h1 class="page-title3">page-title</h1>
+         <main class="main-content3">main-content</main>
+         <aside class="sidebar3">sidebar</aside>
+         <footer class="footer3">footer</footer>
+      </div><br><br>
+    
+    <!-- 4) -->
+     <div class="div-repeat">
+        <div class="div-repeat1">1</div>
+        <div class="div-repeat2">2</div>
+        <div class="div-repeat3">3</div>
+        <div class="div-repeat4">4</div>
+        <div class="div-repeat5">5</div>
+        <div class="div-repeat6">6</div>
+    </div><br><br>
+
+    <div class="div-auto-fit">
+        <div class="div-auto-fit1">1</div>
+        <div class="div-auto-fit2">2</div>
+        <div class="div-auto-fit3">3</div>
+        <div class="div-auto-fit4">4</div>
+        <div class="div-auto-fit5">5</div>
+        <div class="div-auto-fit6">6</div>
+    </div>
+
+    <!-- 5) -->
+
+    <div class="site5">
+         <header class="mastheader5">.masthead</header>
+         <h1 class="page-title5">page title</h1>
+         <main class="main-content5">MAIN CONTENT</main>
+         <aside class="sidebar5">sidebar</aside>
+         <footer class="footer5">main footer</footer>
+    </div><br><br>
+
+    <!-- 6) -->
+
+     <div class="site6">
+         <div class="d61">1</div>
+         <div class="d62">2</div>
+         <div class="d63">3</div>
+         <div class="d64">4</div>
+         <div class="d65">5</div>
+         ...
+     </div><br>
+     
+     <!-- 7) -->
+
+     <div class="cont7-1">
+         <div class="cont7-1-1">1</div>
+         <div class="cont7-1-2">2</div>
+         <div class="cont7-1-3">3</div>
+         <div class="cont7-1-4">4</div>
+         <div class="cont7-1-5">5</div>
+     </div><br>
+
+     <!-- <div class="cont7-2">   YAPAMADIM
+         <div class="cont7-2-1">1</div>
+         <div class="cont7-2-2">2</div>
+         <div class="cont7-2-3">3</div>
+         <div class="cont7-2-4">4</div>
+         <div class="cont7-2-5">5</div>
+     </div><br> -->
+
+     <div class="cont7-3">
+         <div class="cont7-3-1">1</div>
+         <div class="cont7-3-2">Content Content Content Content Content Content</div>
+         <div class="cont7-3-3">3</div>
+         <div class="cont7-3-4">4</div>
+         <div class="cont7-3-5">Content Content Content Content Content Content</div>
+     </div><br>
+
+     <div class="cont7-4">
+         <div class="cont7-4-1">1</div>
+         <div class="cont7-4-2">Content Content Content Content Content Content</div>
+         <div class="cont7-4-3">3</div>
+         <div class="cont7-4-4">4</div>
+         <div class="cont7-4-5">Content Content Content Content Content Content</div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html> <!-- Css de width ve height da %50 gibi kavramlar. -->
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .item{
+        background-color: orange;
+        height:30px;
+        margin: 20px 0px;
+    }
+        /* Bununla hepsine varsayılan özellik ekliyoruz ve sonra üzerine extra özellik ekliyoruz. Bu şekilde kod yazmayı alışkanlık haline getir. Divin içindekilerde herhangi bir boşluk yok, demek ki margin o parent dive işlemiyor.*/
+    .parent{
+        width:300px;
+        border:1px solid red;
+        margin: auto;
+    }
+    .item-view{
+        margin:20px auto;
+        width: 50vw;
+        height: 50vh;
+    }
+    .item-yüzde{
+        margin:20px auto;
+        width:50%;
+    }
+        /* 50vw den biraz daha kısa oldu 50%. Çünkü 50% ekranın yarısına kadar getiriyor 50vw ise direktmen ekranın %50 lik uzunluğunda yapıyor. */
+    .a{
+        margin: 0px;
+    }
+    </style>
+ </head>
+ <body>
+    <div class="item item-view"> %50 view</div>
+    <div class="item item-yüzde"> %50</div>                    
+    <div class="parent">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item item-yüzde a"> %50</div>
+    </div>   
+ </body>
+ </html>
+
+ <!-- birini oranla ile ve birini de ekran uzunluğu diyerek ve bunların arasındaki farkı neden olduğunu hatırlatıcak şekilde iste.
+ 
+ wh ile 50% arasında farka galiba ekranın yarısına kadar getiriyor diye yazmışız. Biri ekranın tam yarısına kadar getiriyor, öbürü ise marginler hariç uzunluğun yarısına, bunu ekle.
+
+    % ile yapılan şeyler de marginleri de hesaba katarak parentinin yüzdesini ekliyor, daha doğrusu belli bir yüzde uzunluğuna kadar getiriyor, oranlıyor, marginini arttırırsan uzunluk kısalıyor, nerden başlarsa başlasın o belli yüzdede bitecek. vw de ise direkt ekranın belli oranını ekliyor. Margeinler aracılığı ile istediği yerden başlasın o uznluk her türlü eklenecek, kısalmaz böyle.
+ 
+ * ile kaldırdığımız marginlerin neleri tam değiştirdiğini araştır. margin none padding none diyince olmuyor bu. Bunu kaldırınca divin içinde verdiğimiz oranlar bozuluyor, div kırılıyor. Bunu birine sor.
+
+    Tanım ve Kullanım
+    CSS evrensel seçicisi (*) herhangi bir türdeki tüm öğeleri seçer.
+ 
+    Evrensel seçici (*) ayrıca başka bir öğenin içindeki tüm öğeleri de seçebilir (Bkz. "Daha Fazla Örnek").
+ 
+    Bu seçici, @namespace kullanıldığında da ad alanlı olabilir.
+ 
+    ns|* - ns ad alanındaki tüm öğeleri seçer
+    *|* - tüm öğeleri seçer
+    |* - herhangi bir ad alanı belirtilmemiş tüm öğeleri seçer
+
+ burda bütün divlere özellik atayabilmemiz için 2 class birden vermeyi ekle.
+
+ gördüğün gibi margin-block:auto; olmuyor. ve vw deyine ebeveyninin değil. ekranın uzunluğunu alıyor. containere de padding vermem divlere etki etmedi, bunları araştır hep.
+
+    padding etki ediyor hatta con padding ile div marginin toplamı kadar boşluk kalıyor.
+
+ div ekranı en olarak kaplıyor ama height ını içindeki nesnenin boyutuna göre alıyor galiba.
+
+ İstenilenler bölümünde projenin tamamı yok ve iki dive de margin-inline-start:50px; dedim yine aynı oldu, birinin boyu kısalır diye umuyordum. Bunu araştır.
+
+ --> 

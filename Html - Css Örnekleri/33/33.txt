@@ -1,0 +1,11 @@
+Bir button oluştur. Flex ile ekranın tam ortasında, olmasını sağla. Görüntüsünğü güzel gözükecek şekilde yap.
+
+3 tane animasyon yap.
+
+    Birincisi hafifçe büyütüp küçülsün
+
+    ikincisi saydamlık ile göz kırpsın
+
+    üçüncüsü de ilk hafi dönerek ve büyüyerek sağa gitsin, sonra ters tarafa dönerek ve küçülerek sola doğru gidip yok olsun.
+
+    İlk ikisi hover durumunda 3. sü focus durumunda olsun.

@@ -1,0 +1,19 @@
+a elementi ile ilgili:
+    Başka siteye açılan köprü(farklı sekme).
+    Başka siteye açılan köprü(aynı sekme).
+    Başka belgeye açılan köprü.
+    Resim içerisinden açılan köprü.
+    Mail adresine açılan köprü.
+
+    Bunları yaparken sitenin açılması için bir şeye dikkat etmek gerekiyordu, daha doğrusu bir kavramı iyi bilmek.
+
+    Bu yapı neye göre linkin ziyaret edildiğini kontrol ediyordu, neyi yapmazsak bu kontrol bozuluyordu?
+
+Bir de sitenin başına bir köprü ekle, sitenin herhangi bir yerine götürsün bun bizi.
+
+    Köprünün bir yere bağlanmamasını nasıl sağlıyorduk, ne yazarsak yazalım bir işaret.
+
+Bu tagları şekillendirirken:
+    sizesi(farklı yapıyorduk, normal yapınca istediğimiz tepkiyi vermiyordu, onu bir hatırla.)
+    arka fon rengi, yazı rengi, yazı boyutu, çerçeve kullan.
+    linki, üzerine gelme durumu, tıklanma durumu ve önceden tıklanmış olma durumunu kullan ve aynı özelliği iki duruma birden aynı kodda yaz.

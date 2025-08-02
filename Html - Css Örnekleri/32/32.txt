@@ -1,0 +1,19 @@
+Şimdi 8 tane div oluştur; 100x100px boyut, arkafon 100px kadar da margin ver.
+
+Dönüştürme komutunu kullanarak hover durumunda şunları yap.
+
+    Y ekseninde kendi boyutunun 50% si kadar ötelensin.
+
+    X ekseninde 50px Y ekseninde 50% kadar telensin.
+
+    Kendini yarım tur çevirsin.
+
+    Y eksenini baza alarak kendini 1 tur çevirsin.
+
+    Kendini 1.5 kat büyütsün.
+
+    Kendini biraz eğsin
+
+    Yukarda yazdığımız bütün durumları birlikte kullanarak bir animasyon yap.
+
+    Son olarak da kendi origin noktasından farklı bir noktayı baza alarak kendi etrafında dönsün.

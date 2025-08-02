@@ -1,0 +1,8 @@
+Arka plan resminin boyutunu ayarla, url olarak başka yerden getirt, nerede duracağını, ne yönde nasıl tekrar edeceğini ve sabit mi yoksa haraketli mi olacağını ayarla.
+
+Bir p ye (block elemente) border, iç ve dış boşluk ata, o 4 alanın boyutunu ayarla, 4 farklı şekilde yazılabiliyordu.
+Sırayla bu 4 kazımı hepsinde farklı olacak şekilde kullan. Bir de bir komuta neler yazabileceğimizi nasıl anlıyorduk.
+
+Aynı elementten bir tane daha koy ve bunu öbüründen farklı olarak; bir kod yardımı ile farklı da hesaplatabilyorduk onu da ekle. Sonra bu alanları ayrı ayrı yönlerde de ayarlayabiliyorduk, o şekilde bütün alanları ayarla (tarz ve renkleri de) ve bu yönleri iki farklı şekilde belirtebiliyorduk, ikisini de kullan.
+
+Bu iki örneği divde de yap. İki örnekte de alanlardan birini otomatik, kendi hesaplayıp doldurmasını sağla.

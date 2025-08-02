@@ -1,0 +1,7 @@
+puseido elementlere ve normal elemtlere, boyut hesaplarken işimize yarıyacak şekilde hesaplat ve body üst boşluk 300px ver.
+
+Şimdi tooltip yapacağız. Özellik atayarak yani attiribute ile bağla bu kez style lerini, class ile değil de.
+
+puseido elementleri kullanarak üzerine geldiğinde çıkan ve tam ortalayan bir tooltip yap. Bir de ok çıksın altında, içeriğine doğru. Position ile ayarla bunları.
+
+Sonra aynı tooltip var(--ana-renk) gibi şeylerle, daha kısa ve elemte göre kolayca değiştirebileceğimiz şekilde yap. 
