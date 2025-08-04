@@ -22,7 +22,7 @@ Telif hakları veya diğer yan yorumları tanımlayan tag.
 
 Silinen, çıkarılan metni tanımlayan tag.
 
-içerisinde resim braındırabilen tagı kullan.
+içerisinde resim barındırabilen tagı kullan.
 
 Eklenen metni tanımlayan tag.
 
