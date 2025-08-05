@@ -5,45 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table,th,tr,td{
+        table,tr,th,td{
             border: 1px solid black;
             border-collapse: collapse;
+            background-color: blueviolet;
         }
         img{
-            height: 50px;
+            width: 200px;
         }
         caption{
             caption-side: bottom;
         }
-        tr:nth-child(2){
+        th:nth-child(odd){
             background-color: aqua;
         }
-        th:nth-child(1),th:nth-child(3),th:nth-child(6){
+        td:nth-child(even){
             background-color: brown;
+        }
+        ul{
+            list-style: disc;
+        }
+        ol{
+            list-style: lower-greek;
         }
     </style>
 </head>
 <body>
     <table>
-        <caption>Başlık</caption>
-
+        <caption>Tablo</caption>
         <tr>
             <th>Ad</th>
+
             <th>Soyad</th>
-            <th>Yaş</th>
-            <th>Meslek - Hayal</th>
-            <th style="display: none;"></th>
-            <th>Fotoğraf</th>
-            <th>.</th>
+
+            <th>Meslek</th>
+
+            <th colspan="2">Resim</th>
+            
         </tr>
+
         <tr>
             <td>Çağlar</td>
+
             <td>OKCU</td>
-            <td>25</td>
-            <td>Öğrenci -</td>
-            <td style="text-align: center;" colspan="2"><img src="../../resimler/Biometrik.jfif" alt=""></td>
+
+            <td>Öğrenci</td>
+
+            <td rowspan="2">
+                <img src="../../resimler/Biometrik.jfif" alt="">
+            </td>
+        </tr>
+
+        <tr>
+            <td style="display: none;"></td>
+
+            <td style="display: none;"></td>
+
+            <td style="display: none;"></td>
         </tr>
     </table>
+
+    <ul style="list-style: circle;">
+        <li>1</li>
+        <li>2</li>
+        <li>
+            <ul>
+            <li>3.1</li>
+            <li>3.2</li>
+            <li>3.3</li>
+            </ul>
+        </li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
 
     <ul>
         <li>1</li>
@@ -53,21 +87,28 @@
         <li>5</li>
     </ul>
 
-    <ol>
-        <li><ol><li>1</li>
-        <li>2</li>
-        <li>3</li></ol></li>
+    <ol style="list-style: lower-roman;">
+        <li>1</li>
         <li>2</li>
         <li>3</li>
         <li>4</li>
-        <li>5</li>
+    </ol>
+
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
     </ol>
 
     <dl>
-        <dt>i</dt>
-        <dd>b</dd>
-        <dt>a</dt>
-        <dd>c</dd>
+        <dt>Silgi</dt>
+        <dd>Unutur</dd>
+        <dt>Kalem</dt>
+        <dd>Anlatır</dd>
+        <dt>Defter</dt>
+        <dd>Hatırlar</dd>
     </dl>
 </body>
 </html>
+

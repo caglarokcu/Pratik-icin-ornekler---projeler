@@ -5,39 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .a{
-            text-decoration: none;
-            color: blue;
+        .d1{
+            height: 500px;
         }
-        .a1,.a3,.a5,.a7{
-            font-size: 30px;
+        a{
+            display: inline-block;
+            margin: 10px;
+            height: 30px;
+            width: 100px;
         }
-        .a2,.a4,.a6{
-            font-size: 50px;
-        }
-        .a:hover{
+        .a1,.a3,.a5{
             background-color: aqua;
-        }
-        .a:visited{
-            color: brown;
-        }
-        .a:focus{
+            color: black;
             border: 1px solid red;
         }
-
+        .a2,.a4{
+            background-color: blueviolet;
+            color: black;
+            border: 1px solid red;
+        }
+        .a1:hover,.a3:hover,.a5:hover{
+            background-color: azure;
+        }
+        .a2:hover,.a4:hover{
+            background-color: brown;
+        }
+        .a2:visited,.a4:visited{
+            color: blue;
+        }
+        .a1:visited,.a3:visited,.a5:visited{
+            color: blue;
+        }
+        .a1:focus,.a2:focus,.a3:focus,.a4:focus,.a5:focus{
+            border: 3px solid black;
+        }
     </style>
 </head>
 <body>
-    <a href="https://youtube.com" target="_self" class="a a1">Youtube (self)</a><br>
-    <a href="https://youtube.com" target="_blank" class="a a2">Youtube</a><br>
-    <a href="../../firstHello/caglar 2.html" class="a a3">Çağlar</a><br>
-    <a href="../../resimler/2.jpg" class="a a4"> Resimler</a><br>
-    <a href="mailto:caglarokcu0@gmail.com" class="a a5">Mail</a><br>
-    <a href="#e" class="a a6">Öylesine</a><br>
-    <a href="#a" class="a a7">span</a><br>
+    <a href="https://youtube.com" target="_blank" class="a1">Youtube</a><br>
+    <a href="https://youtube.com" target="_self" class="a2">Youtube</a><br>
+    <a href="../../resimler/1.jpg" class="a3">Resim</a><br>
+    <a href="../1/1.html" class="a4">1. örnek</a><br>
+    <a href="mailto:caglarokcu0@gmail.com" class="a5">Mail</a><br>
+    <a href="#s1">sayfa</a>
 
-    <p style="height: 1000px;"></p>
+    <div class="d1"></div>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse asperiores ea aliquam id distinctio reiciendis, nulla tempora odio ipsa nisi pariatur excepturi autem nihil ut porro nemo totam repudiandae ex sed facere, maxime atque vero voluptatibus mollitia! Reiciendis vitae ratione, eius perspiciatis corrupti, vero deleniti laboriosam molestiae voluptatum illo veritatis enim asperiores repudiandae at est sapiente! Eum facilis incidunt quis fuga temporibus doloremque neque fugit cum, repellendus quae vitae voluptatibus eos quia ad nesciunt, iure consectetur nisi sequi? Expedita nobis molestias necessitatibus modi cumque laborum alias dolorem odio. Sint illum perferendis ipsam, a quisquam laudantium eum dolorem nobis, autem vel asperiores magni quas quaerat commodi nulla explicabo animi enim quos natus dignissimos non accusantium quibusdam. Deserunt ab sunt eligendi asperiores doloremque quasi cumque repellendus, optio impedit tempore consectetur nulla ratione ea? Illum accusantium <span id="a">in</span> , quos mollitia esse, officiis sapiente facere ab adipisci dicta quas, dolor possimus aut sint quasi quia?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos recusandae earum quasi! Atque rerum, dolore, aliquam, ratione saepe libero perferendis deleniti tenetur natus voluptatibus aspernatur eveniet dignissimos. Quibusdam accusamus repellat tempora dignissimos ratione magnam suscipit earum atque sint? Voluptate ipsam eaque magni praesentium sequi repudiandae quaerat minus facilis, facere minima similique, vitae sit aliquid consequuntur quidem vel, odit adipisci. Deserunt, labore quasi officiis aperiam officia quam natus similique, numquam quia quo aliquam. Deleniti voluptatibus odit et in temporibus eligendi, voluptas neque esse aliquid ex quasi corporis fugiat sit rerum ad accusantium sapiente! Quasi quisquam voluptatem similique ea suscipit ducimus consequuntur quas magni praesentium magnam corporis earum, temporibus beatae labore ab quis mollitia odio corrupti. Reiciendis rem laborum quia voluptatem qui repellat quidem distinctio minima, molestiae maxime, architecto voluptates consequuntur praesentium quisquam. Rem qui in <span id="s1">nisi?</span> Voluptas, laborum fugiat. Recusandae aut tempora ea ratione libero quisquam iste modi aliquid nam aspernatur.</p>
 </body>
 </html>
+
+<!-- a inline bir element olduğu için margin atasak da sadece inline start ve end de margin verdi.
+ 
+şu boyut veremememizin sebebi inline olmasıymış.
+
+mail linki ne açılıyor ne de visited oluyor. Ona bir bak.-->

@@ -4,7 +4,7 @@ Sonra da köprüler le yerlerini yüzdürerek belirlediğin bir header yap.
 
 Aynı şekilde farklı font-family den bir harfi büyüterek en sağa yapıştır. Paragrafı öyle başlat.
 
-Sonra bir resim al ve onun içindeki cisimlerin olduğu alanları tıklanabilir yapıp onlardan köpri açılmasını sağla.
+Sonra bir resim al ve onun içindeki cisimlerin olduğu alanları tıklanabilir yapıp onlardan köprü açılmasını sağla.
 
 Sonra da bir alanda başka siteden alıntı video göster. Sonra altta köprüler olsun ve o köprülere tıklayınca, alıntı yaptığımız alanda video veya başka bir şey açılsın. Bu alana da çerçeve ekliyebiliyorduk bir çeşit, onu da eklemeyi unutma.
 
