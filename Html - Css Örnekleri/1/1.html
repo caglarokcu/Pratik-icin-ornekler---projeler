@@ -75,7 +75,9 @@
          recusandae dolorum omnis reiciendis consequatur 
       </pre>
 
-      <!-- Önceden biçimlendirilmiş metni tanımlar. Biçimli bir yazıda, kaynak kodunda yazıldığı gibi çıkar. -->
+      <!-- Önceden biçimlendirilmiş metni tanımlar. Biçimli bir yazıda, kaynak kodunda yazıldığı gibi çıkar.
+       
+      Font-family, margin ayarlamaları, display ı block. Text-wrap-mode: nowrap ve white-speace-collopse: preserve. -->
       
       doloribus adipisci, repellat corporis distinctio ratione sed.
    </p>
@@ -89,14 +91,20 @@
          adipisicing elit. Pariatur dolores facilis ratione eveniet, repellendus esse voluptatibus placeat! Labore
       <strong>
 
-         <!-- Tarayıcıya ekstra önemli metni anlatır, kalın harflere gösterilir -->
+         <!-- Tarayıcıya ekstra önemli metni anlatır, kalın harflere gösterilir.
+         
+         display ı inline ve font-weight ayarlaması.-->
           
       iusto ducimus perferendis delectus expedita nisi eligendi magnam ipsam adipisci, earum commodi incidunt soluta sit provident <hr> 
       <i> 
          officia nesciunt totam voluptatum 
       </i> 
 
-         <!-- metni altarnetif bir ses veya ruh hali ile tanımlar, italik olarak görüntülenir. Genellikle teknik bir terimi, başka bir dilden bir ifadeyi, bir düşünceyi, bir gemi adını vb. belirtmek için kullanılır. -->
+         <!-- metni altarnetif bir ses veya ruh hali ile tanımlar, italik olarak görüntülenir. Genellikle teknik bir terimi, başka bir dilden bir ifadeyi, bir düşünceyi, bir gemi adını vb. belirtmek için kullanılır.
+          
+         <i> öğesini yalnızca daha uygun bir anlamsal öğe olmadığında kullanın
+            
+         displayı inline ve font-style ayarlaması.-->
       <br> <br> 
       molestiae nam sunt veniam sequi? Illum necessitatibus cumque quasi, harum neque maxime.
    </p>
@@ -106,28 +114,36 @@
          consectetur adipisicing elit. Ducimus vel, nam 
       </em> 
 
-         <!-- Vurgulanan metni tanımlar, italik olarak görüntülenir, ekran okuyucu vurgu kullanarak okur. -->
+         <!-- Vurgulanan metni tanımlar, italik olarak görüntülenir, ekran okuyucu vurgu kullanarak okur.
+          
+         display ı inline ve font-style ayarlaması-->
 
       minima maxime eaque fugiat itaque, nostrum quisquam dolorem 
       <small> 
          aperiam numquam est praesentium distinctio laudantium ab 
       </small> 
 
-         <!-- Daha küçük metinleri (telif hakkı ve diğer yan yorumlar gibi) tanımlar. (Sadece font sizesi küçük.)-->
+         <!-- Daha küçük metinleri (telif hakkı ve diğer yan yorumlar gibi) tanımlar.
+          
+         display ı inline ve font-size ayarlaması.-->
 
       nisi officia inventore 
       <mark> 
          ut, impedit molestiae aliquam asperiores!
       </mark>
 
-      <!-- İşaretlenmesi ve vurgulanması gereken metni tanımalar. (Sadece arka fon rengi değişik ve yazı rengi.) -->
+      <!-- İşaretlenmesi ve vurgulanması gereken metni tanımalar. (Sadece arka fon rengi değişik ve yazı rengi.)
+       
+      display ı inline, background-color ve color ayarlaması.-->
 
       Iste dignissimos culpa minus dolore ipsa tempora, perferendis illo 
       <del> 
          repellat, laboriosam labore 
       </del> 
 
-         <!-- Bir belgeden silinen metni tanımlar. Üstüne çizgi çeker. -->
+         <!-- Bir belgeden silinen metni tanımlar. Üstüne çizgi çeker.
+          
+         display ı inline ve text-decoration ayarlamaları.-->
 
       temporibus nesciunt fuga consequatur!
    </p>
@@ -144,24 +160,7 @@
       alt - Resim herhangi bir nedenle görüntülenemezse resim için alternatif bir metin belirtir
       Not: Ayrıca, her zaman bir resmin genişliğini ve yüksekliğini belirtin. Genişlik ve yükseklik belirtilmezse, resim yüklenirken sayfa titreyebilir.
 
-      alt-text Bir görüntü için alternatif bir metin belirtir
-      crossorigin anonymous
-      use-credentials Üçüncü taraf sitelerden gelen ve çapraz kökenli erişime izin veren görüntülerin canvas ile kullanılmasına izin ver
-      height pixels Bir görüntünün yüksekliğini belirtir
-      ismap ismap Bir görüntüyü sunucu tarafı görüntü haritası olarak belirtir
-      loading eager
-      lazy Bir tarayıcının görüntüyü hemen yüklemesi mi yoksa bazı koşullar karşılanana kadar görüntülerin yüklenmesini ertelemesi mi gerektiğini belirtir
-      longdesc URL Bir görüntünün ayrıntılı açıklamasına giden bir URL belirtir
-      referrerpolicy no-referrer
-      no-referrer-when-downgrade
-      origin
-      origin-when-cross-origin
-      unsafe-url Bir görüntü alınırken hangi yönlendiren bilgilerinin kullanılacağını belirtir
-      sizes sizes Farklı sayfa düzenleri için görüntü boyutlarını belirtir
-      src URL Görüntünün yolunu belirtir
-      srcset URL-list Farklı durumlarda kullanılacak görüntü dosyalarının bir listesini belirtir
-      usemap #mapname Bir görüntüyü istemci tarafı görüntü haritası olarak belirtir
-      width pixels bir görüntünün genişliği -->
+      display ı inline, overflow x ve y clip e ayarlanmış, overflow-clip-margin: content-box -->
 
    <h4>Lorem ipsum dolor sit amet consectetur.</h4>
 
@@ -172,7 +171,7 @@
 
          <!-- Bir belgeye eklenen metni tanımlar. Tarayıcılar genellikle eklenen metnin altını çizer. -->
 
-         <!-- text-decoration ile css tanımlanmış. -->
+         <!-- display ı inline ve text-decoration ayarlaması.-->
 
       Quia reiciendis 
       <sub> 
@@ -181,7 +180,7 @@
 
          <!-- etiketi alt simge metnini tanımlar.Alt simge metni normal satırın yarım karakter altında görünür ve bazen daha küçük bir yazı tipiyle gösterilir. Alt simge metni H2O gibi kimyasal formüller için kullanılabilir. -->
 
-         <!-- vertical-align: dikey hizalamasını sağlar. baseline, text-top, text-bottom, sub, sup veya 50% gibi ayarlanabilir. -->
+         <!-- display ı block ve margin ayarlaması.-->
 
       explicabo incidunt 
       <sup>
@@ -190,22 +189,39 @@
 
          <!-- üst simge metnini tanımlar. Üst simge metni normal satırın yarım karakter üzerinde görünür ve bazen daha küçük bir yazı tipiyle gösterilir. Dipnotlar için WWW[1] gibi üst simge metni kullanılabilir. -->
 
-         <!-- vertical-align ile css tanımlanmış. -->
-      nam ut ipsum neque voluptatum. Officia aut ad fuga libero suscipit perspiciatis incidunt vero 
+         <!-- display ı inline ve vertical-align, font-size ayarlanması. -->
+
+      nam ut ipsum neque voluptatum. Officia aut ad fuga libero suscipit perspiciatis incidunt vero
+
       <dfn title="Ağlama">
          AGLAMAKASD
       </dfn> 
 
-         <!-- "tanım öğesi" anlamına gelir ve içerikte tanımlanacak terimi belirtir. En yakın ebeveyni aynı zamanda terimin tanımını/açıklamasını da içermelidir. İtalik olarak görüntülenir. -->
+         <!-- "tanım öğesi" anlamına gelir ve içerikte tanımlanacak terimi belirtir. En yakın ebeveyni aynı zamanda terimin tanımını/açıklamasını da içermelidir. Mesela p nin içinde kullanıyorsak p elemnti. İtalik olarak görüntülenir. -->
 
          <!-- title fonksiyonu ile, kelimenin üstüne geldiğinde yazdığın yazı çıkar. Aynı zamanda head'e title elementi yazarak sayfanın başlığını belirleyebilirsin. -->
 
-      doloremque deleniti expedita, 
+         <!-- display ı inline. -->
+
+      doloremque deleniti expedita,
+
       <a href="www.google.com">
          Google
       </a> 
 
-         <!-- Bir sayfadan diğerine bağlantı vermek için kullanılan bir köprüyü tanımlar. En önemli özelliği bağlantının hedefini belirten href özelliğidir. -->
+         <!-- Bir sayfadan diğerine bağlantı vermek için kullanılan bir köprüyü tanımlar. En önemli özelliği bağlantının hedefini belirten href özelliğidir.
+          
+         Varsayılan olarak, bağlantılar tüm tarayıcılarda şu şekilde görünür:
+         
+         Ziyaret edilmemiş bir bağlantı altı çizili ve mavi renktedir
+         Ziyaret edilmiş bir bağlantı altı çizili ve mor renktedir
+         Etkin bir bağlantı altı çizili ve kırmızı renktedir
+         İpuçları ve Notlar
+         İpucu: <a> etiketinin href özelliği yoksa, bu yalnızca bir köprü metni için bir yer tutucudur.
+         
+         İpucu: Başka bir hedef belirtmediğiniz sürece, bağlantılı bir sayfa normalde geçerli tarayıcı penceresinde görüntülenir. hrrps://... şeklinde belirtmen lazım. www kullanırsan çalışmaz.
+         
+         text-decoraiton, cursor ve solor ayarlaması, display ı inline.-->
       
       laudantium 
       <span> 
@@ -286,5 +302,11 @@ font-weight ince olarak ayarlanamıyordu, onu bir araştır.
 Spesifikasyon, başlıkların <h1> ila <h6> etiketleriyle, vurgulanan metinlerin <em> etiketiyle, önemli metinlerin <strong> etiketiyle ve işaretli/vurgulanmış metinlerin <mark> etiketiyle belirtilmesi gerektiğini belirtir. Burda bu taglar için kullanışlı bilgiler olabilir.
 
 border-style: inset; Bunu araştır, hr için kullanılıyor ve güzel gözüküyor.
+
+Text-wrap-mode: nowrap ve white-speace-collopse: preserve bunları araştır. pre de geçiyor.
+
+overflow x ve y clip e ayarlanmış, overflow-clip-margin: content-box, bunları araştır, img de var bunlar.
+
+vertical-align: dikey hizalamasını sağlar. baseline, text-top, text-bottom, sub, sup veya 50% gibi ayarlanabilir. Bunu farklı bir yere yerleştirebilirmiyiz bak.
 
 -->
