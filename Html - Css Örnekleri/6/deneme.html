@@ -6,65 +6,89 @@
     <title>Document</title>
     <style>
         body{
-            background-image: url(../../resimler/1.jpg);
-            background-size: auto 400px;
-            background-position:top left;
-            background-repeat: no-repeat;
-            background-attachment: scroll;
-        }
-        .p{
-            color: black;
-            outline: 5px dashed aquamarine;
-            background-color: brown;
+            background-image: url(../../resimler/10.jpg);
+            background-size: 200px 300px;
+            background-position: top center;
+            background-repeat: repeat-y;
+            background-attachment: fixed;
         }
         .p1{
-            outline: 5px solid blue;
-            border: 1px dotted red;
-            margin: 15px;
+            outline: 5px inset blue;
+            border: 3px solid red;
+            margin:15px;
             padding: 10px;
-            color: black;
-            background-color: brown;
         }
         .p2{
-            outline-style: solid;
-            outline-width: 20px;
-            outline-color: aqua;
-            margin-block: 25px;
-            margin-inline: 10px;
-            border-block: 3px dotted red;
-            border-inline: 3px solid blue;
-            padding-block: 10px;
-            padding-inline: 15px;
-            color: black;
-            background-color: blueviolet;
+            outline-style: inset;
+            outline-width: 5px;
+            outline-color: blueviolet;
+
+            border-style: solid;
+            border-width: 10px;
+            border-color: brown;
+
+            margin-left: 5px;
+            margin-right: 10px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+
+            padding-left: 20px;
+            padding-right: 15px;
+            padding-top: 10px;
+            padding-bottom: 5px;
         }
         .p3{
-            border-style: dashed dotted solid;
-            border-width: 5px 10px 20px;
-            border-color: aqua blue green;
+            border-style: solid dashed;
+            border-width: 10px 5px;
+            border-color: brown blue;
+
+            margin-inline-start: 5px;
+            margin-inline-end: 10px;
+            margin-block-start: 15px;
+            margin-block-end: 20px;
+
+            padding-inline-start: 20px;
+            padding-inline-end: 15px;
+            padding-block-start: 10px;
+            padding-block-end: 5px;
         }
         .p4{
-            border:5px solid red;
-            border-color: aqua blue red green;
+            border-style: solid inset dashed;
+            border-width: 10px 5px 15px;
+            border-color: brown blue red;
         }
-        .d{
+        .p5{
+            border-width: 10px 5px 15px 20px;
+            border-style: solid inset dashed inset;
+            border-color: brown blue red purple;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            background-color: aqua;
+            border: 10px solid red;
+            outline: 10px solid blue;
+            padding: 20px;
+        }
+        .d2{
             box-sizing: border-box;
-            outline: 5px solid red;
-            margin: 25px;
-            padding: 15px;
-            border: 10px dashed blue;
-            color: black;
-            background-color: brown;
-
         }
     </style>
 </head>
 <body>
-    <p class="p p1">1</p>
-    <p class="p p2">2</p>
-    <p class="p p3">3</p>
-    <p class="p p4">4</p>
+    <p class="p1">Lorem ipsum dolor sit amet.</p><br><br>
 
-    <div class="d">Div</div>
+    <p class="p2">Lorem ipsum dolor sit amet.</p><br><br>
+    
+    <p class="p3">Lorem ipsum dolor sit amet.</p><br><br>
+    
+    <p class="p4">Lorem ipsum dolor sit amet.</p><br><br>
+
+    <p class="p5">Lorem ipsum dolor sit amet.</p>
+
+    <div class="d1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim odio, atque nihil ab doloribus labore ipsam fugiat similique iusto necessitatibus.</div>
+    
+    <div class="d2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam atque ex quo temporibus architecto eius accusamus asperiores dignissimos ad harum.</div>
 </body>
 </html>

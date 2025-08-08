@@ -1,4 +1,4 @@
-Arka plan resminin boyutunu ayarla, url olarak başka yerden getirt, nerede duracağını, ne yönde nasıl tekrar edeceğini ve sabit mi yoksa haraketli mi olacağını ayarla.
+Arka plan resminin boyutunu ayarla, url olarak başka yerden getirt, nerede duracağını, ne yönde nasıl tekrar edeceğini ve sabit mi yoksa ekranla birlikte kayacak mı ayarla.
 
 Bir p ye (block elemente) border, iç ve dış boşluk ata, o 4 alanın boyutunu ayarla, 4 farklı şekilde yazılabiliyordu.
 Sırayla bu 4 kazımı hepsinde farklı olacak şekilde kullan. Bir de bir komuta neler yazabileceğimizi nasıl anlıyorduk.

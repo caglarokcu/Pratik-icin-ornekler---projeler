@@ -1,6 +1,6 @@
 Bir form yap kısaca, şimdilik bir yere yollamamasını sağlıyorduk. Nasıl gönderilmesi gerektiğini de yaz ve hata vermemeis için bir attiribute ekle. 
  
-Formdaki girdileri forma özel bir guruplandırma elementi vardı ve tabii bir de başlık. İsim soy isim, cinsiyet, renk, şehir ve ekstra istekleri bölüm 1 de diğerlerini de bölüm 2 de iste. 
+Formdaki girdileri forma özel bir guruplandırma elementi vardı ve tabii bir de başlık. İsim soy isim, cinsiyet, renk, şehir ve talepleri bölüm 1 de diğerlerini de bölüm 2 de iste. 
 
 girdi ve girdi başlıklarını bağla, girdinin ismine tıklanınca o girdiye focuslansın otobatik olarak. Bir de seçilen kutu Bunlardan aldığı değeri bilgisayarın hangi bölüme kaydedip nasıl ulaşacağımızı, işaretlemelerde ise o kutucuk işaretlenince farklı, istediğimiz başka bir değerde algılayabilmesini kontrol et. Bütün formda her istenilen bilgi için bunu kontrol et. Bunlara dikkat ederek forma şunları koy. 
 
