@@ -43,17 +43,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap#wrap
 white-space-collapse: satır sonları ve boşluklara nasıl davranması gerektiğini açıklar. collapse: satır sonlarını be boşlukları 1 boşluk olarak sayar. preserve: boşlukları ve segment sonlarını korur. preserve-breaks: boşluklar daraltılır, segment sonları korunur. preserve-spaces: boşluklar korunur segment sonları boşluğa dönüştürülür.(Bu uygulamada çalışmadı.). break-spaces: preserve ile aynı sadece satırbaşından sonra kalan boşluklar yer tutmaya devam ediyor yeni satırda, sanırım preserve de bu yok.
 https://developer.mozilla.org/en-US/docs/Web/CSS/white-space-collapse
 
-unicode-bidi
-
-overflow
-
-Margin - Padding
-
-Float
-
-Caption-side
-
-width-height
 
 Form da kullanılabilcek attiributeler:
     <input>
@@ -89,24 +78,6 @@ Flex de div in içinde p ile bir şeyler yazdım ve onu vertical-align ile hizal
 
 İnput çeşitleri;
 
-    <input type="button">
-        <input type="checkbox">
-        <input type="color">
-        <input type="date">
-        <input type="datetime-local">
-        <input type="email">
-        <input type="file">
-        <input type="month">
-        <input type="number">
-        <input type="password">
-        <input type="radio">
-        <input type="range">
-        <input type="search">
-        <input type="tel">
-        <input type="text">
-        <input type="time">
-        <input type="url">
-        <input type="week">
         <meter>
         <progress>
         <select>
@@ -141,3 +112,26 @@ a da belgeye açılan bağlantıda yazdığımız css ler işe yaramıyor.
 tr ler varsayılan olarak ortalanırken th ler sola yapışıyor. Bir de bir th normalden büyükse, resim vs, o sütundakilerde mecburen o büyüklükte oluyor.
 
 th:nth-child(odd) dediğimde sadece ilk satırdaki th leri aldı neden acaba.
+
+Unicode-bidi özelliği, aynı belgede birden fazla dili desteklemek için metnin geçersiz kılınıp kılınmayacağını ayarlamak veya döndürmek için direction özelliğiyle birlikte kullanılır.
+
+font-weight normal, bold, bolder, lighter.
+
+border-style: inset; Bunu araştır, hr için kullanılıyor ve güzel gözüküyor.
+
+Text-wrap-mode: nowrap ve white-speace-collopse: preserve bunları araştır. pre de geçiyor.
+
+text-wrap buldum, satırın nasıl kesileceğini söylüyor.
+
+White-space özelliği, bir öğenin içindeki beyaz boşluğun nasıl işleneceğini belirtir. normal, nowrap, pre, preline, prewrap.
+
+overflow x ve y clip e ayarlanmış, overflow-clip-margin: content-box, bunları araştır, img de var bunlar.
+
+Taşma-y, x özelliği, blok düzeyindeki bir öğenin üst ve alt kenarlarından taşması durumunda içeriğin kırpılıp kırpılmayacağını, kaydırma çubuğu eklenip eklenmeyeceğini veya taşan içeriğin görüntülenip görüntülenmeyeceğini belirtir.
+scroll, hidden, auto, visible.
+
+overflow-clip-margin i bulamadım.
+
+content-boxu da acaba bunlar tarayıcıda farklı mı gözüküyor. Mesela bunda box-sizing var sadece.
+
+vertical-align: dikey hizalamasını sağlar. baseline, text-top, text-bottom, sub, sup veya 50% gibi ayarlanabilir. Bunu farklı bir yere yerleştirebilirmiyiz bak.

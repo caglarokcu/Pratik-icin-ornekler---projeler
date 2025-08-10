@@ -17,7 +17,6 @@
    
    margin, font-size, font-weight ayarlamaları. Display ı block. unicode-bidi si isolate.-->
 
-
    <h2>Lorem, ipsum.</h2>
 
    <h4>Lorem ipsum dolor sit amet consectetur.</h4>
@@ -75,7 +74,7 @@
          recusandae dolorum omnis reiciendis consequatur 
       </pre>
 
-      <!-- Önceden biçimlendirilmiş metni tanımlar. Biçimli bir yazıda, kaynak kodunda yazıldığı gibi çıkar.
+      <!-- Önceden biçimlendirilmiş metni tanımlar. Biçimli bir yazıda, kaynak kodunda yazıldığı gibi çıkar. Eğer <pre> ile aynı satırda yazmaya başlarsan arada olan boşluk kadar boşluk bırakıyor. Bu yüzden pre lerden farklı satırda ve çıkmasını istediğin şekilde yazmaya dikkat et.
        
       Font-family, margin ayarlamaları, display ı block. Text-wrap-mode: nowrap ve white-speace-collopse: preserve. -->
       
@@ -205,6 +204,13 @@
 
       doloremque deleniti expedita,
 
+      <abbr title="World Health Organization">WHO</abbr>
+
+      <!-- <abbr> etiketi, "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM" gibi bir kısaltma veya akronim tanımlar. Yine title niteliği ile açıklama eklenir.
+         
+      displayı inline
+      -->
+
       <a href="www.google.com">
          Google
       </a> 
@@ -228,7 +234,10 @@
          reiciendis vitae similique iste, 
       </span> 
 
-      <!-- Bir metnin veya belgenin bir bölümünü işaretlemek için kullanılan satır içi bir kapsayıcıdır.CSS tarafından kolaylıkla şekillendirilebilir veya class veya id niteliği kullanılarak JavaScript ile değiştirilebilir.
+      <!-- Bir metnin veya belgenin bir bölümünü işaretlemek için kullanılan satır içi bir kapsayıcıdır.
+       
+      CSS tarafından kolaylıkla şekillendirilebilir veya class veya id niteliği kullanılarak JavaScript ile değiştirilebilir.
+      
       <div> öğesine çok benzer, ancak <div> blok düzeyinde bir öğedir ve <span> bir satır içi öğedir. -->
 
       molestiae voluptate provident quaerat? Dolor dolore doloremque temporibus illo repellendus aut inventore.
@@ -240,14 +249,22 @@
          Praesentium, rerum a est asperiores 
       </q> 
 
-      <!-- Etiketi kısa bir alıntıyı tanımlar. Tarayıcılar normalde alıntıların etrafına tırnak işaretleri ekler. -->
+      <!-- Etiketi kısa bir alıntıyı tanımlar. Tarayıcılar normalde alıntıların etrafına tırnak işaretleri ekler. 
+       
+      displayı block ve margin ayarlaması.-->
 
       eius, rem debitis sit fugit ipsum 
       <blockquote> 
          neque recusandae dicta, ratione delectus 
       </blockquote> 
 
-      <!-- Başka bir kaynaktan alıntılanan bölümü belirtir. Tarayıcılar genellikle <blockquote> öğelerini girintili hale getirir. pre gibi gösteriyor tarayıcı-->
+      <!-- Başka bir kaynaktan alıntılanan bölümü belirtir. Tarayıcılar genellikle <blockquote> öğelerini girintili hale getirir. pre gibi gösteriyor tarayıcı
+
+      displayı block, margin ayarlamaları ve unicode-bidi isolate.
+         
+      Attiribute olarak cite de kullanılıyor. Cite niteliği, bir alıntının kaynağını belirtir.
+
+      İpucu: Varsa, alıntının kaynağını her zaman eklemek iyi bir alışkanlıktır.-->
          
       quaerat voluptates iusto officiis. Modi, totam!
    </p>
@@ -261,14 +278,23 @@
       </cite> 
 
          <!-- Yaratıcı bir çalışmanın (örneğin kitap, şiir, şarkı, film, resim, heykel vb.) başlığını tanımlar. 
-         Not: Bir kişinin adı bir eserin başlığı değildir. metin genellikle italik olarak görüntülenir. -->
+         Not: Bir kişinin adı bir eserin başlığı değildir.
+          
+         metin genellikle italik olarak görüntülenir. 
+         
+         displayı inline ve font-style si italic. -->
       
-      molestiae fuga enim commodi voluptates provident, rem et doloribus soluta odit dolores exercitationem, sint repudiandae in voluptatibus ratione blanditiis eius est suscipit quibusdam? Et 
+      molestiae fuga enim commodi voluptates provident, rem et doloribus soluta odit dolores exercitationem, sint repudiandae in voluptatibus ratione blanditiis eius est suscipit quibusdam? Et
+
       <address> 
          nisi quo esse, labore iusto cumque consequuntur 
       </address> 
 
-         <!-- Bir belgenin veya makalenin yazarının/sahibinin iletişim bilgilerini tanımlar. İletişim bilgileri bir e-posta adresi, URL, fiziksel adres, telefon numarası, sosyal medya adresi vb. olabilir. Öğesindeki metin genellikle italik olarak görüntülenir ve tarayıcılar her zaman <address> öğesinden önce ve sonra bir satır sonu ekler. -->
+         <!-- Bir belgenin veya makalenin yazarının/sahibinin iletişim bilgilerini tanımlar. İletişim bilgileri bir e-posta adresi, URL, fiziksel adres, telefon numarası, sosyal medya adresi vb. olabilir. 
+          
+         Öğesindeki metin genellikle italik olarak görüntülenir ve tarayıcılar her zaman <address> öğesinden önce ve sonra bir satır sonu ekler.
+            
+         displayı block ve margin ayarlamalaır.-->
       
       ullam distinctio quod, excepturi facilis ab necessitatibus repellat ducimus perspiciatis!
    </p>
@@ -278,7 +304,9 @@
          Bunu okuyan tosun, okuyana kosun.
       </bdo>
 
-      <!-- BDO, Çift Yönlü Geçersiz Kılma anlamına gelir. <bdo> etiketi geçerli metin yönünü geçersiz kılmak için kullanılır. dir de directionun kısaltması. -->
+      <!-- BDO, Çift Yönlü Geçersiz Kılma anlamına gelir. <bdo> etiketi geçerli metin yönünü geçersiz kılmak için kullanılır. dir niteliği dde directionun kısaltması.
+         
+      displayı inline, unicode-bidi isolate-override.-->
       
    </p>
 
@@ -287,26 +315,6 @@
 
 <!-- 
 
-img deki attiributeleri araştır.
- 
-pre de eğer satırın birini hemen preniden sonra yazarsan direkt sayfanın başına yapıştırıyor ama hepsini düzenli, Boşlukları da düzenleyerek ve prelerden ayırarak yazarsan Boşluklara göre ekrana yazıyor, bunu ekle.
-
 tagların özelliklerini yapılarını vs yaz, her tag için ve bunları iste. Uygun şekilde kullanımını da iste.
-
-abbr ı araştır, ekle.
-
-h1 de falan unicode-bidi diye bir şey var. Onları araştır.
-
-font-weight ince olarak ayarlanamıyordu, onu bir araştır.
-
-Spesifikasyon, başlıkların <h1> ila <h6> etiketleriyle, vurgulanan metinlerin <em> etiketiyle, önemli metinlerin <strong> etiketiyle ve işaretli/vurgulanmış metinlerin <mark> etiketiyle belirtilmesi gerektiğini belirtir. Burda bu taglar için kullanışlı bilgiler olabilir.
-
-border-style: inset; Bunu araştır, hr için kullanılıyor ve güzel gözüküyor.
-
-Text-wrap-mode: nowrap ve white-speace-collopse: preserve bunları araştır. pre de geçiyor.
-
-overflow x ve y clip e ayarlanmış, overflow-clip-margin: content-box, bunları araştır, img de var bunlar.
-
-vertical-align: dikey hizalamasını sağlar. baseline, text-top, text-bottom, sub, sup veya 50% gibi ayarlanabilir. Bunu farklı bir yere yerleştirebilirmiyiz bak.
 
 -->

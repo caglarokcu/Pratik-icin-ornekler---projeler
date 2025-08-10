@@ -1,14 +1,16 @@
-Başlıkları Kullan.
+Html de kullanacağımız temel elementlari(tag) kullanacağız. Aşşağıda belirttiğim elementlerin varsayılan(default) olarak olarak gelen özelliklerini ve kullanım notlarını hatırla, örnek kullanım yap, sonra da cevap anahtarından kontrol et;
 
-Paragarfı tanımlayan tag kullan.
+    Önem sırasına göre başlıkların tanımlanması için kullanılan tag.
 
-Sadece kalın gösteren ve tarayıcı için önemsiz olan tag kullan.
+    Paragarfı tanımlamak için kullan tag.
 
-Yeni satıra geçmek için kullanılan tag kullan.
+    Sadece kalın gösteren ve tarayıcı için bir önem taşımayan tag.
 
-İçeriğin ayrılması için olan çizgisel tag kullan.
+    Yeni satıra geçmek için kullanılan tag.
 
-Önceden biçimlendirilmiş metin tanımlayan tag kullan. İstediğin gibi biraz şekil ver.
+    İçeriğin ayrılması tarayıcıya anlatan çizgisel tag kullan.
+
+    Önceden biçimlendirilmiş metin tanımlamak için kullan tag.
 
 Tarayıcıya metnin ekstra önemli olduğunu anatan tag.
 
@@ -31,6 +33,8 @@ Alt simge metnini tanımlayan tag.
 Üst simge metnini tanımlayan tag.
 
 Tanım ögesi anlamında olan ve ebeveyninin açıklamasını içermesi gereken tag. Ayrıca bir sıralaması vardı.
+
+Kısaltma tanımlamak için olan ögeyi kullan.
 
 Bir sayfadan diğerine köprü tanımlayan tag.
 
