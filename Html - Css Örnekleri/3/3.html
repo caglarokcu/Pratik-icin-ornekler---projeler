@@ -193,15 +193,12 @@
 </html>
 
 <!--
-    nth-child() çocuklarını değil, eşlerini kapsıyor. Ekle.
-    
-    :nth-child():nth-child() olmuyor, bunu yine de bir sor.
-    
-        denemede de en sonra list style type sadece nth-child(1) e etki ediyor, 2 3 e değil nedenini bul.
+    :nth-child() eşlerini kapsıyor ve direkt element adını belirtmen lazım. table tr:nth-child(3) td:nth-child(4)
+gib dersen de oluyor ama 1. child hiçbir şeyi kapsamıyor, 2. child belirttiğin tagı, 3. child belirttiğin tagın bir altındakini diye gidiyor.
 
-        CSS :nth-child(n) sözde sınıfı, ebeveyninin n'inci çocuğu olan herhangi bir öğeyle eşleşir.
-
-            Bu sözde sınıf, öğeleri ebeveynlerinin çocuk listesindeki öğelerin dizinlerine göre eşleştirir.
+divlerde sıralama tam doğru işliyor. 2. child 2. div e etki ediyor. Border collopse de burda işe yaramadı.
+    
+li ul de de etki ediyor bu :nth-child() ama border collapse işe yaramıyor yine
 
             n bir sayı/dizin, bir anahtar sözcük (tek veya çift) veya bir formül (an + b gibi) olabilir.
 
@@ -212,8 +209,6 @@
         ya div içinde div yapınca sadece çalışıyor yine direkt element adı ile ve 1 de hem belirttiğimiz ebeveyni hem de 1. çocuğu falan alıyor, çok garip bir şey. Neyse şuanlık birine sorulcak olarak ekleyelim, kullanmasak da olur gibi duruyor.
 
         Bunun tablo için yapılan bir özellik olup olmadığını sor.
-
-        -webkit... gibi şeyler yani - ile başlayan şeyler nedir, bunları birine sor.
 
         th lerin birini display le kaldırdın mesela ama ona nth-child ile bir şey verirsen ona sayılıyor yine, sırasına dikkat et.
 

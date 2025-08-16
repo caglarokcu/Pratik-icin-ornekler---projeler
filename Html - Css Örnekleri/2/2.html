@@ -13,7 +13,7 @@
             color: black;
         }
 
-        /* a nın yapısın heightine müdahale edebiliyoruz. Ama tam değil, font size ile yazıyı ayarla onun yerine veya içine ne koyduysan onun sizesini, a zaten onun kadar yer kaplar. */
+        /* inline bir element olduğu için boyut veremiyoruz. Ama mecbur font-size sinin boyutunu alıyor. Eğer taga boyut vermek margin ve padding atama istiyorsan displayını değiştir. Bu şekilde sadece inline-start ve end deki margini kontrol edebilirsin. */
         
         a:link{
             color: black;
@@ -58,13 +58,7 @@
 <!-- 
     tıklanmış linkte yazdığımız hover durumu etkinleştirilmiyor. mailto da oluyor ama. Bunu birine sor.
 
-    50. satır bir varsayım.
+    50. satırı da birine sor.
 
-    a inline bir element olduğu için margin atasak da sadece inline start ve end de margin verdi.
- 
-    şu boyut veremememizin sebebi inline olmasıymış.
-
-    mail linki ne açılıyor ne de visited oluyor. Ona bir bak.
-
-    şu # ile bağlanmama gibi şeyleri de örneklerle iste.
+    mail linki ne açılıyor ne de visited oluyor. w3school daki örneğe de baktım ama o da açılmadı. Bunu birine sor.
 -->

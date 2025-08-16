@@ -1,4 +1,4 @@
-Html de kullanacağımız temel elementlari(tag) kullanacağız. Aşşağıda belirttiğim elementlerin varsayılan(default) olarak olarak gelen özelliklerini ve kullanım notlarını hatırla, örnek kullanım yap, sonra da cevap anahtarından kontrol et;
+Html de kullanacağımız temel elementlari(tag) kullanacağız. Aşşağıda belirttiğim elementlerin varsayılan(default) olarak olarak gelen özelliklerini ve kullanım notlarını hatırlayarak örnek kullanım yap, sonra da cevap anahtarından kontrol et;
 
     Önem sırasına göre başlıkların tanımlanması için kullanılan tag.
 
@@ -12,40 +12,40 @@ Html de kullanacağımız temel elementlari(tag) kullanacağız. Aşşağıda be
 
     Önceden biçimlendirilmiş metin tanımlamak için kullan tag.
 
-Tarayıcıya metnin ekstra önemli olduğunu anatan tag.
+    Tarayıcıya metnin ekstra önemli olduğunu anatan tag.
 
-Teknik terimi, başka dilden ifadeyi, gemi adını vs tanımlayan tag.
+    Teknik terimi, başka dilden ifadeyi, gemi adını vs tanımlayan tag.
 
-Vurgulanan metni tanımlayan tag, ekran okuyucunun vurgulu okuması için de kullanılır.
+    Vurgulanan metni tanımlayan tag.
 
-Telif hakları veya diğer yan yorumları tanımlayan tag.
+    Telif hakları veya diğer yan yorumları tanımlayan tag.
 
-İşaretlenmesi ve vurgulanması gereken metni tanımlayan tag.
+    İşaretlenmesi ve vurgulanması gereken metni tanımlayan tag.
 
-Silinen, çıkarılan metni tanımlayan tag.
+    Silinen, çıkarılan metni tanımlayan tag.
 
-içerisinde resim barındırabilen tagı kullan.
+    İçerisinde resim barındırabilen tagı kullan.
 
-Eklenen metni tanımlayan tag.
+    Eklenen metni tanımlayan tag.
 
-Alt simge metnini tanımlayan tag.
+    Alt simge metnini tanımlayan tag.
 
-Üst simge metnini tanımlayan tag.
+    Üst simge metnini tanımlayan tag.
 
-Tanım ögesi anlamında olan ve ebeveyninin açıklamasını içermesi gereken tag. Ayrıca bir sıralaması vardı.
+    Tanım ögesi anlamında olan tag.
 
-Kısaltma tanımlamak için olan ögeyi kullan.
+    Kısaltma tanımlamak için olan ögeyi kullan.
 
-Bir sayfadan diğerine köprü tanımlayan tag.
+    Bir sayfadan diğerine köprü tanımlayan tag.
 
-Yine işaretlemek için kullanılan satır içi düzeyindeki tag.
+    Satır içi kapsayıcı olarak kullanılan tag.
 
-Kısa bir alıntıyı belirten tag.
+    Kısa bir alıntıyı belirten tag.
 
-Başka kaynaktan alıntılanan bölümü belirten tag. Nasıl gösterdiğini de hatırla.
+    Başka kaynaktan alıntılanan bölümü belirten tag. Nasıl gösterdiğini de hatırla.
 
-Bir çalışmanın başlığını tanımlayan tag. (Adını değil.)
+    Bir çalışmanın başlığını tanımlayan tag.
 
-Yazarın iletişim bilgilerini içeren tag. Ayrıca tarayıcı otomatik olarak ne yapıyordu.
+    Yazarın iletişim bilgilerini içeren tag.
 
-Metin için tanımlana yönü geçersiz kılmak için kullanılan tag.
+    Metin için tanımlana yönü geçersiz kılmak için kullanılan tag.
