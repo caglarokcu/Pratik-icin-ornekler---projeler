@@ -1,0 +1,119 @@
+Burda Sass (syntactically awosome style sheets) öğreneceğiz. Bu html ve css de karşılaştığımız zorluklara göre yapılmış ve o zorlukları yaşamamamızı sağlayan bir program gibi düşünebiliriz.
+
+Öncelikle unutma, tarayıcı html, css ve js den başka bir şey anlamaz. Biz buraya daha basit ve kolay bir şekilde yazacağız ve bu bizim için onu html ve css e çevirecek.
+
+scss de sasın daha : ; gib kurallara uygun hali gibi. sass da ; gibi şeyler yok o yüzden paragrafın nerde bittiği anlaşılmıyor, biz daha çok scss kullanacağız. Bu sadece yazım formatı, yine sass kullanıyoruz aslında.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+$ana_renk: red;
+
+body{
+    background-color: $ana_renk;
+}
+
+// $ ile değişkenin arasına boşluk koyarsak eğer kabul etmiyor.
+
+// Aşşağıda Watch Sass diye bir buton var ona basınca yeni, css uzantılı bir dosya açıyor ve canlı olarak buraya yazdıklarımızı css e dönüştürüyor. Zaten html e de link ile o dosyanın url sini veriyoruz.
+
+// Settings kısmından bir dosyanın içine girip formatını expendetten comprese getirince de olabilridğince az satıra sığdırmaya çalışıyor.
+
+// mesela flex kullandığımızda display: -webkit-box: gibi komutların da eklendiğini göreceksin, bunlar farklı tarayıcıların{linux, mozilla} kullandığı diller. Bunları da yazmış oluyor ve her tarayıcıya uygun olmuş oluyor. 
+
+--------------------------------------------------------------------------------------------------------------------------
+
+$buyuk_font: 2rem;
+$body_font: helvatica;
+
+// burda font-family i tanımlayamadım mesela. En kötü css dosyasından kopyalarız. 
+
+$ana_renk: #ccc;
+$yardimci_renk: #ff7b00;
+
+$kirmizi_cerceve: 2px solid red;
+$red-map: (light:#faa4a4, medium:#ff0000, dark:#aa0000);
+
+// Bu map ile de bu şekilde birden fazla benzer değeri tutabiliyoruz.
+
+$genel_margin:10px 10px 0px 10px;
+
+// Bunları nasıl anlıyor font-family olduğunu falan diye düşünüyordum. Bunlar değişken, yani bunu nereye yazarsan o değeri koyalıyacak. Margin için yazdıysan değeri ve margine yine bu değişkeni atarsan hiçbir sıkıntı çıkmaz.
+
+
+// Bu yorum css formatına geçmez.
+/*Bu yorum css formatına geçer.*/
+
+.p1{
+    font-size: $buyuk_font;
+    color: $ana_renk;
+}
+
+.p2{
+    $yardimci_renk:#b301fa;
+    color: $yardimci_renk;
+}
+
+.p3{
+    color: $yardimci_renk;
+    margin:$genel_margin;
+}
+
+// Burda gördüğün gibi en üstte yazdığımız değişken tanımları daha önemli, bu .p2 de yazdığımız değişken tanımları ise sadece o bölüm için.
+
+// Aşşağıdaki platformda hata alıyor musun diye her koddan sonra bak ve hemen çöz, yoksa hatayı bulman zorlaşır.
+
+.p4{
+    color:map-get($red-map, $dark);
+}
+
+// Bu şekilde de map kullanımını görüyoruz.
+
+.p5{
+    text-align: center;
+    text-transform: uppercase;
+    text-overflow: hidden;
+}
+
+.p6{
+    text:{
+        align: center;
+        transform: uppercase;
+        overflow: hidden;
+    }
+}
+
+// Böyle de yapınca bir kısaltma elde edebiliyoruz. Burda hata veriyor nedenini çözemedim.
+
+.main{
+    .main-content{
+        .p{
+            color: $ana_renk;
+        }
+    }
+}
+
+// Burda gördüğün gibi bir ögenin içindeki ögeyi böyle belirtiyoruz.
+
+.main{
+    &-content{
+        .p{
+            color: $ana_renk;
+        }
+    }
+}
+
+// Bu & işareti ile ebeveyninin belirtme kısmının aynısı, yani .main i belirtmiş oluyoruz.
+
+a{
+    font-size: $body_font;
+    color: map-get($red-map ,$normal);
+}
+
+a:hover{
+    color: map-get($red-map ,$light);
+}
+
+// Bu şekilde de hover i belirtebiliyoruz.
+
+--------------------------------------------------------------------------------------------------------------------------
+
