@@ -1,0 +1,60 @@
+@mixin menu_buton{
+    a{
+        background-color: orange;
+        color: white;
+        margin: 5px;
+        &:hover{
+            color: blue;
+        }
+    }
+}
+
+.navbar{
+    li{
+        ul{
+            @include menu_buton;
+        }
+    }
+}
+
+// Gördüğün gibi @mixin yazıp bir nevi bir kod satırını bir değişkene tanımlıyoruz. Sonra da @include diyip o değişkeni kullanabiliyoruz.
+
+li{
+    list-style: none;
+}
+
+@mixin menu_buton_2($bg, $renk){
+    a{
+        background-color: $bg;
+        color: white;
+        margin: 5px;
+        &:hover{
+            color: $renk;
+        }
+    }
+}
+
+.navbar_2{
+    li{
+        ul{
+            @include menu_buton(orange,black);
+        }
+    }
+}
+
+// Bu şekilde de yerine göre değişiklik yapabiliyoruz.
+
+// @mixin menu_buton_2($bg:red, $renk:aqua){     diyerek de varsayılan atayabiliyoruz.
+
+@mixin text_ecerik($renk){
+    color: $renk;
+    @content
+}
+
+@include text_icerik(brown){
+    background-color: purple;
+    border: 1px solid red;
+    font-size: 2rem;
+}
+
+// Bu şekilde de yazdığımız her şey @content in içine gidecek.
